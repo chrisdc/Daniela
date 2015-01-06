@@ -96,6 +96,51 @@ function daniela_widgets_init() {
 }
 add_action( 'widgets_init', 'daniela_widgets_init' );
 
+if ( ! function_exists( 'daniela_fonts_url' ) ) :
+/**
+ * Register Google fonts for Daniela.
+ *
+ * @since Daniela 1.0
+ *
+ * @return string Google fonts URL for the theme.
+ */
+function daniela_fonts_url() {
+	$fonts_url = '';
+	$fonts     = array();
+	$subsets   = 'latin,latin-ext';
+
+	/* translators: If there are characters in your language that are not supported by Open Sans, translate this to 'off'. Do not translate into your own language. */
+	if ( 'off' !== _x( 'on', 'Noto Sans font: on or off', 'daniela' ) ) {
+		$fonts[] = 'Open Sans:400italic,700italic,400,700';
+	}
+
+	/* translators: If there are characters in your language that are not supported by Playfair Display, translate this to 'off'. Do not translate into your own language. */
+	if ( 'off' !== _x( 'on', 'Playfair Display font: on or off', 'daniela' ) ) {
+		$fonts[] = 'Playfair Display:400,700,900';
+	}
+
+	/* translators: To add an additional character subset specific to your language, translate this to 'greek', 'cyrillic', 'devanagari' or 'vietnamese'. Do not translate into your own language. */
+	$subset = _x( 'no-subset', 'Add new subset (greek, cyrillic, devanagari, vietnamese)', 'twentyfifteen' );
+
+	if ( 'cyrillic' == $subset ) {
+		$subsets .= ',cyrillic,cyrillic-ext';
+	} elseif ( 'greek' == $subset ) {
+		$subsets .= ',greek,greek-ext';
+	} elseif ( 'vietnamese' == $subset ) {
+		$subsets .= ',vietnamese';
+	}
+
+	if ( $fonts ) {
+		$fonts_url = add_query_arg( array(
+			'family' => urlencode( implode( '|', $fonts ) ),
+			'subset' => urlencode( $subsets ),
+		), '//fonts.googleapis.com/css' );
+	}
+
+	return $fonts_url;
+}
+endif;
+
 /**
  * Enqueue scripts and styles.
  */
