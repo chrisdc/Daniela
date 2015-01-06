@@ -146,6 +146,9 @@ endif;
  * Enqueue scripts and styles.
  */
 function daniela_scripts() {
+	// Add custom fonts, used in the main stylesheet.
+	wp_enqueue_style( 'daniela-fonts', daniela_fonts_url(), array(), null );
+
 	wp_enqueue_style( 'daniela-style', get_stylesheet_uri() );
 
 	wp_enqueue_script( 'daniela-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
