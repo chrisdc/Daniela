@@ -392,7 +392,7 @@ hr {
 
 ul,
 ol {
-	margin: 0 0 1.5em 3em;
+	margin: 0 0 1.5em;
 }
 
 ul {
@@ -762,6 +762,7 @@ a:active {
 10.0 Header
 --------------------------------------------------------------*/
 .site-header {
+	margin-bottom: 2.5em; /* 40px */
 	text-align: center;
 }
 
