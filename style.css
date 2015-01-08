@@ -39,6 +39,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 	11.1 Posts and pages
 	11.2 Asides
 	11.3 Comments
+12.0 Footer
 12.0 Infinite scroll
 13.0 Media
 	13.1 Captions
@@ -276,7 +277,7 @@ textarea {
 	font-family: 'Open Sans', sans-serif;
 	font-size: 16px;
 	font-size: 1rem;
-	line-height: 1.5;
+	line-height: 1.6;
 }
 
 h1,
@@ -289,7 +290,7 @@ h6 {
 }
 
 p {
-	margin-bottom: 1.5em;
+	margin-bottom: 1.25em;
 }
 
 b,
@@ -423,7 +424,18 @@ img {
 
 table {
 	margin: 0 0 1.5em;
+	text-align: left;
 	width: 100%;
+}
+
+th,
+td {
+	padding: 8px 4px;
+}
+
+tr {
+	border-bottom: 1px solid #e4e4e4;
+	
 }
 
 /*--------------------------------------------------------------
@@ -766,7 +778,12 @@ a:active {
 	margin: 0;
 }
 
+.site-title a {
+	color: inherit;
+}
+
 .site-description {
+	color: #3db59f;
 	font-size: 16px;
 	font-size: 1rem;
 	line-height: 1.5;
@@ -784,7 +801,74 @@ a:active {
 }
 
 .hentry {
-	margin: 0 0 1.5em;
+	border-bottom: 1px solid #e4e4e4;
+	margin: 0 0 2.25em;
+	padding: 0 0 2.25em;
+}
+
+.entry-title {
+	font-family: 'Playfair Display', serif;
+	font-size: 42px;
+	font-size: 2.625rem;
+	line-height: 1.04761904762; /* 44px */
+	margin: 0;
+}
+
+.entry-title a {
+	color: inherit;
+}
+
+.entry-content h1,
+.entry-summary h1,
+.page-content h1,
+.comment-content h1 {
+	font-family: 'Playfair Display', serif;
+	font-size: 42px;
+	font-size: 2.625rem;
+}
+
+.entry-content h2,
+.entry-summary h2,
+.page-content h2,
+.comment-content h2 {
+	font-family: 'Playfair Display', serif;
+	font-size: 32px;
+	font-size: 2rem;
+	font-weight: normal;
+}
+
+.entry-content h3,
+.entry-summary h3,
+.page-content h3,
+.comment-content h3 {
+	font-size: 20px;
+	font-size: 1.25rem;
+}
+
+.entry-content h4,
+.entry-summary h4,
+.page-content h4,
+.comment-content h4 {
+	font-size: 16px;
+	font-size: 1rem;
+}
+
+.entry-content h5,
+.entry-summary h5,
+.page-content h5,
+.comment-content h5 {
+	font-size: 14px;
+	font-size: 0.875rem;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+}
+
+.entry-content h6,
+.entry-summary h6,
+.page-content h6,
+.comment-content h6 {
+	font-size: 14px;
+	font-size: 0.875rem;
 }
 
 .byline,
@@ -825,6 +909,15 @@ a:active {
 
 .bypostauthor {
 	display: block;
+}
+
+/*--------------------------------------------------------------
+12.0 Footer
+--------------------------------------------------------------*/
+
+.site-footer {
+	border-top: 1px solid #e4e4e4;
+	text-align: center;
 }
 
 /*--------------------------------------------------------------
@@ -929,4 +1022,8 @@ object {
 
 .gallery-caption {
 	display: block;
+}
+
+.content-area {
+	max-width: 620px !important;
 }
