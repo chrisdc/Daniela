@@ -525,7 +525,8 @@ a {
 a:hover,
 a:focus,
 a:active {
-	color: midnightblue;
+	color: #259883;
+	text-decoration: underline;
 }
 
 a:focus {
@@ -734,18 +735,31 @@ a:active {
 }
 
 /*--------------------------------------------------------------
-9.0 Widgets
+9.0 Basic layout
 --------------------------------------------------------------*/
 .site {
 	margin: 0 auto;
 	max-width: 1020px;
 }
 
+
 /*--------------------------------------------------------------
 9.0 Widgets
 --------------------------------------------------------------*/
 .widget {
 	margin: 0 0 1.5em;
+}
+
+.widget-title {
+	font-size: 16px;
+	font-size: 1rem;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+}
+
+.widget ul {
+	list-style: none;
+	padding: 0;
 }
 
 /* Make sure select elements fit in widgets. */
