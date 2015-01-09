@@ -619,14 +619,27 @@ a:active {
 .main-navigation li {
 	display: inline-block;
 	margin: 0 0.75em; /* 0 12px */
-	/*padding: 4px 0;*/
 	position: relative;
 }
 
 .main-navigation a {
 	color: #777;
-	display: block;
+	display: inline-block;
 	text-decoration: none;
+}
+
+.main-navigation .menu-item-has-children > a {
+	padding-right: 12px;
+}
+
+.main-navigation .menu-item-has-children > a:after {
+	content: "\f502";
+	font-family: genericons;
+	font-size: 8px;
+/*	font-size: 0.75rem;*/
+	top: 8px;
+	right: 1px; /* 4px */
+	position: absolute;
 }
 
 .main-navigation a:hover {
@@ -635,9 +648,7 @@ a:active {
 
 .main-navigation ul ul {
 	background-color: #fff;
-	/*box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);*/
 	border: 1px solid #e4e4e4;
-	/*float: left;*/
 	position: absolute;
 	text-align: left;
 	top: 100%;
@@ -652,13 +663,20 @@ a:active {
 }
 
 .main-navigation ul ul a {
+	padding: 8px 12px;
 	width: 200px;
+}
+
+.main-navigation ul ul .menu-item-has-children a:after {
+	content: "\f501";
+	top: 14px;
+	right: 4px;
 }
 
 .main-navigation ul ul li {
 	border-bottom: 1px solid #e4e4e4;
 	margin: 0;
-	padding: 8px 12px;
+/*	padding: 8px 12px;*/
 }
 
 .main-navigation ul ul li:last-child {
