@@ -636,9 +636,9 @@ a:active {
 	content: "\f502";
 	font-family: genericons;
 	font-size: 8px;
-/*	font-size: 0.75rem;*/
-	top: 8px;
-	right: 1px; /* 4px */
+	font-size: 0.5rem;
+	top: 1em; /* 8px */
+	right: 0;
 	position: absolute;
 }
 
@@ -658,8 +658,8 @@ a:active {
 
 .main-navigation ul ul ul {
 	box-sizing: border-box;
-	left: -999em;
 	top: 0;
+	left: -999em;
 }
 
 .main-navigation ul ul a {
@@ -669,14 +669,13 @@ a:active {
 
 .main-navigation ul ul .menu-item-has-children a:after {
 	content: "\f501";
-	top: 14px;
-	right: 4px;
+	top: 1.75em; /* 14px */
+	right: 0.5em; /* 4px */
 }
 
 .main-navigation ul ul li {
 	border-bottom: 1px solid #e4e4e4;
 	margin: 0;
-/*	padding: 8px 12px;*/
 }
 
 .main-navigation ul ul li:last-child {
