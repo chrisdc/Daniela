@@ -1124,6 +1124,11 @@ a:active {
 	text-align: center;
 }
 
+.site-header a:hover {
+	color: #3db59f;
+	text-decoration: none;
+}
+
 .site-branding {
 	padding: 2.5em 0; /* 40px 0 */
 }
@@ -1175,6 +1180,11 @@ a:active {
 
 .entry-title a {
 	color: inherit;
+}
+
+.entry-title a:hover {
+	color: #3db59f;
+	text-decoration: none;
 }
 
 .entry-content h1,
