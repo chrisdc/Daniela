@@ -713,30 +713,31 @@ a:active {
 /* Social menu */
 
 .social-navigation {
-	margin-bottom: 1.5em; /* 24px */
+	margin-bottom: 0.5em; /* 8px */
 }
 
 .social-navigation ul {
 	list-style: none;
 	margin: 0;
+	padding: 0;
 }
 
 .social-navigation li {
 	display: inline-block;
-	margin: 0 0.75em; /* 0 12px */
+	margin: 0 0.25em; /* 0 4px */
 	
 }
 
 .social-navigation a {
 	color: #777;
 	display: block;
-	height: 1em;
+	height: 2em;
+	width: 2em;
 	position: relative;
-	width: 1em;
 }
 
 .social-navigation a:hover {
-	text-decoration: inherit;
+	text-decoration: none;
 }
 
 .social-navigation a:before {
@@ -1084,6 +1085,7 @@ a:active {
 .site {
 	margin: 0 auto;
 	max-width: 1020px;
+	width: 90%;
 }
 
 
@@ -1157,6 +1159,7 @@ a:active {
 /*--------------------------------------------------------------
 11.0 Content
 --------------------------------------------------------------*/
+
 /*--------------------------------------------------------------
 11.1 Posts and pages
 --------------------------------------------------------------*/
@@ -1394,6 +1397,15 @@ object {
 	display: block;
 }
 
-.content-area {
-	max-width: 620px !important;
+@media screen and (min-width: 600px) {
+	/* Basic layout */
+	.content-area {
+		float: left;
+		width: 60.784313725%; /* 620px max */
+	}
+	
+	.widget-area {
+		float: right;
+		width: 30.392156862%; /* 310px max */
+	}
 }
