@@ -1169,8 +1169,8 @@ a:active {
 
 .hentry {
 	border-bottom: 1px solid #e4e4e4;
-	margin: 0 0 2.25em;
-	padding: 0 0 2.25em;
+	margin: 0 0 2.25em; /* 0 0 32px */
+	padding: 0 0 2.25em; /* 0 0 32px */
 }
 
 .entry-title {
@@ -1202,6 +1202,7 @@ a:active {
 .entry-content h2,
 .entry-summary h2,
 .page-content h2,
+.comments-area h2,
 .comment-content h2 {
 	font-family: 'Playfair Display', serif;
 	font-size: 32px;
@@ -1275,6 +1276,18 @@ a:active {
 /*--------------------------------------------------------------
 11.3 Comments
 --------------------------------------------------------------*/
+.comment-list,
+.comment-list .children {
+	list-style: none;
+	padding: 0;
+}
+
+.comment-body {
+	border-bottom: 1px solid #e4e4e4;
+	margin: 0 0 2.25em; /* 0 0 32px */
+	padding: 0 0 2.25em; /* 0 0 32px */
+}
+
 .comment-content a {
 	word-wrap: break-word;
 }
