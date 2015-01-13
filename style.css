@@ -603,43 +603,43 @@ a:active {
 .main-navigation {
 	border-top: 1px solid #e4e4e4;
 	border-bottom: 1px solid #e4e4e4;
-	clear: both;
-	display: block;
-	float: left;
-	padding: 14px 0;
+	padding: 0.875em 0; /* 14px 0 */
+	text-align: left;
 	width: 100%;
+}
+
+.main-navigation.toggled {
+	border-bottom-width: 0;
+	padding-bottom: 0;
+}
+
+.main-navigation .nav-menu {
+	display: none;
+	padding-left: 0;
+}
+
+.main-navigation.toggled .nav-menu {
+	border-top: 1px solid #e4e4e4;
+	display: block;
+	margin-top: 0.875em; /* 14px */
 }
 
 .main-navigation ul {
 	list-style: none;
 	margin: 0;
-	padding-left: 0;
 }
 
 .main-navigation li {
-	display: inline-block;
-	margin: 0 0.75em; /* 0 12px */
+	border-bottom: 1px solid #e4e4e4;
+	display: list-item;
 	position: relative;
 }
 
 .main-navigation a {
 	color: #777;
-	display: inline-block;
+	display: block;
+	padding: 0.875em 0px; /* 14px 0 */
 	text-decoration: none;
-}
-
-.main-navigation .menu-item-has-children > a {
-	padding-right: 12px;
-}
-
-.main-navigation .menu-item-has-children > a:after {
-	content: "\f502";
-	font-family: genericons;
-	font-size: 8px;
-	font-size: 0.5rem;
-	top: 1em; /* 8px */
-	right: 0;
-	position: absolute;
 }
 
 .main-navigation a:hover {
@@ -647,57 +647,30 @@ a:active {
 }
 
 .main-navigation ul ul {
-	background-color: #fff;
-	border: 1px solid #e4e4e4;
-	position: absolute;
-	text-align: left;
-	top: 100%;
-	left: -999em;
-	z-index: 99999;
+	list-style: disc;
+	padding-bottom: 0.875em;
 }
 
-.main-navigation ul ul ul {
-	box-sizing: border-box;
-	top: 0;
-	left: -999em;
-}
-
-.main-navigation ul ul a {
-	padding: 8px 12px;
-	width: 200px;
+.main-navigation ul ul li {
+	border-bottom-width: 0;
+	display: list-item;
+	padding: 0;
 }
 
 .main-navigation ul ul .menu-item-has-children a:after {
-	content: "\f501";
 	top: 1.75em; /* 14px */
 	right: 0.5em; /* 4px */
 }
 
-.main-navigation ul ul li {
-	border-bottom: 1px solid #e4e4e4;
-	margin: 0;
+.main-navigation ul ul a {
+	padding: 0.25em 0px; /* 4px 0 */
 }
 
-.main-navigation ul ul li:last-child {
-	border-bottom: 0
-}
-
-.main-navigation li:hover > a {
-}
-
-.main-navigation ul ul :hover > a {
-}
-
-.main-navigation ul ul a:hover {
-}
-
-.main-navigation ul li:hover > ul {
-	left: auto;
-}
-
-.main-navigation ul ul li:hover > ul {
-	left: 100%;
-	top: -1px;
+.main-navigation ul ul ul {
+	box-sizing: border-box;
+	padding-bottom: 0;
+	top: 0;
+	left: -999em;
 }
 
 .main-navigation .current_page_item > a,
@@ -705,9 +678,96 @@ a:active {
 .main-navigation .current_page_ancestor > a {
 }
 
-/* Small menu. */
-.menu-toggle {
-	display: none;
+@media screen and (min-width: 600px) {
+	.menu-toggle {
+		display: none;
+	}
+	
+	.main-navigation.toggled {
+		border-bottom: 1px solid #e4e4e4;
+		padding: 0.875em 0; /* 14px 0 */
+	}
+	
+	.main-navigation .nav-menu {
+		display: block;
+		text-align: center;
+	}
+	
+	.main-navigation.toggled .nav-menu {
+		border-width: 0;
+		margin: 0;
+	}
+	
+	.main-navigation li {
+		border-width: 0;
+		display: inline-block;
+		margin: 0 0.75em; /* 0 12px */
+	}
+	
+	.main-navigation a {
+		padding: 0;
+	}
+	
+	.main-navigation .menu-item-has-children > a {
+		padding-right: 12px;
+	}
+	
+	.main-navigation ul ul {
+		background-color: #fff;
+		border: 1px solid #e4e4e4;
+		list-style: none;
+		padding: 0;
+		position: absolute;
+		text-align: left;
+		top: 100%;
+		left: -999em;
+		z-index: 99999;
+	}
+	
+	.main-navigation ul li:hover > ul {
+		left: auto;
+	}
+	
+	.main-navigation .menu-item-has-children > a:after {
+		content: "\f502";
+		font-family: genericons;
+		font-size: 8px;
+		font-size: 0.5rem;
+		top: 1em;  /*8px*/
+		right: 0;
+		position: absolute;
+	}
+	
+	.main-navigation ul ul li {
+		border-bottom: 1px solid #e4e4e4;
+		margin: 0;
+	}
+	
+	.main-navigation ul ul li:last-child {
+		border-bottom: 0
+	}
+	
+	.main-navigation ul ul li:hover > ul {
+		left: 100%;
+		top: -1px;
+	}
+	
+	.main-navigation ul ul .menu-item-has-children a:after {
+		content: "\f501";
+		top: 1.75em; /* 14px */
+		right: 0.5em; /* 4px */
+	}
+	
+	.main-navigation ul ul a {
+		padding: 0.5em 0.75em; /* 8px 12px */
+		width: 200px;
+	}
+	
+	.main-navigation ul ul ul {
+		box-sizing: border-box;
+		top: 0;
+		left: -999em;
+	}
 }
 
 /* Social menu */
@@ -961,17 +1021,6 @@ a:active {
 
 .social-navigation a[href*="twitch.tv"]:hover {
 	color: #6441a5;
-}
-
-@media screen and (max-width: 600px) {
-	.menu-toggle,
-	.main-navigation.toggled .nav-menu {
-		display: block;
-	}
-
-	.main-navigation ul {
-		display: none;
-	}
 }
 
 .site-main .comment-navigation,
