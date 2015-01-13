@@ -1222,6 +1222,22 @@ a:active {
 	padding: 0 0 2.25em; /* 0 0 32px */
 }
 
+.entry-meta {
+	color: #3db59f;
+}
+
+.entry-footer {
+	color: #777;
+}
+
+.entry-footer a {
+	color: inherit;
+}
+
+.entry-footer a:hover {
+	color: #3db59f;
+}
+
 .entry-title {
 	font-family: 'Playfair Display', serif;
 	font-size: 42px;
