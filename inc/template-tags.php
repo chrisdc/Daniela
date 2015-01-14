@@ -103,13 +103,19 @@ function daniela_entry_footer() {
 		/* translators: used between list items, there is a space after the comma */
 		$categories_list = get_the_category_list( __( ', ', 'daniela' ) );
 		if ( $categories_list && daniela_categorized_blog() ) {
-			printf( '<span class="cat-links">' . __( 'Posted in %1$s', 'daniela' ) . '</span>', $categories_list );
+			printf( '<span class="cat-links"><span class="screen-reader-text">%1$s </span>%2$s</span>',
+				_x( 'Categories', 'daniela' ),
+				$categories_list
+			);
 		}
 
 		/* translators: used between list items, there is a space after the comma */
 		$tags_list = get_the_tag_list( '', __( ', ', 'daniela' ) );
 		if ( $tags_list ) {
-			printf( '<span class="tags-links">' . __( 'Tagged %1$s', 'daniela' ) . '</span>', $tags_list );
+			printf( '<span class="tags-links"><span class="screen-reader-text">%1$s </span>%2$s</span>',
+				_x( 'Tags ', 'daniela' ),
+				$tags_list
+			);
 		}
 	}
 

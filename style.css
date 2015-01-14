@@ -1218,8 +1218,8 @@ a:active {
 
 .hentry {
 	border-bottom: 1px solid #e4e4e4;
-	margin: 0 0 2.25em; /* 0 0 32px */
-	padding: 0 0 2.25em; /* 0 0 32px */
+	margin: 0 0 3em;
+	padding: 0 0 1em; /* 0 0 32px */
 }
 
 .entry-meta {
@@ -1328,6 +1328,56 @@ a:active {
 .page-links {
 	clear: both;
 	margin: 0 0 1.5em;
+}
+
+/*--------------------------------------------------------------
+11.2 Entry meta
+--------------------------------------------------------------*/
+
+.entry-footer {
+	margin-top: 2.25em; /* 36px */
+}
+
+.cat-links,
+.tags-links,
+.comments-link {
+	margin-right: 1.5em;
+}
+
+.cat-links:before {
+	content: '\f301';
+	font-family: genericons;
+	font-size: 16px;
+	margin-right: 3px;
+	position: relative;
+	top: 4px;
+}
+
+.tags-links:before {
+	content: '\f302';
+	font-family: genericons;
+	font-size: 16px;
+	margin-right: 3px;
+	position: relative;
+	top: 4px;
+}
+
+.comments-link:before {
+	content: '\f300';
+	font-family: genericons;
+	font-size: 16px;
+	margin-right: 3px;
+	position: relative;
+	top: 4px;
+}
+
+.edit-link:before {
+	content: '\f411';
+	font-family: genericons;
+	font-size: 16px;
+	margin-right: 3px;
+	position: relative;
+	top: 4px;
 }
 
 /*--------------------------------------------------------------
