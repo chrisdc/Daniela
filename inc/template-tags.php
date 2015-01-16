@@ -266,3 +266,18 @@ function daniela_category_transient_flusher() {
 }
 add_action( 'edit_category', 'daniela_category_transient_flusher' );
 add_action( 'save_post',     'daniela_category_transient_flusher' );
+
+if ( ! function_exists( 'daniela_get_link_url' ) ) :
+/**
+ * Return the post URL.
+ *
+ * Falls back to the post permalink if no URL is found in the post.
+ *
+ * @return string The Link format URL.
+ */
+function daniela_get_link_url() {
+	$has_url = get_url_in_content( get_the_content() );
+
+	return $has_url ? $has_url : apply_filters( 'the_permalink', get_permalink() );
+}
+endif;
