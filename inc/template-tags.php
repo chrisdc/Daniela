@@ -88,7 +88,10 @@ function daniela_posted_on() {
 	$post_format = get_post_format();
 
 	if ( false !== $post_format ) {
-		echo ' | <span class="post-format">' . get_post_format_string( $post_format ) . '</span>';
+		printf( ' | <span class="entry-format"><a href="%1$s">%2$s</a></span>',
+			esc_url( get_post_format_link( $post_format ) ),
+			get_post_format_string( $post_format )
+		);	
 	}
 }
 endif;
