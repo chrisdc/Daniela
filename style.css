@@ -363,33 +363,12 @@ big {
  * 2.0 - Genericons
  */
 .social-navigation a:before,
-.secondary-toggle:before,
-.dropdown-toggle:after,
-.bypostauthor > article .fn:after,
-.comment-reply-title small a:before,
-.comment-navigation .nav-next a:after,
-.comment-navigation .nav-previous a:before,
-.posted-on:before,
-.byline:before,
-.cat-links:before,
-.tags-links:before,
-.comments-link:before,
-.entry-format:before,
-.edit-link:before,
-.full-size-link:before,
-.pagination .prev:before,
-.pagination .next:before,
-.image-navigation a:before,
-.image-navigation a:after,
-.format-link .entry-title a:after,
-.entry-content .more-link:after,
-.entry-summary .more-link:after,
-.author-link:after {
+.format-link .entry-title a:after {
 	-moz-osx-font-smoothing: grayscale;
 	-webkit-font-smoothing: antialiased;
 	display: inline-block;
 	font-family: "Genericons";
-	font-size: 16px;
+	font-size: inherit;
 	font-style: normal;
 	font-weight: normal;
 	font-variant: normal;
@@ -1386,6 +1365,52 @@ a:active {
 .blog .format-aside .entry-title,
 .archive .format-aside .entry-title {
 	display: none;
+}
+
+/*--------------------------------------------------------------
+11.2 Quotes
+--------------------------------------------------------------*/
+.blog .format-aside .entry-title {
+	display: none;
+}
+
+.format-quote .entry-title {
+	display: none;
+}
+
+.format-quote blockquote {
+	font-size: 2em;
+	font-family: playfair, serif;
+	line-height: 1.25; /* 40px */
+	margin: 0;
+}
+
+.format-quote cite {
+	display: block;
+	font-style: normal;
+	margin-top: 0.5em;  /* 16px */
+}
+
+.format-quote cite a {
+	color: #3db59f;
+}
+
+/*--------------------------------------------------------------
+11.2 Link
+--------------------------------------------------------------*/
+.format-link .entry-title a {
+	position: relative;
+}
+
+/*--------------------------------------------------------------
+11.2 Image / Video / Gallery
+--------------------------------------------------------------*/
+.format-image .entry-title,
+.format-video .entry-title,
+.format-gallery .entry-title {
+	font-size: 32px;
+	font-size: 2rem;
+	font-weight: normal;
 }
 
 /*--------------------------------------------------------------
