@@ -1435,6 +1435,10 @@ a:active {
 	padding: 0 0 2.25em; /* 0 0 32px */
 }
 
+.says {
+	display: none;
+}
+
 .comment-content a {
 	word-wrap: break-word;
 }
