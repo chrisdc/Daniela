@@ -274,7 +274,7 @@ button,
 input,
 select,
 textarea {
-	color: #444;
+	color: #333;
 	font-family: 'Open Sans', sans-serif;
 	font-size: 16px;
 	font-size: 1rem;
@@ -455,7 +455,7 @@ figure {
 }
 
 figcaption {
-	color: #777;
+	color: #727272;
 	font-style: italic;
 }
 
@@ -554,7 +554,7 @@ textarea {
 5.1 Links
 --------------------------------------------------------------*/
 a {
-	color: #3db59f;
+	color: #21759b;
 	text-decoration: none;
 	transition: color 0.2s;
 }
@@ -615,14 +615,15 @@ a:active {
 }
 
 .main-navigation a {
-	color: #777;
+	color: #727272;
 	display: block;
 	padding: 0.875em 0px; /* 14px 0 */
 	text-decoration: none;
 }
 
-.main-navigation a:hover {
-	color: #3db59f;
+.main-navigation a:hover,
+.main-navigation a.focus {
+	color: #21759b;
 }
 
 .main-navigation ul ul {
@@ -703,7 +704,8 @@ a:active {
 		z-index: 99999;
 	}
 	
-	.main-navigation ul li:hover > ul {
+	.main-navigation ul li:hover > ul,
+	.main-navigation ul li.focus > ul {
 		left: auto;
 	}
 	
@@ -726,7 +728,8 @@ a:active {
 		border-bottom: 0
 	}
 	
-	.main-navigation ul ul li:hover > ul {
+	.main-navigation ul ul li:hover > ul,
+	.main-navigation ul ul li.focus > ul {
 		left: 100%;
 		top: -1px;
 	}
@@ -768,7 +771,7 @@ a:active {
 }
 
 .social-navigation a {
-	color: #777;
+	color: #727272;
 	display: block;
 	height: 2em;
 	width: 2em;
@@ -789,7 +792,7 @@ a:active {
 }
 
 .social-navigation a:hover {
-	color: #3db59f;
+	color: #21759b;
 }
 
 .social-navigation a[href$="/feed/"]:before {
@@ -853,7 +856,7 @@ a:active {
 }
 
 .social-navigation a[href*="foursquare.com"]:hover {
-	color: #f84777;
+	color: #f84727272;
 }
 
 .social-navigation a[href*="plus.google.com"]:before {
@@ -983,7 +986,7 @@ a:active {
 }
 
 .social-navigation a[href*="mailto:"]:hover {
-	color: #3db59f;
+	color: #21759b;
 }
 
 .social-navigation a[href*="spotify.com"]:before {
@@ -1155,7 +1158,7 @@ a:active {
 }
 
 .site-header a:hover {
-	color: #3db59f;
+	color: #21759b;
 	text-decoration: none;
 }
 
@@ -1177,7 +1180,7 @@ a:active {
 }
 
 .site-description {
-	color: #3db59f;
+	color: #21759b;
 	font-size: 16px;
 	font-size: 1rem;
 	line-height: 1.5;
@@ -1202,11 +1205,15 @@ a:active {
 }
 
 .entry-meta {
-	color: #3db59f;
+	color: #21759b;
+}
+
+.entry-content a {
+	text-decoration: underline;
 }
 
 .entry-footer {
-	color: #777;
+	color: #727272;
 }
 
 .entry-footer a {
@@ -1214,7 +1221,7 @@ a:active {
 }
 
 .entry-footer a:hover {
-	color: #3db59f;
+	color: #21759b;
 }
 
 .entry-title {
@@ -1230,7 +1237,7 @@ a:active {
 }
 
 .entry-title a:hover {
-	color: #3db59f;
+	color: #21759b;
 	text-decoration: none;
 }
 
@@ -1392,7 +1399,7 @@ a:active {
 }
 
 .format-quote cite a {
-	color: #3db59f;
+	color: #21759b;
 }
 
 /*--------------------------------------------------------------
