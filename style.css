@@ -1005,26 +1005,46 @@ a:active {
 	color: #6441a5;
 }
 
+/* Post navigation */
+
 .site-main .comment-navigation,
-.site-main .paging-navigation,
+.site-main .posts-navigation,
 .site-main .post-navigation {
-	margin: 0 0 2.25em; /* 0 0 32px */
+	font-weight: bold;
+	letter-spacing: 1px;
+	padding: 0 0 2.25em; /* 0 0 32px */
 	overflow: hidden;
+	text-transform: uppercase;
+}
+
+.site-main .post-navigation {
+	border-bottom: 1px solid #e4e4e4;
 }
 
 .comment-navigation .nav-previous,
-.paging-navigation .nav-previous,
+.posts-navigation .nav-previous,
 .post-navigation .nav-previous {
 	float: left;
 	width: 50%;
 }
 
 .comment-navigation .nav-next,
-.paging-navigation .nav-next,
+.posts-navigation .nav-next,
 .post-navigation .nav-next {
 	float: right;
 	text-align: right;
 	width: 50%;
+}
+
+.post-navigation .post-title {
+	color: #727272;
+	font-weight: normal;
+	letter-spacing: 0;
+	text-transform: none;
+}
+
+.post-navigation span {
+	display: block;
 }
 
 /*--------------------------------------------------------------
@@ -1461,7 +1481,7 @@ a:active {
 12.0 Infinite scroll
 --------------------------------------------------------------*/
 /* Globally hidden elements when Infinite Scroll is supported and in use. */
-.infinite-scroll .paging-navigation, /* Older / Newer Posts Navigation (always hidden). */
+.infinite-scroll .posts-navigation, /* Older / Newer Posts Navigation (always hidden). */
 .infinite-scroll.neverending .site-footer { /* Theme Footer (when set to scrolling). */
 	display: none;
 }
