@@ -779,6 +779,7 @@ a:active {
 }
 
 .social-navigation a:hover {
+	color: #21759b;
 	text-decoration: none;
 }
 
@@ -791,176 +792,88 @@ a:active {
 	left: 0;
 }
 
-.social-navigation a:hover {
-	color: #21759b;
-}
-
 .social-navigation a[href$="/feed/"]:before {
 	content: "\f413";
-}
-
-.social-navigation a[href$="/feed/"]:hover {
-	color: #ff6600;
 }
 
 .social-navigation a[href*="codepen.io"]:before {
 	content: "\f216";
 }
 
-.social-navigation a[href*="codepen.io"]:hover {
-	color: #000;
-}
-
 .social-navigation a[href*="digg.com"]:before {
 	content: "\f221";
-}
-
-.social-navigation a[href*="digg.com"]:hover {
-	color: #1b5791;
 }
 
 .social-navigation a[href*="dribbble.com"]:before {
 	content: "\f201";
 }
 
-.social-navigation a[href*="dribbble.com"]:hover {
-	color: #ea4c89;
-}
-
 .social-navigation a[href*="dropbox.com"]:before {
 	content: "\f225";
-}
-
-.social-navigation a[href*="dropbox.com"]:hover {
-	color: #007ee5;
 }
 
 .social-navigation a[href*="facebook.com"]:before {
 	content: "\f203";
 }
 
-.social-navigation a[href*="facebook.com"]:hover {
-	color: #3b5998;
-}
-
 .social-navigation a[href*="flickr.com"]:before {
 	content: "\f211";
-}
-
-.social-navigation a[href*="flickr.com"]:hover {
-	color: #ff0084;
 }
 
 .social-navigation a[href*="foursquare.com"]:before {
 	content: "\f226";
 }
 
-.social-navigation a[href*="foursquare.com"]:hover {
-	color: #f84727272;
-}
-
 .social-navigation a[href*="plus.google.com"]:before {
 	content: "\f206";
-}
-
-.social-navigation a[href*="plus.google.com"]:hover {
-	color: #dd4b39;
 }
 
 .social-navigation a[href*="github.com"]:before {
 	content: "\f200";
 }
 
-.social-navigation a[href*="github.com"]:hover {
-	color: #333;
-}
-
 .social-navigation a[href*="instagram.com"]:before {
 	content: "\f215";
-}
-
-.social-navigation a[href*="instagram.com"]:hover {
-	color: #3b5998;
 }
 
 .social-navigation a[href*="linkedin.com"]:before {
 	content: "\f208";
 }
 
-.social-navigation a[href*="linkedin.com"]:hover {
-	color: #007bb6;
-}
-
 .social-navigation li a[href*="path.com"]:before {
 	content: '\f219';
-}
-
-.social-navigation li a[href*="path.com"]:hover {
-	color: #e62f17;
 }
 
 .social-navigation a[href*="pinterest.com"]:before {
 	content: "\f210";
 }
 
-.social-navigation a[href*="pinterest.com"]:hover {
-	color: #cd1f28;
-}
-
 .social-navigation a[href*="getpocket.com"]:before {
 	content: "\f224";
-}
-
-.social-navigation a[href*="getpocket.com"]:hover {
-	color: #ee4056;
 }
 
 .social-navigation a[href*="polldaddy.com"]:before {
 	content: "\f217";
 }
 
-.social-navigation a[href*="polldaddy.com"]:hover {
-	color: #bc0b0b;
-}
-
 .social-navigation a[href*="reddit.com"]:before {
 	content: "\f222";
-}
-
-.social-navigation a[href*="reddit.com"]:hover {
-	color: #ff5700;
 }
 
 .social-navigation a[href*="stumbleupon.com"]:before {
 	content: "\f223";
 }
 
-.social-navigation a[href*="stumbleupon.com"]:hover {
-	color: #ec4b24;
-}
-
 .social-navigation a[href*="tumblr.com"]:before {
 	content: "\f214";
-}
-
-.social-navigation a[href*="tumblr.com"]:hover {
-	color: #35465d;
 }
 
 .social-navigation a[href*="twitter.com"]:before {
 	content: "\f202";
 }
 
-.social-navigation a[href*="twitter.com"]:hover {
-	color: #55acee;
-}
-
 .social-navigation a[href*="vimeo.com"]:before {
 	content: "\f212";
-}
-
-.social-navigation a[href*="vimeo.com"]:hover {
-	color: #1ab7ea;
 }
 
 .social-navigation a[href*="wordpress.com"]:before,
@@ -968,41 +881,20 @@ a:active {
 	content: "\f205";
 }
 
-.social-navigation a[href*="wordpress.com"]:hover,
-.social-navigation a[href*="wordpress.org"]:hover {
-	color: #21759b;
-}
-
 .social-navigation a[href*="youtube.com"]:before {
 	content: "\f213";
-}
-
-.social-navigation a[href*="youtube.com"]:hover {
-	color: #e72d28;
 }
 
 .social-navigation a[href*="mailto:"]:before {
 	content: "\f410";
 }
 
-.social-navigation a[href*="mailto:"]:hover {
-	color: #21759b;
-}
-
 .social-navigation a[href*="spotify.com"]:before {
 	content: "\f515";
 }
 
-.social-navigation a[href*="spotify.com"]:hover {
-	color: #81c340;
-}
-
 .social-navigation a[href*="twitch.tv"]:before {
 	content: "\f516";
-}
-
-.social-navigation a[href*="twitch.tv"]:hover {
-	color: #6441a5;
 }
 
 /* Post navigation */
