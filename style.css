@@ -562,7 +562,7 @@ a {
 a:hover,
 a:focus,
 a:active {
-	color: #259883;
+	color: #104e6b;
 	text-decoration: underline;
 	transition: color 0.2s;
 }
