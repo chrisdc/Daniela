@@ -18,6 +18,11 @@
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
+		<?php if ( has_post_thumbnail() && ! post_password_required() ) : ?>
+			<p class="post-thumbnail">
+				<?php the_post_thumbnail(); ?>
+			</p>
+		<?php endif; ?>
 		<?php
 			/* translators: %s: Name of current post */
 			the_content( sprintf(
