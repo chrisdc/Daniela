@@ -291,7 +291,7 @@ h6 {
 }
 
 p {
-	margin-bottom: 1.25em;
+	margin: 0 0 1.25em;
 }
 
 b,
@@ -418,7 +418,7 @@ hr {
 
 ul,
 ol {
-	margin: 0 0 1.5em;
+	margin: 0 0 1.25em;
 }
 
 ul {
@@ -1051,6 +1051,21 @@ a:active {
 	padding: 0;
 }
 
+.widget ul ul {
+	list-style: none;
+	margin-top: 0.45em;
+	padding: 0;
+}
+
+.widget li {
+	padding: 0.45em;
+	border-top: 1px solid #e4e4e4;
+}
+
+.widget li:last-child {
+	padding-bottom: 0;
+}
+
 /* Make sure select elements fit in widgets. */
 .widget select {
 	max-width: 100%;
@@ -1233,7 +1248,7 @@ a:active {
 --------------------------------------------------------------*/
 
 .entry-footer {
-	margin-top: 2.25em; /* 36px */
+	margin-top: 1.5em; /* 24px */
 }
 
 .cat-links,
