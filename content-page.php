@@ -7,16 +7,16 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+	<?php if ( has_post_thumbnail() && ! post_password_required() ) : ?>
+		<p class="post-thumbnail">
+			<?php the_post_thumbnail(); ?>
+		</p>
+	<?php endif; ?>
 	<header class="entry-header">
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
-		<?php if ( has_post_thumbnail() && ! post_password_required() ) : ?>
-			<p class="post-thumbnail">
-				<?php the_post_thumbnail(); ?>
-			</p>
-		<?php endif; ?>
 		<?php the_content(); ?>
 		<?php
 			wp_link_pages( array(
