@@ -1495,6 +1495,16 @@ object {
 		width: 60.784313725%; /* 620px max */
 	}
 	
+	.full-width .content-area {
+		float: none;
+		margin: 0 auto;
+		width: 60.784313725%; /* 620px max */
+	}
+	
+	.full-width .post-thumbnail {
+		margin: 0 -14.032258064% 1.25em; /* max width 794px */
+	}
+	
 	.widget-area {
 		float: right;
 		width: 30.392156862%; /* 310px max */
