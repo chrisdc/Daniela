@@ -165,30 +165,6 @@ function daniela_scripts() {
 add_action( 'wp_enqueue_scripts', 'daniela_scripts' );
 
 /**
- * Extend the default WordPress body classes.
- *
- * Adds body classes to denote:
- * 1. Single or multiple authors.
- * 2. Full-width content layout.
- *
- * @param array $classes A list of existing body class values.
- * @return array The filtered body class list.
- */
-function daniela_body_classes( $classes ) {
-	if ( is_multi_author() ) {
-		$classes[] = 'group-blog';
-	}
-
-	if ( ( ! is_active_sidebar( 'sidebar-1' ) )
-		|| is_page_template( 'page-templates/full-width.php' ) ) {
-		$classes[] = 'full-width';
-	}
-
-	return $classes;
-}
-add_filter( 'body_class', 'daniela_body_classes' );
-
-/**
  * Implement the Custom Header feature.
  */
 //require get_template_directory() . '/inc/custom-header.php';

@@ -19,6 +19,10 @@ function daniela_body_classes( $classes ) {
 		$classes[] = 'group-blog';
 	}
 
+	if ( ( ! is_active_sidebar( 'sidebar-1' ) )
+		|| is_page_template( 'page-templates/full-width.php' ) ) {
+		$classes[] = 'full-width';
+	}
 	return $classes;
 }
 add_filter( 'body_class', 'daniela_body_classes' );
