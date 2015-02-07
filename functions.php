@@ -169,12 +169,7 @@ add_action( 'wp_enqueue_scripts', 'daniela_scripts' );
  *
  * Adds body classes to denote:
  * 1. Single or multiple authors.
- * 2. Presence of header image except in Multisite signup and activate pages.
- * 3. Index views.
- * 4. Full-width content layout.
- * 5. Presence of footer widgets.
- * 6. Single views.
- * 7. Featured content layout.
+ * 2. Full-width content layout.
  *
  * @param array $classes A list of existing body class values.
  * @return array The filtered body class list.
