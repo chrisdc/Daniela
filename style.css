@@ -1498,11 +1498,21 @@ object {
 	.full-width .content-area {
 		float: none;
 		margin: 0 auto;
-		width: 60.784313725%; /* 620px max */
+		/*width: 60.784313725%; /* 620px max */
+		width: 100%;
 	}
-	
+
+	.full-width .entry-header,
+	.full-width .entry-content,
+	.full-width .entry-footer,
+	.full-width .comments-area {
+		margin-left: auto;
+		margin-right: auto;
+		width: 60.784313725%;
+	}
+
 	.full-width .post-thumbnail {
-		margin: 0 -14.032258064% 1.25em; /* max width 794px */
+		/*margin: 0 -14.032258064% 1.25em; /* max width 794px */
 	}
 	
 	.widget-area {
