@@ -227,6 +227,32 @@ function the_archive_description( $before = '', $after = '' ) {
 endif;
 
 /**
+ * Generate the post thumnail with a link to the post.
+ */
+function daniela_post_thumbnail() {
+	if ( ! has_post_thumbnail() || post_password_required() ) {
+		return;
+	}
+
+	echo '<p class="post-thumbnail">';
+	if ( ! is_active_sidebar( 'sidebar-1' ) || is_page_template ( 'page-templates/full-width.php' ) ) {
+		$image_size = 'daniela-full-width';
+	} else {
+		$image_size = 'post-thumbnail';
+	}
+
+	if ( is_single() ) {
+		the_post_thumbnail( $image_size );
+	} else {
+		?>
+		<a href="<?php the_permalink() ?>"><?php the_post_thumbnail( $image_size ) ?></a>
+		<?php
+	}
+	echo '</p>';
+}
+
+
+/**
  * Returns true if a blog has more than 1 category.
  *
  * @return bool

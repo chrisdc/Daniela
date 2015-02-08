@@ -5,11 +5,7 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<?php if ( has_post_thumbnail() && ! post_password_required() ) : ?>
-		<p class="post-thumbnail">
-			<?php the_post_thumbnail(); ?>
-		</p>
-	<?php endif; ?>
+	<?php daniela_post_thumbnail(); ?>
 	<header class="entry-header">
 		<?php if ( 'post' == get_post_type() ) : ?>
 		<div class="entry-meta">
