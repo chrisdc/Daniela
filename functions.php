@@ -9,8 +9,22 @@
  * Set the content width based on the theme's design and stylesheet.
  */
 if ( ! isset( $content_width ) ) {
-	$content_width = 640; /* pixels */
+	$content_width = 620; /* pixels */
 }
+
+if ( ! function_exists( 'daniela_content_width' ) ) :
+/**
+ * Adjust content_width value for full width template.
+ */
+function daniela_content_width() {
+	global $content_width;
+
+	if ( is_page_template( 'page-templates/full-width.php' ) || ! is_active_sidebar( 'sidebar-1' ) ) {
+		$content_width = 1020;
+	}
+}
+endif;
+add_action( 'template_redirect', 'daniela_content_width' );
 
 if ( ! function_exists( 'daniela_setup' ) ) :
 /**
@@ -47,6 +61,8 @@ function daniela_setup() {
 	 * @link http://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
 	 */
 	add_theme_support( 'post-thumbnails' );
+	set_post_thumbnail_size( 620, 413, true );
+	add_image_size( 'daniela-full-width', 1020, 680, true );
 
 	// This theme uses wp_nav_menu() in two locations.
 	register_nav_menus( array(
