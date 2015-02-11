@@ -734,7 +734,7 @@ a:active {
 		top: -1px;
 	}
 	
-	.main-navigation ul ul .menu-item-has-children a:after {
+	.main-navigation ul ul .menu-item-has-children > a:after {
 		content: "\f501";
 		top: 1.75em; /* 14px */
 		right: 0.5em; /* 4px */
@@ -771,7 +771,7 @@ a:active {
 }
 
 .social-navigation a {
-	color: #727272;
+	color: #333;
 	display: block;
 	height: 2em;
 	width: 2em;
@@ -980,12 +980,16 @@ a:active {
 	display: inline;
 	float: left;
 	margin-right: 1.5em;
+	margin-bottom: 1.25em;
+	margin-left: -32.258064516%;
 }
 
 .alignright {
 	display: inline;
 	float: right;
 	margin-left: 1.5em;
+	margin-bottom: 1.25em;
+	margin-right: -32.258064516%;
 }
 
 .aligncenter {
@@ -1235,6 +1239,12 @@ a:active {
 .page-content,
 .entry-content,
 .entry-summary {
+	margin: 1.5em 0;
+}
+
+.page-content p:last-child,
+.entry-content p:last-child,
+.entry-summary p:last-child {
 	margin: 1.5em 0 0;
 }
 
@@ -1486,6 +1496,21 @@ object {
 
 .gallery-caption {
 	display: block;
+}
+
+/*--------------------------------------------------------------
+14.0 Jetpack Features
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+14.1 Sharing
+--------------------------------------------------------------*/
+
+div.sharedaddy h3.sd-title {
+	font-size: 1rem;
+	font-size: 16px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
 }
 
 @media screen and (min-width: 600px) {
