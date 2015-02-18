@@ -24,27 +24,37 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 ----------------------------------------------------------------
 1.0 Normalize
 2.0 Typography
-2.0 Genericons
-3.0 Elements
-4.0 Forms
-5.0 Navigation
-	5.1 Links
-	5.2 Menus
-6.0 Accessibility
-7.0 Alignments
-8.0 Clearings
-9.0 Basic structure
-9.0 Widgets
-10.0 Header
-11.0 Content
-	11.1 Posts and pages
-	11.2 Asides
-	11.3 Comments
-12.0 Footer
-12.0 Infinite scroll
-13.0 Media
-	13.1 Captions
-	13.2 Galleries
+3.0 Genericons
+4.0 Elements
+5.0 Forms
+6.0 Navigation
+	6.1 Links
+	6.2 Menus
+7.0 Accessibility
+8.0 Alignments
+9.0 Clearings
+10.0 Basic layout
+11.0 Widgets
+12.0 Header
+13.0 Content
+	13.1 Posts and pages
+	13.2 Entry meta
+	13.3 Aside Post Format
+	13.4 Quote Post Format
+	13.5 Link Post Format
+	13.6 Image / Video / Gallery Post Formats
+	13.7 Comments
+14.0 Footer
+16.0 Media
+	16.1 Captions
+	16.2 Galleries
+17.0 Jetpack Features
+	17.1 Infinite scroll
+	17.2 Sharing
+	17.3 Portfolio
+	17.4 Testimonials
+	17.5 Site Logo
+18.0 Media Queries
 --------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
@@ -290,7 +300,59 @@ h6 {
 	clear: both;
 }
 
-p {
+h1 {
+	font-family: 'Playfair Display', serif;
+	font-size: 42px;
+	font-size: 2.625rem;
+	line-height: 1.25;
+	margin: 0.95238095238em 0 0.7619047619em /* 40px 0 32px */
+}
+
+h2 {
+	font-family: 'Playfair Display', serif;
+	font-size: 32px;
+	font-size: 2rem;
+	font-weight: normal;
+	line-height: 1.25;
+	margin: 1em 0 0.75em; /* 32px 0 24px */
+}
+
+h3 {
+	font-size: 20px;
+	font-size: 1.25rem;
+	line-height: 1.25;
+	margin: 1.6em 0 0.83333333333em; /* 32px 0 24px */
+}
+
+h4 {
+	font-size: 16px;
+	font-size: 1rem;
+	line-height: 1.25;
+	margin: 1.5em 0 1em; /* 24px 0 16px */
+}
+
+h5 {
+	font-size: 14px;
+	font-size: 0.875rem;
+	letter-spacing: 1px;
+	line-height: 1.25;
+	margin: 1.71428571429em 0 1.14285714286em; /* 24px 0 16px */
+	text-transform: uppercase;
+}
+
+h6 {
+	font-size: 14px;
+	font-size: 0.875rem;
+	line-height: 1.25;
+	margin: 1.71428571429em 0 1.14285714286em; /* 24px 0 16px */
+}
+
+p,
+pre,
+address,
+blockquote,
+ul,
+ol {
 	margin: 0 0 1.25em;
 }
 
@@ -306,21 +368,12 @@ i {
 	font-style: italic;
 }
 
-blockquote {
-	margin: 0 1.5em;
-}
-
-address {
-	margin: 0 0 1.5em;
-}
-
 pre {
 	background: #eee;
 	font-family: "Courier 10 Pitch", Courier, monospace;
 	font-size: 15px;
 	font-size: 0.9375rem;
 	line-height: 1.6;
-	margin-bottom: 1.6em;
 	max-width: 100%;
 	overflow: auto;
 	padding: 1.6em;
@@ -359,11 +412,9 @@ big {
 3.0 Genericons
 --------------------------------------------------------------*/
 
-/**
- * 2.0 - Genericons
- */
 .social-navigation a:before,
-.format-link .entry-title a:after {
+.format-link .entry-title a:after,
+.comment .comment-reply-link:before {
 	-moz-osx-font-smoothing: grayscale;
 	-webkit-font-smoothing: antialiased;
 	display: inline-block;
@@ -381,7 +432,7 @@ big {
 }
 
 /*--------------------------------------------------------------
-3.0 Elements
+4.0 Elements
 --------------------------------------------------------------*/
 html {
 	box-sizing: border-box;
@@ -414,11 +465,6 @@ hr {
 	border: 0;
 	height: 1px;
 	margin-bottom: 1.5em;
-}
-
-ul,
-ol {
-	margin: 0 0 1.25em;
 }
 
 ul {
@@ -475,7 +521,7 @@ tr {
 }
 
 /*--------------------------------------------------------------
-4.0 Forms
+5.0 Forms
 --------------------------------------------------------------*/
 button,
 input[type="button"],
@@ -548,10 +594,10 @@ textarea {
 }
 
 /*--------------------------------------------------------------
-5.0 Navigation
+6.0 Navigation
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
-5.1 Links
+6.1 Links
 --------------------------------------------------------------*/
 a {
 	color: #21759b;
@@ -577,7 +623,7 @@ a:active {
 }
 
 /*--------------------------------------------------------------
-5.2 Menus
+6.2 Menus
 --------------------------------------------------------------*/
 .main-navigation {
 	border-top: 1px solid #e4e4e4;
@@ -940,7 +986,7 @@ a:active {
 }
 
 /*--------------------------------------------------------------
-6.0 Accessibility
+7.0 Accessibility
 --------------------------------------------------------------*/
 /* Text meant only for screen readers. */
 .screen-reader-text {
@@ -974,14 +1020,13 @@ a:active {
 }
 
 /*--------------------------------------------------------------
-7.0 Alignments
+8.0 Alignments
 --------------------------------------------------------------*/
 .alignleft {
 	display: inline;
 	float: left;
 	margin-right: 1.5em;
 	margin-bottom: 1.25em;
-	margin-left: -32.258064516%;
 }
 
 .alignright {
@@ -989,7 +1034,6 @@ a:active {
 	float: right;
 	margin-left: 1.5em;
 	margin-bottom: 1.25em;
-	margin-right: -32.258064516%;
 }
 
 .aligncenter {
@@ -999,7 +1043,7 @@ a:active {
 }
 
 /*--------------------------------------------------------------
-8.0 Clearings
+9.0 Clearings
 --------------------------------------------------------------*/
 .clear:before,
 .clear:after,
@@ -1027,7 +1071,7 @@ a:active {
 }
 
 /*--------------------------------------------------------------
-9.0 Basic layout
+10.0 Basic layout
 --------------------------------------------------------------*/
 .site {
 	margin: 0 auto;
@@ -1035,18 +1079,29 @@ a:active {
 	width: 90%;
 }
 
+.site-content {
+	
+}
+
+.site-main,
+.widget-area {
+	margin-top: 2.5em; /* 40px */
+}
 
 /*--------------------------------------------------------------
-9.0 Widgets
+11.0 Widgets
 --------------------------------------------------------------*/
 .widget {
-	margin: 0 0 1.5em;
+	margin: 0 0 2em; /* 0 0 32px */
 }
 
 .widget-title {
+	font-family: 'Open Sans', sans-serif;
 	font-size: 16px;
 	font-size: 1rem;
 	letter-spacing: 1px;
+	line-height: 1.6;
+	margin: 0 0 0.4375em; /* 0 0 7px */
 	text-transform: uppercase;
 }
 
@@ -1062,7 +1117,15 @@ a:active {
 }
 
 .widget li {
-	padding: 0.45em;
+	padding: 0.4375em 0; /* 7px 0 */
+	border-top: 1px solid #e4e4e4;
+}
+
+.widget li:first-child {
+	border-top: 4px double #e4e4e4;
+}
+
+.widget .children li:first-child {
 	border-top: 1px solid #e4e4e4;
 }
 
@@ -1081,14 +1144,14 @@ a:active {
 }
 
 /*--------------------------------------------------------------
-10.0 Header
+12.0 Header
 --------------------------------------------------------------*/
 .site-header {
-	margin-bottom: 2.5em; /* 40px */
 	text-align: center;
 }
 
-.site-header a:hover {
+.site-header a:hover,
+.site-header a:focus {
 	color: #21759b;
 	text-decoration: none;
 }
@@ -1112,18 +1175,20 @@ a:active {
 
 .site-description {
 	color: #21759b;
+	font-family: 'Open Sans', sans-serif;
 	font-size: 16px;
 	font-size: 1rem;
+	font-weight: bold;
 	line-height: 1.5;
 	margin: 0;
 }
 
 /*--------------------------------------------------------------
-11.0 Content
+13.0 Content
 --------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
-11.1 Posts and pages
+13.1 Posts and pages
 --------------------------------------------------------------*/
 .sticky {
 	display: block;
@@ -1137,9 +1202,13 @@ a:active {
 
 .entry-meta {
 	color: #21759b;
+	font-weight: bold;
 }
 
-.entry-content a {
+.entry-content a,
+.entry-summary a,
+.page-content a,
+.comment-content a {
 	text-decoration: underline;
 }
 
@@ -1156,10 +1225,6 @@ a:active {
 }
 
 .entry-title {
-	font-family: 'Playfair Display', serif;
-	font-size: 42px;
-	font-size: 2.625rem;
-	line-height: 1.04761904762; /* 44px */
 	margin: 0;
 }
 
@@ -1170,60 +1235,6 @@ a:active {
 .entry-title a:hover {
 	color: #21759b;
 	text-decoration: none;
-}
-
-.entry-content h1,
-.entry-summary h1,
-.page-content h1,
-.comment-content h1 {
-	font-family: 'Playfair Display', serif;
-	font-size: 42px;
-	font-size: 2.625rem;
-}
-
-.entry-content h2,
-.entry-summary h2,
-.page-content h2,
-.comments-area h2,
-.comment-content h2 {
-	font-family: 'Playfair Display', serif;
-	font-size: 32px;
-	font-size: 2rem;
-	font-weight: normal;
-}
-
-.entry-content h3,
-.entry-summary h3,
-.page-content h3,
-.comment-content h3 {
-	font-size: 20px;
-	font-size: 1.25rem;
-}
-
-.entry-content h4,
-.entry-summary h4,
-.page-content h4,
-.comment-content h4 {
-	font-size: 16px;
-	font-size: 1rem;
-}
-
-.entry-content h5,
-.entry-summary h5,
-.page-content h5,
-.comment-content h5 {
-	font-size: 14px;
-	font-size: 0.875rem;
-	letter-spacing: 1px;
-	text-transform: uppercase;
-}
-
-.entry-content h6,
-.entry-summary h6,
-.page-content h6,
-.comment-content h6 {
-	font-size: 14px;
-	font-size: 0.875rem;
 }
 
 .byline,
@@ -1239,13 +1250,21 @@ a:active {
 .page-content,
 .entry-content,
 .entry-summary {
-	margin: 1.5em 0;
+	margin: 2em 0; /* 32px * */
 }
 
-.page-content p:last-child,
-.entry-content p:last-child,
-.entry-summary p:last-child {
-	margin: 1.5em 0 0;
+.page-content :first-child,
+.entry-content :first-child,
+.entry-summary :first-child,
+.comment-content :first-child {
+	margin-top: 0;
+}
+
+.page-content :last-child,
+.entry-content :last-child,
+.entry-summary :last-child,
+.comment-content :last-child {
+	margin-bottom: 0;
 }
 
 .page-links {
@@ -1253,10 +1272,47 @@ a:active {
 	margin: 0 0 1.5em;
 }
 
-/*--------------------------------------------------------------
-11.2 Entry meta
---------------------------------------------------------------*/
+.post-thumbnail {
+	margin-bottom: 2em; /* 32px */
+}
 
+/* Archive titles */
+.page-header {
+	/*border-bottom: 1px solid #e4e4e4;*/
+	/*margin-bottom: 2.5em; /* 40px */
+	padding: 2.5em 0 0; /* 40px 0 */
+}
+
+.page-title {
+	font-size: 32px;
+	font-size: 2rem;
+	font-weight: normal;
+	margin: 0; /* 0 0 7px */
+	line-height: 1;
+	text-align: center;
+}
+
+h2 {
+	font-family: 'Playfair Display', serif;
+	font-size: 32px;
+	font-size: 2rem;
+	font-weight: normal;
+	line-height: 1.25;
+	margin: 1em 0 0.75em; /* 32px 0 24px */
+}
+
+.taxonomy-description {
+	/*margin-bottom: 2em; /* 32px */
+	/*margin-top: 0.4375em; /* 7px */
+}
+
+.taxonomy-description p {
+	margin: 0;
+}
+
+/*--------------------------------------------------------------
+13.2 Entry meta
+--------------------------------------------------------------*/
 .entry-footer {
 	margin-top: 1.5em; /* 24px */
 }
@@ -1304,7 +1360,7 @@ a:active {
 }
 
 /*--------------------------------------------------------------
-11.2 Asides
+13.3 Aside Post Format
 --------------------------------------------------------------*/
 .blog .format-aside .entry-title,
 .archive .format-aside .entry-title {
@@ -1312,7 +1368,7 @@ a:active {
 }
 
 /*--------------------------------------------------------------
-11.2 Quotes
+13.4 Quote Post Format
 --------------------------------------------------------------*/
 .blog .format-aside .entry-title {
 	display: none;
@@ -1340,14 +1396,14 @@ a:active {
 }
 
 /*--------------------------------------------------------------
-11.2 Link
+13.5 Link Post Format
 --------------------------------------------------------------*/
 .format-link .entry-title a {
 	position: relative;
 }
 
 /*--------------------------------------------------------------
-11.2 Image / Video / Gallery
+13.6 Image / Video / Gallery Post Formats
 --------------------------------------------------------------*/
 .format-image .entry-title,
 .format-video .entry-title,
@@ -1358,12 +1414,69 @@ a:active {
 }
 
 /*--------------------------------------------------------------
-11.3 Comments
+13.7 Comments
 --------------------------------------------------------------*/
+.comments-title {
+	border-bottom: 4px double #e4e4e4;
+	margin-bottom: 1em; /* 32px */
+	padding-bottom: 1em; /* 32px */
+}
+
 .comment-list,
 .comment-list .children {
 	list-style: none;
 	padding: 0;
+}
+
+.avatar {
+	border-radius: 50%;
+	position: absolute;
+	top: 0.25em;
+	left: 0;
+}
+
+.comment-author .fn {
+	font-family: 'Playfair Display', serif;
+	font-size: 32px;
+	font-size: 2rem;
+	font-weight: normal;
+	margin: 0; /* 0 0 7px */
+	line-height: 1;
+}
+
+.comment-author .fn a {
+	color: #333;
+}
+
+.comment-metadata {
+	display: inline;
+}
+
+.comment-meta {
+	margin-bottom: 1.25em; /* 16px */
+	position: relative;
+}
+
+.comment-content {
+	margin-bottom: 1.25em; /* 16px */
+}
+
+.comment-author,
+.comment-metadata,
+.comment-content,
+.reply {
+	padding-left:3em; /* 48px */
+}
+
+.comment .comment-reply-link:before {
+	content: '\f412';
+	margin-right: 0.25em;
+	position: relative;
+	top: 0.25em;
+}
+
+.comment .comment-reply-link:hover:before {
+	text-decoration: none;
 }
 
 .comment-body {
@@ -1385,9 +1498,8 @@ a:active {
 }
 
 /*--------------------------------------------------------------
-12.0 Footer
+14.0 Footer
 --------------------------------------------------------------*/
-
 .site-footer {
 	border-top: 1px solid #e4e4e4;
 	padding: 2.625em; /* 42px */
@@ -1395,21 +1507,7 @@ a:active {
 }
 
 /*--------------------------------------------------------------
-12.0 Infinite scroll
---------------------------------------------------------------*/
-/* Globally hidden elements when Infinite Scroll is supported and in use. */
-.infinite-scroll .posts-navigation, /* Older / Newer Posts Navigation (always hidden). */
-.infinite-scroll.neverending .site-footer { /* Theme Footer (when set to scrolling). */
-	display: none;
-}
-
-/* When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before. */
-.infinity-end.neverending .site-footer {
-	display: block;
-}
-
-/*--------------------------------------------------------------
-13.0 Media
+16.0 Media
 --------------------------------------------------------------*/
 .page-content .wp-smiley,
 .entry-content .wp-smiley,
@@ -1428,7 +1526,7 @@ object {
 }
 
 /*--------------------------------------------------------------
-13.1 Captions
+16.1 Captions
 --------------------------------------------------------------*/
 .wp-caption {
 	margin-bottom: 1.5em;
@@ -1449,7 +1547,7 @@ object {
 }
 
 /*--------------------------------------------------------------
-13.2 Galleries
+16.2 Galleries
 --------------------------------------------------------------*/
 .gallery {
 	margin-bottom: 1.5em;
@@ -1499,13 +1597,26 @@ object {
 }
 
 /*--------------------------------------------------------------
-14.0 Jetpack Features
+17.0 Jetpack Features
 --------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
-14.1 Sharing
+17.1 Infinite scroll
 --------------------------------------------------------------*/
+/* Globally hidden elements when Infinite Scroll is supported and in use. */
+.infinite-scroll .posts-navigation, /* Older / Newer Posts Navigation (always hidden). */
+.infinite-scroll.neverending .site-footer { /* Theme Footer (when set to scrolling). */
+	display: none;
+}
 
+/* When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before. */
+.infinity-end.neverending .site-footer {
+	display: block;
+}
+
+/*--------------------------------------------------------------
+17.2 Sharing
+--------------------------------------------------------------*/
 div.sharedaddy h3.sd-title {
 	font-size: 1rem;
 	font-size: 16px;
@@ -1513,6 +1624,34 @@ div.sharedaddy h3.sd-title {
 	text-transform: uppercase;
 }
 
+/*--------------------------------------------------------------
+17.3 Portfolio
+--------------------------------------------------------------*/
+.post-type-archive-jetpack-portfolio .content-area {
+	width: 100%;
+}
+
+.portfolio-projects .jetpack-portfolio {
+	float: left;
+	margin-right: 45px;
+}
+
+.portfolio-projects .jetpack-portfolio:nth-of-type(3n) {
+	float: left;
+	margin-right: 0;
+}
+
+/*--------------------------------------------------------------
+17.4 Testimonials
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+17.5 Site Logo
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+18.0 Media Queries
+--------------------------------------------------------------*/
 @media screen and (min-width: 600px) {
 	/* Basic layout */
 	.content-area {
@@ -1534,6 +1673,14 @@ div.sharedaddy h3.sd-title {
 		margin-left: auto;
 		margin-right: auto;
 		width: 60.784313725%;
+	}
+
+	.full-width .alignleft {
+		margin-left: -32.258064516%;
+	}
+
+	.full-width .alignright {
+		margin-right: -32.258064516%;
 	}
 
 	.full-width .post-thumbnail {
