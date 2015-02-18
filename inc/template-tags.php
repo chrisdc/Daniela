@@ -237,6 +237,8 @@ function daniela_post_thumbnail() {
 	echo '<p class="post-thumbnail">';
 	if ( ! is_active_sidebar( 'sidebar-1' ) || is_page_template ( 'page-templates/full-width.php' ) ) {
 		$image_size = 'daniela-full-width';
+	} elseif ( is_post_type_archive( 'jetpack-portfolio' ) ) {
+		$image_size = 'daniela-porfolio-archive';
 	} else {
 		$image_size = 'post-thumbnail';
 	}
