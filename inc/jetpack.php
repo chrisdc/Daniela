@@ -12,14 +12,18 @@
 function daniela_jetpack_setup() {
 	add_image_size( 'daniela-porfolio-archive', 524, 339, true );
 	add_image_size( 'daniela-site-logo', 1020, 300 );
+	add_image_size( 'daniela-testimonial-archive', 80, 80 );
 
 	add_theme_support( 'infinite-scroll', array(
 		'container' => 'main',
 		'footer'    => 'page',
 	) );
 
-	// Add support for Jetpack site logo.
+	// Add support for Jetpack Site Logo.
 	add_theme_support( 'site-logo', array( 'size' => 'daniela-site-logo' ) );
+	
+	// Add support for Jetpack Testimonials.
+	add_theme_support( 'jetpack-testimonial' );
 	
     // Add theme support for Responsive Videos.
     add_theme_support( 'jetpack-responsive-videos' );

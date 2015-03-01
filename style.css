@@ -1699,6 +1699,73 @@ div.sharedaddy h3.sd-title {
 17.4 Testimonials
 --------------------------------------------------------------*/
 
+.post-type-archive-jetpack-testimonial .content-area {
+	width: 100%;
+}
+
+.post-type-archive-jetpack-testimonial .archive-thumbnail {
+	margin-top: 2.5em;
+}
+
+.post-type-archive-jetpack-testimonial .entry-title {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 20px;
+	font-size: 1.25rem;
+	line-height: 1.25;
+}
+
+.post-type-archive-jetpack-testimonial .post-thumbnail {
+	margin: 0;
+}
+
+.post-type-archive-jetpack-testimonial .entry-content {
+	margin: 1.25em 0; /* 20px 0 */
+}
+
+.post-type-archive-jetpack-testimonial .entry-footer {
+	margin: 0;
+}
+
+.post-type-archive-jetpack-testimonial .post-thumbnail img {
+	border-radius: 50%;
+}
+
+.post-type-archive-jetpack-testimonial article {
+	border-bottom-width: 0;
+	margin-bottom: 2.25em;
+	padding-bottom: 0;
+	text-align: center;
+	/*margin: 0 auto 2em;*/
+}
+
+@media screen and (min-width: 600px) {
+	.testimonials .jetpack-testimonial {
+		float: left;
+		margin-right: 5.333333334%; /* 36 px max */
+		width: 47.333333333%; /* 210px max */
+	}
+	
+	.testimonials .jetpack-testimonial:nth-of-type(2n) {
+		margin-right: 0;
+	}
+}
+
+@media screen and (min-width: 900px) {
+	.testimonials .jetpack-testimonial {
+		float: left;
+		margin-right: 3.529411765%; /* 36 px max */
+		width: 30.980392156%; /* 316px max */
+	}
+	
+	.testimonials .jetpack-testimonial:nth-of-type(2n) {
+		margin-right: 3.529411765%; /* 36 px max */
+	}
+	
+	.testimonials .jetpack-testimonial:nth-of-type(3n) {
+		margin-right: 0;
+	}
+}
+
 /*--------------------------------------------------------------
 17.5 Site Logo
 --------------------------------------------------------------*/
