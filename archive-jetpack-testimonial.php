@@ -8,8 +8,14 @@
 get_header(); ?>
 	<?php $jetpack_options = get_theme_mod( 'jetpack_testimonials' ); ?>
 
+	<?php if ( '' != $jetpack_options['featured-image'] ) : ?>
+	<p class="archive-thumbnail">
+		<?php echo wp_get_attachment_image( (int)$jetpack_options['featured-image'], 'daniela-full-width' ); ?>
+	</p><!-- .archive-thumbnail -->
+	<?php endif; ?>
+
 	<header class="archive-header">
-		<h1 class="achive-title">
+		<h1 class="archive-title">
 			<?php
 				if ( '' != $jetpack_options['page-title'] )
 					echo esc_html( $jetpack_options['page-title'] );
@@ -19,14 +25,8 @@ get_header(); ?>
 		</h1>
 	</header><!-- .page-header -->
 
-	<?php if ( '' != $jetpack_options['featured-image'] ) : ?>
-	<p class="archive-thumbnail">
-		<?php echo wp_get_attachment_image( (int)$jetpack_options['featured-image'], 'daniela-full-width' ); ?>
-	</p><!-- .archive-thumbnail -->
-	<?php endif; ?>
-
 	<?php if ( '' != $jetpack_options['page-content'] ) : ?>
-	<div class="entry-content">
+	<div class="archive-description">
 		<?php echo convert_chars( convert_smilies( wptexturize( stripslashes( wp_filter_post_kses( addslashes( $jetpack_options['page-content'] ) ) ) ) ) ); ?>
 	</div><!-- .entry-content -->
 	<?php endif; ?>

@@ -8,7 +8,7 @@
  */
 
 get_header(); ?>
-	<header class="page-header">
+	<header class="archive-header">
 		<?php the_archive_title( '<h1 class="archive-title">', '</h1>' ); ?>
 	</header><!-- .page-header -->
 
