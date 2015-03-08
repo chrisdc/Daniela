@@ -1085,7 +1085,7 @@ a:active {
 
 .site-main,
 .widget-area {
-	margin-top: 2.5em; /* 40px */
+	/*margin-top: 2.5em; /* 40px */
 }
 
 /*--------------------------------------------------------------
@@ -1147,6 +1147,7 @@ a:active {
 12.0 Header
 --------------------------------------------------------------*/
 .site-header {
+	margin-bottom: 2.5em;
 	text-align: center;
 }
 
@@ -1277,13 +1278,13 @@ a:active {
 }
 
 /* Archive titles */
-.page-header {
+.archive-header {
 	/*border-bottom: 1px solid #e4e4e4;*/
-	/*margin-bottom: 2.5em; /* 40px */
-	padding: 2.5em 0 0; /* 40px 0 */
+	margin-bottom: 2.5em; /* 40px */
+	/*padding: 2.5em 0 0; /* 40px 0 */
 }
 
-.page-title {
+.archive-title {
 	font-size: 32px;
 	font-size: 2rem;
 	font-weight: normal;
@@ -1704,7 +1705,7 @@ div.sharedaddy h3.sd-title {
 }
 
 .post-type-archive-jetpack-testimonial .archive-thumbnail {
-	margin-top: 2.5em;
+	/* margin-top: 2.5em; */
 }
 
 .post-type-archive-jetpack-testimonial .entry-title {
