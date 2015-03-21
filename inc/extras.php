@@ -23,6 +23,11 @@ function daniela_body_classes( $classes ) {
 		|| is_page_template( 'page-templates/full-width.php' ) ) {
 		$classes[] = 'full-width';
 	}
+	
+	if ( is_page_template( 'page-templates/front-page.php' ) ) {
+		$classes[] = 'front-page';
+	}
+
 	return $classes;
 }
 add_filter( 'body_class', 'daniela_body_classes' );

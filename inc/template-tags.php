@@ -233,12 +233,15 @@ function daniela_post_thumbnail() {
 	if ( ! has_post_thumbnail() || post_password_required() ) {
 		return;
 	}
-
+	
+	$post_type = get_post_type();
+	
 	echo '<p class="post-thumbnail">';
-	if ( ! is_active_sidebar( 'sidebar-1' ) || is_page_template ( 'page-templates/full-width.php' ) ) {
-		$image_size = 'daniela-full-width';
-	} elseif ( is_post_type_archive( 'jetpack-portfolio' ) ) {
+	
+	if ( 'jetpack-portfolio' === $post_type ) {
 		$image_size = 'daniela-porfolio-archive';
+	} elseif ( ! is_active_sidebar( 'sidebar-1' ) || is_page_template ( 'page-templates/full-width.php' ) || is_page_template ( 'page-templates/front-page.php' ) ) {
+		$image_size = 'daniela-full-width';
 	} else {
 		$image_size = 'post-thumbnail';
 	}

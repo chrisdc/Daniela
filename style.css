@@ -1056,7 +1056,11 @@ a:active {
 .site-content:before,
 .site-content:after,
 .site-footer:before,
-.site-footer:after {
+.site-footer:after,
+.front-testimonials:before,
+.front-testimonials:after,
+.front-portfolio:before,
+.front-portfolio:after {
 	content: "";
 	display: table;
 }
@@ -1066,7 +1070,9 @@ a:active {
 .comment-content:after,
 .site-header:after,
 .site-content:after,
-.site-footer:after {
+.site-footer:after,
+.front-testimonials:after,
+.front-portfolio:after {
 	clear: both;
 }
 
@@ -1147,7 +1153,7 @@ a:active {
 12.0 Header
 --------------------------------------------------------------*/
 .site-header {
-	margin-bottom: 2em; /* 32px */
+	margin-bottom: 2.5em; /* 40px */
 	text-align: center;
 }
 
@@ -1251,7 +1257,7 @@ a:active {
 .page-content,
 .entry-content,
 .entry-summary {
-	margin: 2em 0; /* 32px * */
+	margin: 1.5em 0 2em; /* 24px 0 32px * */
 }
 
 .page-content :first-child,
@@ -1281,7 +1287,7 @@ a:active {
 /* Archive titles */
 .archive-header {
 	/*border-bottom: 1px solid #e4e4e4;*/
-	margin-bottom: 2em; /* 32px */
+	margin-bottom: 2.5em; /* 40px */
 	/*padding: 2.5em 0 0; /* 40px 0 */
 }
 
@@ -1637,11 +1643,11 @@ div.sharedaddy h3.sd-title {
 /*--------------------------------------------------------------
 17.3 Portfolio
 --------------------------------------------------------------*/
-.post-type-archive-jetpack-portfolio .content-area {
+.jetpack-portfolio .content-area {
 	width: 100%;
 }
 
-.post-type-archive-jetpack-portfolio .entry-title {
+.jetpack-portfolio .entry-title {
 	font-family: 'Open Sans', sans-serif;
 	font-size: 20px;
 	font-size: 1.25rem;
@@ -1661,7 +1667,7 @@ div.sharedaddy h3.sd-title {
 	color: #21759b;
 }
 
-.post-type-archive-jetpack-portfolio article {
+.jetpack-portfolio {
 	border-bottom-width: 0;
 	margin-bottom: 2.25em;
 	padding-bottom: 0;
@@ -1669,34 +1675,34 @@ div.sharedaddy h3.sd-title {
 	/*margin: 0 auto 2em;*/
 }
 
-.post-type-archive-jetpack-portfolio .post-thumbnail {
+.jetpack-portfolio .post-thumbnail {
 	margin-bottom: 1.25em;
 }
 
 @media screen and (min-width: 600px) {
-	.portfolio-projects .jetpack-portfolio {
+	.jetpack-portfolio {
 		float: left;
 		margin-right: 5.333333334%; /* 36 px max */
 		width: 47.333333333%; /* 210px max */
 	}
 	
-	.portfolio-projects .jetpack-portfolio:nth-of-type(2n) {
+	.jetpack-portfolio:nth-of-type(2n) {
 		margin-right: 0;
 	}
 }
 
 @media screen and (min-width: 900px) {
-	.portfolio-projects .jetpack-portfolio {
+	.jetpack-portfolio {
 		float: left;
 		margin-right: 3.529411765%; /* 36 px max */
 		width: 30.980392156%; /* 316px max */
 	}
 	
-	.portfolio-projects .jetpack-portfolio:nth-of-type(2n) {
+	.jetpack-portfolio:nth-of-type(2n) {
 		margin-right: 3.529411765%; /* 36 px max */
 	}
 	
-	.portfolio-projects .jetpack-portfolio:nth-of-type(3n) {
+	.jetpack-portfolio:nth-of-type(3n) {
 		margin-right: 0;
 	}
 }
@@ -1714,43 +1720,43 @@ div.sharedaddy h3.sd-title {
 }
 
 .post-type-archive-jetpack-testimonial .archive-description {
-	margin-bottom: 2.25em; /* 36px */
+	margin-bottom: 2.5em; /* 40px */
 }
 
-.post-type-archive-jetpack-testimonial .entry-title {
+.jetpack-testimonial .entry-title {
 	font-family: 'Open Sans', sans-serif;
 	font-size: 20px;
 	font-size: 1.25rem;
 	line-height: 1.25;
 }
 
-.post-type-archive-jetpack-testimonial .post-thumbnail {
+.jetpack-testimonial .post-thumbnail {
 	margin: 0;
 	position: absolute;
 	top: 0;
 	left: 0;
 }
 
-.post-type-archive-jetpack-testimonial .entry-content {
+.jetpack-testimonial .entry-content {
 	margin: 0 0 1.25em; /* 0 0 20px */
 	padding-left: 5.5em; /* 88px */
 }
 
-.post-type-archive-jetpack-testimonial .entry-header {
+.jetpack-testimonial .entry-header {
 	margin: 0;
 	padding-left: 5.5em; /* 88px */
 }
 
-.post-type-archive-jetpack-testimonial .entry-footer {
+.jetpack-testimonial .entry-footer {
 	margin: 0;
 	padding-left: 5.5em; /* 88px */
 }
 
-.post-type-archive-jetpack-testimonial .post-thumbnail img {
+.jetpack-testimonial .post-thumbnail img {
 	border-radius: 50%;
 }
 
-.post-type-archive-jetpack-testimonial article {
+.jetpack-testimonial {
 	border-bottom-width: 0;
 	margin-bottom: 2.25em;
 	padding-bottom: 0;
@@ -1825,6 +1831,73 @@ div.sharedaddy h3.sd-title {
 
 	.full-width .post-thumbnail {
 		/*margin: 0 -14.032258064% 1.25em; /* max width 794px */
+	}
+	
+	.front-page .content-area {
+		float: none;
+		margin: 0 auto;
+		width: 100%;
+	}
+	
+	.front-page .hero-content article {
+		margin-bottom: 2.625em; /* 42px */
+		text-align: center;
+	}
+	
+	.front-page .hero-content {
+		/*text-align: center;*/
+	}
+	
+	.front-page .hero-content p {
+		/*font-family: 'Playfair Display', serif;*/
+		font-size: 24px;
+		font-size: 1.5rem;
+		font-weight: normal;
+		line-height: 1.3125; /* 42px */
+		margin: 0 auto 0.75em; /* 0 auto 24px */
+		width: 95%;
+	}
+	
+	.front-page .content-area p:last-child {
+		margin-bottom: 0;
+	}
+	
+	.front-page article {
+		/*border-bottom-width: 0;
+		padding: 0;*/
+	}
+	
+	.hero-image {
+		margin-bottom: 40px;
+		position: relative;
+	}
+	
+	.hero-overlay {
+		background-color: rgba(0, 0, 0, 0.5);
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+	}
+	
+	.hero-image .entry-content {
+		color: #fff;
+		position: absolute;
+		top: 20px;
+		width: 100%;
+	}
+	
+	.front-page .front-testimonials,
+	.front-page .front-portfolio {
+		border-bottom: 1px solid #e4e4e4;
+		margin-bottom: 42px;
+		padding-bottom: 6px;
+	}
+	
+	.front-page .site-main > div:last-child {
+		border-width: 0;
+		margin-bottom: 0;
 	}
 	
 	.widget-area {
