@@ -655,8 +655,8 @@ a:active {
 }
 
 .main-navigation.toggled {
-	border-bottom-width: 0;
-	padding-bottom: 0;
+	/*border-bottom-width: 0;
+	padding-bottom: 0;*/
 }
 
 .main-navigation .nav-menu {
@@ -989,7 +989,7 @@ a:active {
 .site-main .post-navigation {
 	font-weight: bold;
 	letter-spacing: 1px;
-	padding: 0 0 2.25em; /* 0 0 36px */
+	padding: 0 0 3em; /* 0 0 48px */
 	overflow: hidden;
 	text-transform: uppercase;
 }
@@ -1022,6 +1022,14 @@ a:active {
 
 .post-navigation span {
 	display: block;
+}
+
+.nav-links a:hover {
+	/*text-decoration: none;
+}
+
+.nav-links a:hover .post-title {
+	text-decoration: underline;*/
 }
 
 /*--------------------------------------------------------------
@@ -1986,5 +1994,10 @@ h2 {
 	h1 {
 		font-size: 42px;
 		font-size: 2.625rem;
+	}
+	
+	h2 {
+		font-size: 32px;
+		font-size: 2rem;
 	}
 }
