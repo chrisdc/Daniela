@@ -626,11 +626,32 @@ a:active {
 6.2 Menus
 --------------------------------------------------------------*/
 .main-navigation {
-	border-top: 1px solid #ddd;
-	border-bottom: 1px solid #ddd;
-	padding: 0.875em 0; /* 14px 0 */
-	text-align: left;
+	/*border-top: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;*/
+	/*padding: 0.875em 0; /* 14px 0 */
+	/*text-align:	center;*/
+	color: #727272;
 	width: 100%;
+}
+
+.main-navigation button {
+	/*width: 100%;*/
+	background-color: #333;
+	color: #fff;
+	box-shadow: none;
+	border: 0;
+	font-size: 1rem;
+	text-shadow: none;
+	/*padding: 1em 0;*/
+	padding: 0;
+	background: none;
+	color: #333;
+	
+	padding: 1rem;
+	border: 3px solid #333;
+	font-weight: bold;
+	text-align:	center;
+	margin: 0 auto;
 }
 
 .main-navigation.toggled {
@@ -652,6 +673,7 @@ a:active {
 .main-navigation ul {
 	list-style: none;
 	margin: 0;
+	text-align: left;
 }
 
 .main-navigation li {
@@ -673,14 +695,30 @@ a:active {
 }
 
 .main-navigation ul ul {
+	/*border-bottom: 1px solid #ddd;*/
+	border-top: 1px solid #ddd;
 	list-style: disc;
 	padding-bottom: 0.875em;
+	padding-left: 2em;
+	padding: 0.875em 0 0.875em 2em; /* 14px 0 14px 32px */
+	
 }
 
 .main-navigation ul ul li {
 	border-bottom-width: 0;
 	display: list-item;
-	padding: 0;
+}
+
+.main-navigation ul ul ul {
+	border-top-width: 0;
+	padding-top: 0;
+}
+
+.main-navigation ul ul li a {
+}
+
+.main-navigation ul ul li:last-child {
+	border-bottom-width: 0;
 }
 
 .main-navigation ul ul .menu-item-has-children a:after {
@@ -709,7 +747,8 @@ a:active {
 		display: none;
 	}
 	
-	.main-navigation.toggled {
+	.main-navigation {
+		border-top: 1px solid #ddd;
 		border-bottom: 1px solid #ddd;
 		padding: 0.875em 0; /* 14px 0 */
 	}
@@ -1169,8 +1208,8 @@ a:active {
 
 .site-title {
 	font-family: 'Playfair Display', serif;
-	font-size: 60px;
-	font-size: 3.75rem;
+	font-size: 42px;
+	font-size: 2.625rem;
 	font-weight: 900;
 	line-height: 1;
 	margin: 0;
@@ -1204,7 +1243,7 @@ a:active {
 .hentry {
 	border-bottom: 1px solid #ddd;
 	margin: 0 0 3em;
-	padding: 0 0 1em; /* 0 0 32px */
+	padding: 0 0 3em; /* 0 0 48px */
 }
 
 .entry-meta {
@@ -1257,7 +1296,7 @@ a:active {
 .page-content,
 .entry-content,
 .entry-summary {
-	margin: 1.5em 0 2em; /* 24px 0 32px * */
+	margin: 1.5em 0; /* 24px 0 */
 }
 
 .page-content :first-child,
@@ -1646,7 +1685,7 @@ object {
 /*--------------------------------------------------------------
 17.2 Sharing
 --------------------------------------------------------------*/
-div.sharedaddy h3.sd-title {
+.sharedaddy .sd-title {
 	font-size: 1rem;
 	font-size: 16px;
 	letter-spacing: 1px;
@@ -1846,75 +1885,106 @@ div.sharedaddy h3.sd-title {
 		/*margin: 0 -14.032258064% 1.25em; /* max width 794px */
 	}
 	
-	.front-page .content-area {
-		float: none;
-		margin: 0 auto;
-		width: 100%;
-	}
-	
-	.front-page .hero-content article {
-		margin-bottom: 2.625em; /* 42px */
-		text-align: center;
-	}
-	
-	.front-page .hero-content {
-		/*text-align: center;*/
-	}
-	
-	.front-page .hero-content p {
-		/*font-family: 'Playfair Display', serif;*/
-		font-size: 24px;
-		font-size: 1.5rem;
-		font-weight: normal;
-		line-height: 1.3125; /* 42px */
-		margin: 0 auto 0.75em; /* 0 auto 24px */
-		width: 95%;
-	}
-	
-	.front-page .content-area p:last-child {
-		margin-bottom: 0;
-	}
-	
-	.front-page article {
-		/*border-bottom-width: 0;
-		padding: 0;*/
-	}
-	
-	.hero-image {
-		margin-bottom: 40px;
-		position: relative;
-	}
-	
-	.hero-overlay {
-		background-color: rgba(0, 0, 0, 0.5);
-		position: absolute;
-		top: 0;
-		left: 0;
-		right: 0;
-		bottom: 0;
-	}
-	
-	.hero-image .entry-content {
-		color: #fff;
-		position: absolute;
-		top: 20px;
-		width: 100%;
-	}
-	
-	.front-page .front-testimonials,
-	.front-page .front-portfolio {
-		border-bottom: 1px solid #ddd;
-		margin-bottom: 42px;
-		padding-bottom: 6px;
-	}
-	
-	.front-page .site-main > div:last-child {
-		border-width: 0;
-		margin-bottom: 0;
-	}
-	
 	.widget-area {
 		float: right;
 		width: 30.980392156%; /* 316px max */
+	}
+	
+	
+}
+
+
+
+
+.front-page .content-area {
+	float: none;
+	margin: 0 auto;
+	width: 100%;
+}
+
+.front-page .entry-content {
+	margin-bottom: 0;
+}
+
+.front-page .hero-content article {
+	margin-bottom: 2.625em; /* 42px */
+	text-align: center;
+}
+
+.front-page .hero-content {
+	/*text-align: center;*/
+}
+
+.front-page .hero-content p {
+	/*font-family: 'Playfair Display', serif;*/
+	font-size: 24px;
+	font-size: 1.5rem;
+	font-weight: normal;
+	line-height: 1.3125; /* 42px */
+	margin: 0 auto 0.75em; /* 0 auto 24px */
+	width: 95%;
+}
+
+.front-page .content-area p:last-child {
+	margin-bottom: 0;
+}
+
+.front-page article {
+	/*border-bottom-width: 0;
+	padding: 0;*/
+}
+
+.hero-image {
+	margin-bottom: 40px;
+	position: relative;
+}
+
+.hero-overlay {
+	background-color: rgba(0, 0, 0, 0.5);
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+
+.front-page .front-testimonials,
+.front-page .front-portfolio {
+	border-bottom: 1px solid #ddd;
+	margin-bottom: 42px;
+	padding-bottom: 6px;
+}
+
+.front-page .site-main > div:last-child {
+	border-width: 0;
+	margin-bottom: 0;
+}
+
+/*
+.post-thumbnail {
+	margin-left: -5.555555555%;
+	margin-right: -5.555555555%;
+}*/
+
+h1 {
+	font-size: 36px;
+	font-size: 2.25rem;
+}
+
+h2 {
+	font-size: 24px;
+	font-size: 1.4rem;
+}
+
+@media screen and (min-width: 450px) {
+
+	.site-title {
+		font-size: 60px;
+		font-size: 3.75rem;
+	}
+	
+	h1 {
+		font-size: 42px;
+		font-size: 2.625rem;
 	}
 }

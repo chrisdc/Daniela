@@ -25,12 +25,10 @@ get_header(); ?>
 							<?php the_content(); ?>
 						</div><!-- .entry-content -->
 
-						<footer class="entry-footer">
-							<?php edit_post_link( __( 'Edit', 'daniela' ), '<span class="edit-link">', '</span>' ); ?>
-						</footer><!-- .entry-footer -->
+						<?php edit_post_link( __( 'Edit', 'daniela' ), '<footer class="entry-footer"><span class="edit-link">', '</span></footer>' ); ?>
 					</article><!-- #post-## -->
 				</div><!-- .hero-content -->
-			
+
 				<?php
 					$testimonials = new WP_Query( array(
 						'post_type'      => 'jetpack-testimonial',
