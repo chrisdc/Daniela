@@ -66,7 +66,7 @@ get_header(); ?>
 				?>
 			
 				<?php if ( $testimonials->have_posts() ) : ?>
-				<div id="front-page-portfolio" class="front-portfolio portfolio">
+				<div id="front-page-portfolio" class="front-portfolio portfolio-projects">
 					<header class="archive-header">
 						<h2 class="archive-title">Recent Projects:</h2>
 					</header>
