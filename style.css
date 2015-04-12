@@ -302,16 +302,16 @@ h6 {
 
 h1 {
 	font-family: 'Playfair Display', serif;
-	font-size: 42px;
-	font-size: 2.625rem;
+	font-size: 36px;
+	font-size: 2.25rem;
 	line-height: 1.25;
 	margin: 0.95238095238em 0 0.7619047619em /* 40px 0 32px */
 }
 
 h2 {
 	font-family: 'Playfair Display', serif;
-	font-size: 32px;
-	font-size: 2rem;
+	font-size: 28px;
+	font-size: 1.75rem;
 	font-weight: normal;
 	line-height: 1.25;
 	margin: 1em 0 0.75em; /* 32px 0 24px */
@@ -831,10 +831,12 @@ a:active {
 	}
 	
 	.main-navigation ul ul ul {
+		border-top-width: 1px;
 		box-sizing: border-box;
 		top: 0;
 		left: -999em;
 	}
+	
 }
 
 /* Social menu */
@@ -863,7 +865,8 @@ a:active {
 	position: relative;
 }
 
-.social-navigation a:hover {
+.social-navigation a:hover,
+.social-navigation a:focus {
 	color: #21759b;
 	text-decoration: none;
 }
@@ -1286,7 +1289,8 @@ a:active {
 	color: inherit;
 }
 
-.entry-title a:hover {
+.entry-title a:hover,
+.entry-title a:focus {
 	color: #21759b;
 	text-decoration: none;
 }
@@ -1351,14 +1355,14 @@ a:active {
 	margin-bottom: 2em; /* 32px */
 }
 
-h2 {
+/*h2 {
 	font-family: 'Playfair Display', serif;
 	font-size: 32px;
 	font-size: 2rem;
 	font-weight: normal;
 	line-height: 1.25;
-	margin: 1em 0 0.75em; /* 32px 0 24px */
-}
+	margin: 1em 0 0.75em;  32px 0 24px 
+}*/
 
 .taxonomy-description {
 	/*margin-bottom: 2em; /* 32px */
@@ -1500,15 +1504,21 @@ h2 {
 
 .comment-author .fn {
 	font-family: 'Playfair Display', serif;
-	font-size: 32px;
-	font-size: 2rem;
-	font-weight: normal;
+	font-size: 28px;
+	font-size: 1.75rem;
+	font-weight: bold;
 	margin: 0; /* 0 0 7px */
 	line-height: 1;
 }
 
 .comment-author .fn a {
 	color: #333;
+}
+
+.comment-author .fn a:hover,
+.comment-author .fn a:focus {
+	color: #21759b;
+	text-decoration: none;
 }
 
 .comment-metadata {
@@ -1693,6 +1703,10 @@ object {
 /*--------------------------------------------------------------
 17.2 Sharing
 --------------------------------------------------------------*/
+.sharedaddy {
+	margin-top: 1.75em; /* 28px */
+}
+
 .sharedaddy .sd-title {
 	font-size: 1rem;
 	font-size: 16px;
@@ -1703,11 +1717,11 @@ object {
 /*--------------------------------------------------------------
 17.3 Portfolio
 --------------------------------------------------------------*/
-.jetpack-portfolio .content-area {
+.post-type-archive-jetpack-portfolio .content-area {
 	width: 100%;
 }
 
-.jetpack-portfolio .entry-title {
+.portfolio-projects .entry-title {
 	font-family: 'Open Sans', sans-serif;
 	font-size: 20px;
 	font-size: 1.25rem;
@@ -1727,7 +1741,7 @@ object {
 	color: #21759b;
 }
 
-.jetpack-portfolio {
+.portfolio-projects .jetpack-portfolio {
 	border-bottom-width: 0;
 	margin-bottom: 2.25em;
 	padding-bottom: 0;
@@ -1740,29 +1754,29 @@ object {
 }
 
 @media screen and (min-width: 600px) {
-	.jetpack-portfolio {
+	.portfolio-projects .jetpack-portfolio {
 		float: left;
 		margin-right: 5.333333334%; /* 36 px max */
 		width: 47.333333333%; /* 210px max */
 	}
 	
-	.jetpack-portfolio:nth-of-type(2n) {
+	.portfolio-projects .jetpack-portfolio:nth-of-type(2n) {
 		margin-right: 0;
 	}
 }
 
 @media screen and (min-width: 900px) {
-	.jetpack-portfolio {
+	.portfolio-projects .jetpack-portfolio {
 		float: left;
 		margin-right: 3.529411765%; /* 36 px max */
 		width: 30.980392156%; /* 316px max */
 	}
 	
-	.jetpack-portfolio:nth-of-type(2n) {
+	.portfolio-projects .jetpack-portfolio:nth-of-type(2n) {
 		margin-right: 3.529411765%; /* 36 px max */
 	}
 	
-	.jetpack-portfolio:nth-of-type(3n) {
+	.portfolio-projects .jetpack-portfolio:nth-of-type(3n) {
 		margin-right: 0;
 	}
 }
@@ -1910,7 +1924,7 @@ object {
 	width: 100%;
 }
 
-.front-page .entry-content {
+.hero-content .entry-content {
 	margin-bottom: 0;
 }
 
@@ -1974,16 +1988,6 @@ object {
 	margin-right: -5.555555555%;
 }*/
 
-h1 {
-	font-size: 36px;
-	font-size: 2.25rem;
-}
-
-h2 {
-	font-size: 24px;
-	font-size: 1.4rem;
-}
-
 @media screen and (min-width: 450px) {
 
 	.site-title {
@@ -1997,6 +2001,11 @@ h2 {
 	}
 	
 	h2 {
+		font-size: 32px;
+		font-size: 2rem;
+	}
+	
+	.comment-author .fn {
 		font-size: 32px;
 		font-size: 2rem;
 	}
