@@ -78,3 +78,17 @@ if ( version_compare( $GLOBALS['wp_version'], '4.1', '<' ) ) :
 	}
 	add_action( 'wp_head', 'daniela_render_title' );
 endif;
+
+/**
+ * Filter special cases of the_archive_title()
+ * @param   string $title Archive title.
+ * @returns string $title Filtered archive title.
+ */
+function daniela_archive_title( $title ) {
+	if ( is_post_type_archive( 'jetpack-portfolio' ) ) {
+		$title = __( 'Projects', 'daniela' );
+	}
+
+	return $title;
+}
+add_filter( 'get_the_archive_title', 'daniela_archive_title' );
