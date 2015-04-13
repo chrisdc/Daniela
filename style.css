@@ -1228,7 +1228,7 @@ a:active {
 
 /* Search widget. */
 .widget_search .search-submit {
-	display: none;
+	/*display: none;*/
 }
 
 /*--------------------------------------------------------------
@@ -1924,15 +1924,7 @@ object {
 	.full-width .comments-area {
 		margin-left: auto;
 		margin-right: auto;
-		max-width: 41.75em; /* 668px */
-	}
-
-	.full-width .alignleft {
-		margin-left: -32.258064516%;
-	}
-
-	.full-width .alignright {
-		margin-right: -32.258064516%;
+		max-width: 52.75em; /* 844px */
 	}
 
 	.full-width .post-thumbnail {
@@ -1943,10 +1935,18 @@ object {
 		float: right;
 		width: 30.980392156%; /* 316px max */
 	}
-	
-	
 }
 
+/* Max width + padding */
+@media screen and (min-width: 1133px) {
+	.full-width .alignleft {
+		margin-left: -8.62745098%;
+	}
+
+	.full-width .alignright {
+		margin-right: -8.62745098%;
+	}
+}
 
 
 
