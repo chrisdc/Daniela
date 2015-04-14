@@ -1422,10 +1422,12 @@ a:active {
 
 .cat-links,
 .tags-links,
+.author-link,
 .comments-link,
 .single-jetpack-portfolio .portfolio-type-links,
 .portfolio-tag-links {
 	margin-right: 1.5em;
+	/*white-space:nowrap;*/
 }
 
 .cat-links:before,
@@ -1450,6 +1452,15 @@ a:active {
 
 .comments-link:before {
 	content: '\f300';
+	font-family: genericons;
+	font-size: 16px;
+	margin-right: 3px;
+	position: relative;
+	top: 4px;
+}
+
+.author-link:before {
+	content: '\f304';
 	font-family: genericons;
 	font-size: 16px;
 	margin-right: 3px;
@@ -1507,6 +1518,14 @@ a:active {
 --------------------------------------------------------------*/
 .format-link .entry-title a {
 	position: relative;
+}
+
+.format-link .entry-title a:after {
+	content: '\f442';
+	color: #21759b;
+	position: relative;
+	top: 0.16666666666em; /* 6px */
+	right: 0;
 }
 
 /*--------------------------------------------------------------

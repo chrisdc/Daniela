@@ -106,7 +106,7 @@ function daniela_entry_footer() {
 		/* translators: used between list items, there is a space after the comma */
 		$categories_list = get_the_category_list( __( ', ', 'daniela' ) );
 		if ( $categories_list && daniela_categorized_blog() ) {
-			printf( '<span class="cat-links"><span class="screen-reader-text">%1$s </span>%2$s</span>',
+			printf( '<span class="cat-links"><span class="screen-reader-text">%1$s </span>%2$s</span> ',
 				_x( 'Categories', 'daniela' ),
 				$categories_list
 			);
@@ -115,17 +115,23 @@ function daniela_entry_footer() {
 		/* translators: used between list items, there is a space after the comma */
 		$tags_list = get_the_tag_list( '', __( ', ', 'daniela' ) );
 		if ( $tags_list ) {
-			printf( '<span class="tags-links"><span class="screen-reader-text">%1$s </span>%2$s</span>',
+			printf( '<span class="tags-links"><span class="screen-reader-text">%1$s </span>%2$s</span> ',
 				_x( 'Tags ', 'daniela' ),
 				$tags_list
 			);
 		}
 	}
 
+	printf('<span class="author-link author vcard"><span class="screen-reader-text">%1$s</span><a class="url fn n" href="%2$s">%3$s</a></span> ',
+		   _x( 'Author ', 'daniela' ),
+		   esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
+		   esc_html( get_the_author() )
+	);
+	
 	if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
 		echo '<span class="comments-link">';
 		comments_popup_link( __( 'Leave a comment', 'daniela' ), __( '1 Comment', 'daniela' ), __( '% Comments', 'daniela' ) );
-		echo '</span>';
+		echo '</span> ';
 	}
 
 	edit_post_link( __( 'Edit', 'daniela' ), '<span class="edit-link">', '</span>' );
