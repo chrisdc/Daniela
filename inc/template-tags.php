@@ -120,14 +120,16 @@ function daniela_entry_footer() {
 				$tags_list
 			);
 		}
+		
+		if ( is_multi_author() ) {
+			printf('<span class="author-link author vcard"><span class="screen-reader-text">%1$s</span><a class="url fn n" href="%2$s">%3$s</a></span> ',
+				_x( 'Author ', 'daniela' ),
+				esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
+				esc_html( get_the_author() )
+			);
+		}
 	}
 
-	printf('<span class="author-link author vcard"><span class="screen-reader-text">%1$s</span><a class="url fn n" href="%2$s">%3$s</a></span> ',
-		   _x( 'Author ', 'daniela' ),
-		   esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
-		   esc_html( get_the_author() )
-	);
-	
 	if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
 		echo '<span class="comments-link">';
 		comments_popup_link( __( 'Leave a comment', 'daniela' ), __( '1 Comment', 'daniela' ), __( '% Comments', 'daniela' ) );
