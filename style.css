@@ -1293,7 +1293,7 @@ a:active {
 }
 
 /* Fix spacing on last entry where no post nav exists. */
-.site-main > :last-child {
+.site-main :last-child {
 	border-bottom-width: 0;
 	margin-bottom: 0;
 }
@@ -1523,7 +1523,12 @@ a:active {
 }
 
 .format-quote cite a {
-	color: #21759b;
+	/*color: #21759b;*/
+	text-decoration: none;
+}
+
+.format-quote cite a:hover {
+	text-decoration: underline;
 }
 
 /*--------------------------------------------------------------
