@@ -1324,6 +1324,7 @@ a:active {
 
 .entry-title {
 	margin: 0;
+	word-wrap: break-word;
 }
 
 .entry-title a {
@@ -1350,6 +1351,7 @@ a:active {
 .entry-content,
 .entry-summary {
 	margin: 1.5em 0; /* 24px 0 */
+	word-wrap: break-word;
 }
 
 .page-content > :first-child,
@@ -1389,6 +1391,7 @@ a:active {
 	margin-left: auto;
 	margin-right: auto;
 	max-width: 844px;
+	word-wrap: break-word;
 }
 
 .archive-title {
@@ -1427,6 +1430,7 @@ a:active {
 --------------------------------------------------------------*/
 .entry-footer {
 	margin-top: 1.5em; /* 24px */
+	word-wrap: break-word;
 }
 
 .cat-links,
@@ -1970,6 +1974,7 @@ object {
 	.widget-area {
 		float: right;
 		width: 30.980392156%; /* 316px max */
+		word-wrap: break-word;
 	}
 }
 
@@ -2149,5 +2154,6 @@ a img {
 	/* Stop preformated text from running off the page */
 	pre {
 		white-space: pre-wrap;
+		word-wrap: break-word;
 	}
 }
