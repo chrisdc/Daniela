@@ -2077,3 +2077,12 @@ object {
 		font-size: 2rem;
 	}
 }
+
+a img:hover {
+	opacity: 0.9;
+	transition: opacity 0.2s;
+}
+
+a img {
+	transition: opacity 0.2s;
+}
