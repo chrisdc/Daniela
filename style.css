@@ -55,6 +55,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 	17.4 Testimonials
 	17.5 Site Logo
 18.0 Media Queries
+19.0 Print Media Stylesheet
 --------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
@@ -2085,4 +2086,68 @@ a img:hover {
 
 a img {
 	transition: opacity 0.2s;
+}
+
+/* Print media */
+
+/*--------------------------------------------------------------
+19.0 Print Media Stylesheet
+--------------------------------------------------------------*/
+@media print {
+	/* Reset */
+	
+	* {
+		background: transparent !important;
+		color: #000 !important;
+	}
+	
+	/* Basic Layout */
+	@page {
+		margin: 1cm;
+	}
+	
+	.main-navigation,
+	.post-navigation,
+	.widget-area,
+	.site-footer,
+	.comment-respond,
+	.sharedaddy,
+	.reply {
+		display: none;
+	}
+	
+	.content-area {
+		float: none;
+	}
+	
+	.hentry {
+		border-width: 0;
+	}
+	
+	/* Typography */
+	
+	.content-area p {
+		orphans: 3;
+		widows: 3;
+	}
+	
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6,
+	dt {
+		page-break-after: avoid;
+	}
+	
+	blockquote,
+	.wp-caption {
+		page-break-inside: avoid;
+	}
+	
+	/* Stop preformated text from running off the page */
+	pre {
+		white-space: pre-wrap;
+	}
 }
