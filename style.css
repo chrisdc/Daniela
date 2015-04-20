@@ -1165,10 +1165,19 @@ a:active {
 10.0 Basic layout
 --------------------------------------------------------------*/
 .site {
+	background-color: #fff;
 	margin: 0 auto;
-	max-width: 1020px;
-	width: 90%;
+	max-width: 71.25em; /* 1140px max */
 }
+
+.site-header,
+.site-content,
+.site-footer {
+	margin-left: auto;
+	margin-right: auto;
+	width: 89.47368421%; /* 1020px max */
+}
+
 
 .site-content {
 	
@@ -1293,7 +1302,7 @@ a:active {
 }
 
 /* Fix spacing on last entry where no post nav exists. */
-.site-main :last-child {
+.site-main > :last-child {
 	border-bottom-width: 0;
 	margin-bottom: 0;
 }
@@ -1855,6 +1864,11 @@ object {
 	
 	.portfolio-projects .jetpack-portfolio:nth-of-type(3n) {
 		margin-right: 0;
+	}
+	
+	.site {
+		/*padding: 0 70px;*/
+		/*width: 100%;*/
 	}
 }
 
