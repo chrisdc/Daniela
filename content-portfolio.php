@@ -12,6 +12,7 @@
 		<?php
 			the_title( '<h1 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h1>' );
 			echo get_the_term_list( get_the_ID(), 'jetpack-portfolio-type', '<span class="portfolio-type-links">', _x(', ', 'Used between list items, there is a space after the comma.', 'daniela' ), '</span>' );
+			edit_post_link( __( 'Edit', 'daniela' ), '<footer class="entry-footer"><span class="edit-link">', '</span></footer>' );
 		?>
 	</header><!-- .entry-header -->
 </article><!-- #post-## -->

@@ -1807,6 +1807,10 @@ object {
 	width: 100%;
 }
 
+.post-type-archive-jetpack-portfolio .entry-footer {
+	margin-top: 0.5em; /* 8px */
+}
+
 .portfolio-projects .entry-title {
 	font-family: 'Open Sans', sans-serif;
 	font-size: 20px;
