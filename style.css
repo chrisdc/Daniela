@@ -1701,7 +1701,7 @@ object {
 16.1 Captions
 --------------------------------------------------------------*/
 .wp-caption {
-	margin-bottom: 1.5em;
+	margin-bottom: 1em; /* 16px */
 	max-width: 100%;
 }
 
