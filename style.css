@@ -1656,6 +1656,24 @@ a:active {
 	display: block;
 }
 
+.comment .edit-link,
+.pingback .edit-link,
+.trackback .edit-link {
+	color: #727272
+}
+
+.comment .edit-link a,
+.pingback .edit-link a,
+.trackback .edit-link a {
+	color: inherit;
+}
+
+.comment .edit-link a:hover,
+.pingback .edit-link a:hover,
+.trackback .edit-link a:hover {
+	color: #21759b;
+}
+
 /*--------------------------------------------------------------
 14.0 Footer
 --------------------------------------------------------------*/
