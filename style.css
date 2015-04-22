@@ -1922,7 +1922,12 @@ object {
 	}
 	
 	.portfolio-projects .jetpack-portfolio:nth-of-type(3n) {
+		/*clear: right;*/
 		margin-right: 0;
+	}
+	
+	.portfolio-projects .jetpack-portfolio:nth-of-type(3n + 1) {
+		clear: left;
 	}
 	
 	.site {
