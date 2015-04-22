@@ -1363,17 +1363,17 @@ a:active {
 	word-wrap: break-word;
 }
 
-.page-content > :first-child,
-.entry-content > :first-child,
-.entry-summary > :first-child,
-.comment-content > :first-child {
+.page-content :first-child,
+.entry-content :first-child,
+.entry-summary :first-child,
+.comment-content :first-child {
 	margin-top: 0;
 }
 
-.page-content > :last-child,
-.entry-content > :last-child,
-.entry-summary > :last-child,
-.comment-content > :last-child {
+.page-content :last-child,
+.entry-content :last-child,
+.entry-summary :last-child,
+.comment-content :last-child {
 	margin-bottom: 0;
 }
 
@@ -1538,6 +1538,10 @@ a:active {
 
 .format-quote cite a:hover {
 	text-decoration: underline;
+}
+
+.format-quote blockquote p:last-child {
+	margin-bottom: 0;
 }
 
 /*--------------------------------------------------------------
@@ -2230,4 +2234,8 @@ a img {
 		white-space: pre-wrap;
 		word-wrap: break-word;
 	}
+}
+
+p:last-child {
+	/*margin-bottom: 0;*/
 }
