@@ -17,6 +17,7 @@ function daniela_jetpack_setup() {
 	add_theme_support( 'infinite-scroll', array(
 		'container' => 'main',
 		'footer'    => 'page',
+		'wrapper'   => false
 	) );
 
 	// Add support for Jetpack Site Logo.
