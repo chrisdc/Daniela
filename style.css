@@ -1808,8 +1808,13 @@ object {
 	display: block;
 }
 
+#infinite-handle {
+	/**clear: both;*/
+}
+
 #infinite-handle,
 .infinite-loader {
+	clear: both;
 	margin-bottom: 3em; /* 48px */
 	text-align: center;
 }
@@ -1841,6 +1846,10 @@ object {
 	transition: background-color 0.2s, color 0.2s;
 }
 
+.infinite-loader .spinner {
+	margin: 0 auto;
+}
+
 /*--------------------------------------------------------------
 17.2 Sharing
 --------------------------------------------------------------*/
@@ -1862,11 +1871,11 @@ object {
 	width: 100%;
 }
 
-.post-type-archive-jetpack-portfolio .entry-footer {
+.jetpack-portfolio .entry-footer {
 	margin-top: 0.5em; /* 8px */
 }
 
-.portfolio-projects .entry-title {
+.jetpack-portfolio .entry-title {
 	font-family: 'Open Sans', sans-serif;
 	font-size: 20px;
 	font-size: 1.25rem;
@@ -1886,7 +1895,7 @@ object {
 	color: #21759b;
 }
 
-.portfolio-projects .jetpack-portfolio {
+.jetpack-portfolio {
 	border-bottom-width: 0;
 	margin-bottom: 2.25em;
 	padding-bottom: 0;
@@ -1894,39 +1903,39 @@ object {
 	/*margin: 0 auto 2em;*/
 }
 
-.jetpack-portfolio .post-thumbnail {
+.post-thumbnail {
 	margin-bottom: 1.25em;
 }
 
 @media screen and (min-width: 600px) {
-	.portfolio-projects .jetpack-portfolio {
+	.jetpack-portfolio {
 		float: left;
 		margin-right: 5.333333334%; /* 36 px max */
 		width: 47.333333333%; /* 210px max */
 	}
 	
-	.portfolio-projects .jetpack-portfolio:nth-of-type(2n) {
+	.jetpack-portfolio:nth-of-type(2n) {
 		margin-right: 0;
 	}
 }
 
 @media screen and (min-width: 900px) {
-	.portfolio-projects .jetpack-portfolio {
+	.jetpack-portfolio {
 		float: left;
 		margin-right: 3.529411765%; /* 36 px max */
 		width: 30.980392156%; /* 316px max */
 	}
 	
-	.portfolio-projects .jetpack-portfolio:nth-of-type(2n) {
+	.jetpack-portfolio:nth-of-type(2n) {
 		margin-right: 3.529411765%; /* 36 px max */
 	}
 	
-	.portfolio-projects .jetpack-portfolio:nth-of-type(3n) {
+	.jetpack-portfolio:nth-of-type(3n) {
 		/*clear: right;*/
 		margin-right: 0;
 	}
 	
-	.portfolio-projects .jetpack-portfolio:nth-of-type(3n + 1) {
+	.jetpack-portfolio:nth-of-type(3n + 1) {
 		clear: left;
 	}
 	
@@ -1995,23 +2004,23 @@ object {
 }
 
 @media screen and (min-width: 750px) {
-	.testimonials .jetpack-testimonial {
+	.jetpack-testimonial {
 		float: left;
 		margin-right: 5.333333334%; /* 36 px max */
 		width: 47.333333333%; /* 210px max */
 	}
 	
-	.testimonials .jetpack-testimonial:nth-of-type(2n) {
+	.jetpack-testimonial:nth-of-type(2n) {
 		margin-right: 0;
 	}
 	
-	.testimonials .jetpack-testimonial {
+	.jetpack-testimonial {
 		float: left;
 		margin-right: 3.529411764%; /* 36 px max */
 		width: 48.235294117%; /* 492px max */
 	}
 	
-	.testimonials .jetpack-testimonial:nth-of-type(2n) {
+	.jetpack-testimonial:nth-of-type(2n) {
 		margin-right: 0;
 	}
 }

@@ -12,12 +12,13 @@
 function daniela_jetpack_setup() {
 	add_image_size( 'daniela-porfolio-archive', 524, 339, true );
 	add_image_size( 'daniela-site-logo', 1020, 300 );
-	add_image_size( 'daniela-testimonial-archive', 70, 70 );
+	add_image_size( 'daniela-testimonial-archive', 70, 70, true );
 
 	add_theme_support( 'infinite-scroll', array(
 		'container' => 'main',
 		'footer'    => 'page',
-		'wrapper'   => false
+		'wrapper'   => false,
+		'render'    => 'daniela_infinite_scroll_render',
 	) );
 
 	// Add support for Jetpack Site Logo.
@@ -30,6 +31,25 @@ function daniela_jetpack_setup() {
     add_theme_support( 'jetpack-responsive-videos' );
 }
 add_action( 'after_setup_theme', 'daniela_jetpack_setup' );
+
+/**
+ * Define the code that is used to render the posts added by Infinite Scroll.
+ *
+ * Includes the whole loop. Used to include the correct template part for the Portfolio CPT.
+ */
+function daniela_infinite_scroll_render() {
+	while ( have_posts() ) {
+		the_post();
+
+		if ( is_post_type_archive( 'jetpack-portfolio' ) || is_tax( 'jetpack-portfolio-type' ) || is_tax( 'jetpack-portfolio-tag' ) ) {
+			get_template_part( 'content', 'portfolio' );
+		} elseif ( is_post_type_archive( 'jetpack-testimonial' ) ) {
+			get_template_part( 'content', 'testimonial' );
+		} else {
+			get_template_part( 'content', get_post_format() );
+		}
+	}
+}
 
 /**
  * Conditionally load the Jetpack site logo.

@@ -15,7 +15,7 @@ get_header(); ?>
 
 		<?php if ( have_posts() ) : ?>
 			<?php /* Start the Loop */ ?>
-			<div class="portfolio-projects">
+			<!--<div class="portfolio-projects">-->
 
 				<?php while ( have_posts() ) : the_post(); ?>
 
@@ -25,7 +25,7 @@ get_header(); ?>
 
 				<?php the_posts_navigation(); ?>
 
-			</div><!-- .projects -->
+			<!--</div><!-- .projects -->
 
 		<?php else : ?>
 
