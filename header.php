@@ -29,7 +29,7 @@
 		</div><!-- .site-branding -->
 
 		<nav id="site-navigation" class="main-navigation" role="navigation">
-			<button class="menu-toggle" aria-controls="menu" aria-expanded="false"><?php _e( 'Main Menu', 'daniela' ); ?></button>
+			<button class="menu-toggle" aria-controls="site-navigation" aria-expanded="false"><?php _e( 'Main Menu', 'daniela' ); ?></button>
 			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
