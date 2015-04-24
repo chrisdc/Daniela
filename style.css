@@ -766,7 +766,7 @@ a:active {
 }
 
 .main-navigation ul ul ul {
-	box-sizing: border-box;
+	/*box-sizing: border-box;*/
 	padding-bottom: 0;
 	top: 0;
 	left: -999em;
@@ -867,8 +867,8 @@ a:active {
 	
 	.main-navigation ul ul ul {
 		border-top-width: 1px;
-		box-sizing: border-box;
-		top: 0;
+		/*box-sizing: border-box;
+		top: 0;*/
 		left: -999em;
 	}
 	
