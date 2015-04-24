@@ -1565,9 +1565,9 @@ a:active {
 .format-image .entry-title,
 .format-video .entry-title,
 .format-gallery .entry-title {
-	font-size: 32px;
+	/*font-size: 32px;
 	font-size: 2rem;
-	font-weight: normal;
+	font-weight: normal;*/
 }
 
 /*--------------------------------------------------------------
