@@ -1387,6 +1387,11 @@ a:active {
 	margin-bottom: 2em; /* 32px */
 }
 
+.post-thumbnail img {
+	display: block;
+	margin: 0 auto;
+}
+
 /* Archive titles */
 .archive-header {
 	/*border-bottom: 1px solid #ddd;*/
@@ -1871,11 +1876,11 @@ object {
 	width: 100%;
 }
 
-.jetpack-portfolio .entry-footer {
+.post-type-archive-jetpack-portfolio .jetpack-portfolio .entry-footer {
 	margin-top: 0.5em; /* 8px */
 }
 
-.jetpack-portfolio .entry-title {
+.post-type-archive-jetpack-portfolio .jetpack-portfolio .entry-title {
 	font-family: 'Open Sans', sans-serif;
 	font-size: 20px;
 	font-size: 1.25rem;
@@ -1895,7 +1900,7 @@ object {
 	color: #21759b;
 }
 
-.jetpack-portfolio {
+.post-type-archive-jetpack-portfolio .jetpack-portfolio {
 	border-bottom-width: 0;
 	margin-bottom: 2.25em;
 	padding-bottom: 0;
@@ -1908,34 +1913,34 @@ object {
 }
 
 @media screen and (min-width: 600px) {
-	.jetpack-portfolio {
+	.post-type-archive-jetpack-portfolio .jetpack-portfolio {
 		float: left;
 		margin-right: 5.333333334%; /* 36 px max */
 		width: 47.333333333%; /* 210px max */
 	}
 	
-	.jetpack-portfolio:nth-of-type(2n) {
+	.post-type-archive-jetpack-portfolio .jetpack-portfolio:nth-of-type(2n) {
 		margin-right: 0;
 	}
 }
 
 @media screen and (min-width: 900px) {
-	.jetpack-portfolio {
+	.post-type-archive-jetpack-portfolio .jetpack-portfolio {
 		float: left;
 		margin-right: 3.529411765%; /* 36 px max */
 		width: 30.980392156%; /* 316px max */
 	}
 	
-	.jetpack-portfolio:nth-of-type(2n) {
+	.post-type-archive-jetpack-portfolio .jetpack-portfolio:nth-of-type(2n) {
 		margin-right: 3.529411765%; /* 36 px max */
 	}
 	
-	.jetpack-portfolio:nth-of-type(3n) {
+	.post-type-archive-jetpack-portfolio .jetpack-portfolio:nth-of-type(3n) {
 		/*clear: right;*/
 		margin-right: 0;
 	}
 	
-	.jetpack-portfolio:nth-of-type(3n + 1) {
+	.post-type-archive-jetpack-portfolio .jetpack-portfolio:nth-of-type(3n + 1) {
 		clear: left;
 	}
 	
@@ -2252,4 +2257,15 @@ a img {
 
 p:last-child {
 	/*margin-bottom: 0;*/
+}
+
+.full-width .entry-header,
+.full-width .entry-content,
+.full-width .entry-footer,
+.full-width .comments-area,
+.front-page .hero-content .entry-header,
+.front-page .hero-content .entry-content {
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 52.75em; /* 844px */
 }
