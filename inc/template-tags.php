@@ -254,7 +254,7 @@ function daniela_post_thumbnail() {
 		$image_size = 'post-thumbnail';
 	}
 
-	if ( is_single() ) {
+	if ( is_single() || is_page() ) {
 		the_post_thumbnail( $image_size );
 	} else {
 		?>
