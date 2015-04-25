@@ -721,11 +721,11 @@ a:active {
 	color: #727272;
 	display: block;
 	padding: 0.875em 0px; /* 14px 0 */
-	text-decoration: none;
+	/*text-decoration: none;*/
 }
 
 .main-navigation a:hover,
-.main-navigation a.focus {
+.main-navigation .focus > a {
 	color: #21759b;
 }
 
@@ -1363,17 +1363,17 @@ a:active {
 	word-wrap: break-word;
 }
 
-.page-content :first-child,
-.entry-content :first-child,
-.entry-summary :first-child,
-.comment-content :first-child {
+.page-content > :first-child,
+.entry-content > :first-child,
+.entry-summary > :first-child,
+.comment-content > :first-child {
 	margin-top: 0;
 }
 
-.page-content :last-child,
-.entry-content :last-child,
-.entry-summary :last-child,
-.comment-content :last-child {
+.page-content > :last-child,
+.entry-content > :last-child,
+.entry-summary > :last-child,
+.comment-content > :last-child {
 	margin-bottom: 0;
 }
 
