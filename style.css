@@ -1639,8 +1639,8 @@ a:active {
 	position: relative;
 }
 
-.comment-content {
-	margin-bottom: 1.25em; /* 16px */
+.comment .reply {
+	margin-top: 1.25em; /* 16px */
 }
 
 .comment-author,
