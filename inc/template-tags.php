@@ -66,7 +66,7 @@ if ( ! function_exists( 'daniela_posted_on' ) ) :
  * Prints HTML with meta information for the post date and format.
  */
 function daniela_posted_on() {
-	if ( is_sticky() ) {
+	if ( is_sticky() && ! is_single() ) {
 		echo '<span class="sticky">' . __( 'Sticky', 'daniela' ) . '</span>';
 	} else {
 		$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
