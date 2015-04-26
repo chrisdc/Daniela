@@ -1025,6 +1025,7 @@ a:active {
 .site-main .comment-navigation,
 .site-main .posts-navigation,
 .site-main .post-navigation {
+	clear: both;
 	font-weight: bold;
 	letter-spacing: 1px;
 	padding: 0 0 3em; /* 0 0 48px */
@@ -1878,11 +1879,11 @@ object {
 	width: 100%;
 }
 
-.post-type-archive-jetpack-portfolio .jetpack-portfolio .entry-footer {
+.portfolio-projects .jetpack-portfolio .entry-footer {
 	margin-top: 0.5em; /* 8px */
 }
 
-.post-type-archive-jetpack-portfolio .jetpack-portfolio .entry-title {
+.portfolio-projects .jetpack-portfolio .entry-title {
 	font-family: 'Open Sans', sans-serif;
 	font-size: 20px;
 	font-size: 1.25rem;
@@ -1902,7 +1903,7 @@ object {
 	color: #21759b;
 }
 
-.post-type-archive-jetpack-portfolio .jetpack-portfolio {
+.portfolio-projects .jetpack-portfolio {
 	border-bottom-width: 0;
 	margin-bottom: 2.25em;
 	padding-bottom: 0;
@@ -1915,34 +1916,34 @@ object {
 }
 
 @media screen and (min-width: 600px) {
-	.post-type-archive-jetpack-portfolio .jetpack-portfolio {
+	.portfolio-projects .jetpack-portfolio {
 		float: left;
 		margin-right: 5.333333334%; /* 36 px max */
 		width: 47.333333333%; /* 210px max */
 	}
 	
-	.post-type-archive-jetpack-portfolio .jetpack-portfolio:nth-of-type(2n) {
+	.portfolio-projects .jetpack-portfolio:nth-of-type(2n) {
 		margin-right: 0;
 	}
 }
 
 @media screen and (min-width: 900px) {
-	.post-type-archive-jetpack-portfolio .jetpack-portfolio {
+	.portfolio-projects .jetpack-portfolio {
 		float: left;
 		margin-right: 3.529411765%; /* 36 px max */
 		width: 30.980392156%; /* 316px max */
 	}
 	
-	.post-type-archive-jetpack-portfolio .jetpack-portfolio:nth-of-type(2n) {
+	.portfolio-projects .jetpack-portfolio:nth-of-type(2n) {
 		margin-right: 3.529411765%; /* 36 px max */
 	}
 	
-	.post-type-archive-jetpack-portfolio .jetpack-portfolio:nth-of-type(3n) {
+	.portfolio-projects .jetpack-portfolio:nth-of-type(3n) {
 		/*clear: right;*/
 		margin-right: 0;
 	}
 	
-	.post-type-archive-jetpack-portfolio .jetpack-portfolio:nth-of-type(3n + 1) {
+	.portfolio-projects .jetpack-portfolio:nth-of-type(3n + 1) {
 		clear: left;
 	}
 	
