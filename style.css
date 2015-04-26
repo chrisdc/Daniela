@@ -1754,6 +1754,7 @@ object {
 
 .gallery-item {
 	display: inline-block;
+	margin-bottom: 1.25em; /* 20px */
 	text-align: center;
 	vertical-align: top;
 	width: 100%;
@@ -1793,6 +1794,7 @@ object {
 
 .gallery-caption {
 	display: block;
+	margin-top: 0.5em;
 }
 
 /*--------------------------------------------------------------
