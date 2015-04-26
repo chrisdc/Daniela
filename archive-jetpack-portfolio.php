@@ -15,8 +15,6 @@ get_header(); ?>
 
 		<?php if ( have_posts() ) : ?>
 			<?php /* Start the Loop */ ?>
-			<!--<div class="portfolio-projects">-->
-
 				<?php while ( have_posts() ) : the_post(); ?>
 
 					<?php get_template_part( 'content', 'portfolio' ); ?>
@@ -28,9 +26,6 @@ get_header(); ?>
 					'next_text'          => __( 'Newer projects' ),
 					'screen_reader_text' => __( 'Projects navigation' ),
 				) ); ?>
-
-			<!--</div><!-- .projects -->
-
 		<?php else : ?>
 
 			<?php get_template_part( 'content', 'none' ); ?>
