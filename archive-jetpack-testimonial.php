@@ -44,7 +44,11 @@ get_header(); ?>
 
 				<?php endwhile; ?>
 
-				<?php the_posts_navigation(); ?>
+				<?php the_posts_navigation( array(
+					'prev_text'          => __( 'Older testimonials' ),
+					'next_text'          => __( 'Newer testimonials' ),
+					'screen_reader_text' => __( 'Testimonials navigation' ),
+				) ); ?>
 
 			</div><!-- .projects -->
 
