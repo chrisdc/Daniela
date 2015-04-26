@@ -1025,16 +1025,26 @@ a:active {
 .site-main .comment-navigation,
 .site-main .posts-navigation,
 .site-main .post-navigation {
+	border-top: 1px solid #ddd;
 	clear: both;
 	font-weight: bold;
 	letter-spacing: 1px;
-	padding: 0 0 3em; /* 0 0 48px */
+	padding: 3em 0; /* 48px 0 */
 	overflow: hidden;
 	text-transform: uppercase;
 }
 
 .site-main .post-navigation {
 	border-bottom: 1px solid #ddd;
+}
+
+.site-main .comment-navigation {
+	border-bottom: 1px solid #ddd;
+	border-top-width: 0;
+}
+
+#comment-nav-below {
+	/*border-top: 1px solid #ddd;*/
 }
 
 .comment-navigation .nav-previous,
@@ -1302,8 +1312,10 @@ a:active {
 	padding: 0 0 3em; /* 0 0 48px */
 }
 
+
+
 /* Fix spacing on last blog entry where no post nav exists. */
-.site-main .type-post:last-child {
+.hentry:last-of-type {
 	border-bottom-width: 0;
 	margin-bottom: 0;
 }
@@ -1581,13 +1593,14 @@ a:active {
 --------------------------------------------------------------*/
 .comments-title {
 	border-bottom: 4px double #ddd;
-	margin-bottom: 1em; /* 32px */
+	margin-bottom: 0;
 	padding-bottom: 1em; /* 32px */
 }
 
 .comment-list,
 .comment-list .children {
 	list-style: none;
+	margin-bottom: 0;
 	padding: 0;
 }
 
@@ -1650,8 +1663,11 @@ a:active {
 
 .comment-body {
 	border-bottom: 1px solid #ddd;
-	margin: 0 0 2.25em; /* 0 0 36px */
-	padding: 0 0 2.25em; /* 0 0 36px */
+	padding: 2.25em 0; /* 36px 0 */
+}
+
+.comment:last-child .comment-body {
+	/*border-bottom-width: 0;*/
 }
 
 .says {
