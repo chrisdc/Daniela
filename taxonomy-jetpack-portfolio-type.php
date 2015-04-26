@@ -1,6 +1,6 @@
 <?php
 /**
- * The archive template for Jetpack portfolio posts.
+ * The taxonomy archive template for Jetpack portfolio types.
  *
  * @package Daniela
  */
