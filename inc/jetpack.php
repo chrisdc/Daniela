@@ -11,7 +11,7 @@
  */
 function daniela_jetpack_setup() {
 	add_image_size( 'daniela-porfolio-archive', 524, 339, true );
-	add_image_size( 'daniela-site-logo', 1020, 300 );
+	add_image_size( 'daniela-site-logo', 100, 100 );
 	add_image_size( 'daniela-testimonial-archive', 70, 70, true );
 
 	add_theme_support( 'infinite-scroll', array(
