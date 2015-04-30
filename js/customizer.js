@@ -27,8 +27,11 @@
 			} else {
 				$( '.site-title, .site-description' ).css( {
 					'clip': 'auto',
-					'color': to,
 					'position': 'relative'
+				} );
+
+				$( '.site-title a' ).css( {
+					'color': to
 				} );
 			}
 		} );
