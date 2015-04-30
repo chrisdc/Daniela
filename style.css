@@ -1754,8 +1754,9 @@ object {
 
 #infinite-handle,
 .infinite-loader {
+	border-top: 1px solid #ddd;
 	clear: both;
-	margin-bottom: 3em; /* 48px */
+	padding: 3em 0;
 	text-align: center;
 }
 
@@ -1766,8 +1767,8 @@ object {
 	box-shadow: none;
 	color: #fff;
 	display: inline-block;
+	font-size: 1em; /* 16px */
 	font-weight: bold;
-	margin: 0 auto;
 	padding: 0.75em 1em; /* 12px 16px */
 	text-align:	center;
 	text-decoration: none;
