@@ -543,7 +543,8 @@ input[type="submit"],
 	text-align:	center;
 	text-decoration: none;
 	text-shadow: none;
-	transition: background-color 0.2s, color 0.2s;
+	-webkit-transition: background-color 0.2s, color 0.2s;
+	        transition: background-color 0.2s, color 0.2s;
 }
 
 button:hover,
@@ -552,7 +553,8 @@ input[type="reset"]:hover,
 input[type="submit"]:hover,
 .button:hover {
 	background-color: #21759b;
-	transition: background-color 0.2s, color 0.2s;
+	-webkit-transition: background-color 0.2s, color 0.2s;
+	        transition: background-color 0.2s, color 0.2s;
 }
 
 button:focus,
@@ -566,7 +568,8 @@ input[type="reset"]:active,
 input[type="submit"]:active,
 .button:active {
 	background-color: #21759b;
-	transition: background-color 0.2s, color 0.2s;
+	-webkit-transition: background-color 0.2s, color 0.2s;
+	        transition: background-color 0.2s, color 0.2s;
 }
 
 .entry-content .button-minimal {
@@ -583,13 +586,15 @@ input[type="submit"]:active,
 	text-align:	center;
 	text-decoration: none;
 	text-shadow: none;
-	transition: background-color 0.2s, color 0.2s;
+	-webkit-transition: background-color 0.2s, color 0.2s;
+	        transition: background-color 0.2s, color 0.2s;
 }
 
 .entry-content .button-minimal:hover {
 	background-color: #333;
 	color: #fff;
-	transition: background-color 0.2s, color 0.2s;
+	-webkit-transition: background-color 0.2s, color 0.2s;
+	        transition: background-color 0.2s, color 0.2s;
 }
 
 input[type="text"],
@@ -601,15 +606,6 @@ textarea {
 	color: #333;
 	border: 1px solid #ccc;
 	border-radius: 3px;
-}
-
-input[type="text"]:focus,
-input[type="email"]:focus,
-input[type="url"]:focus,
-input[type="password"]:focus,
-input[type="search"]:focus,
-textarea:focus {
-	/*color: #333;*/
 }
 
 input[type="text"],
@@ -634,7 +630,8 @@ textarea {
 a {
 	color: #21759b;
 	text-decoration: none;
-	transition: color 0.2s;
+	-webkit-transition: color 0.2s;
+	        transition: color 0.2s;
 }
 
 a:hover,
@@ -642,7 +639,8 @@ a:focus,
 a:active {
 	color: #104e6b;
 	text-decoration: underline;
-	transition: color 0.2s;
+	-webkit-transition: color 0.2s;
+	        transition: color 0.2s;
 }
 
 a:focus {
@@ -745,7 +743,7 @@ a:active {
 }
 
 .main-navigation ul ul a {
-	padding: 0.25em 0px; /* 4px 0 */
+	padding: 0.25em 0; /* 4px 0 */
 }
 
 .main-navigation ul ul ul {
@@ -953,7 +951,7 @@ a:active {
 }
 
 .nav-links a:hover .post-title {
-	text-decoration: underline;*/
+	text-decoration: underline;
 }
 
 /*--------------------------------------------------------------
@@ -1268,12 +1266,14 @@ a:active {
 }
 
 a img {
-	transition: opacity 0.2s;
+	-webkit-transition: opacity 0.2s;
+	        transition: opacity 0.2s;
 }
 
 a img:hover {
 	opacity: 0.9;
-	transition: opacity 0.2s;
+	-webkit-transition: opacity 0.2s;
+	        transition: opacity 0.2s;
 }
 
 /* Archive titles */
@@ -1773,17 +1773,20 @@ object {
 	text-align:	center;
 	text-decoration: none;
 	text-shadow: none;
-	transition: background-color 0.2s, color 0.2s;
+	-webkit-transition: background-color 0.2s, color 0.2s;
+	        transition: background-color 0.2s, color 0.2s;
 }
 
 #infinite-handle span:hover {
 	background-color: #21759b;
-	transition: background-color 0.2s, color 0.2s;
+	-webkit-transition: background-color 0.2s, color 0.2s;
+	        transition: background-color 0.2s, color 0.2s;
 }
 
 #infinite-handle span:focus {
 	background-color: #21759b;
-	transition: background-color 0.2s, color 0.2s;
+	-webkit-transition: background-color 0.2s, color 0.2s;
+	        transition: background-color 0.2s, color 0.2s;
 }
 
 .infinite-loader .spinner {
