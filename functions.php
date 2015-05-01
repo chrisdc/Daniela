@@ -56,6 +56,11 @@ function daniela_setup() {
 	add_theme_support( 'title-tag' );
 
 	/*
+	 * Enqueue editor style sheet.
+	 */
+	add_editor_style( 'css/editor-style.css', daniela_fonts_url() );
+
+	/*
 	 * Enable support for Post Thumbnails on posts and pages.
 	 *
 	 * @link http://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
