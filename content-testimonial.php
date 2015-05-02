@@ -6,9 +6,7 @@
  */
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<p class="post-thumbnail">
-		<?php the_post_thumbnail( 'daniela-testimonial-archive' ); ?>
-	</p>
+	<?php daniela_post_thumbnail(); ?>
 
 	<div class="entry-content">
 		<?php the_content(); ?>
