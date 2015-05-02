@@ -706,7 +706,7 @@ a:active {
 .main-navigation a {
 	color: #727272;
 	display: block;
-	padding: 0.875em 0px; /* 14px 0 */
+	padding: 0.875em 0; /* 14px 0 */
 }
 
 .main-navigation a:hover,
