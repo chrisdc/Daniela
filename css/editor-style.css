@@ -10,9 +10,11 @@ Description: Used to style the TinyMCE editor.
  * 2.0 - Typography
  * 3.0 - Elements
  * 4.0 - Alignment
- * 5.0 - Caption
- * 6.0 - Galleries
- * 7.0 - Audio / Video
+ * 5.0 - Media
+ * 5.1 - Captions
+ * 5.2 - Galleries
+ * 6.0 - RTL
+ * 7.0 - Media Queries
  */
 
  /**
@@ -241,7 +243,7 @@ tr,
 }
 
 /**
- * 5.0 Caption
+ * 5.1 Caption
  */
 .wp-caption {
 	margin-bottom: 1em; /* 16px */
@@ -262,7 +264,7 @@ tr,
 }
 
 /**
- * 6.0 Galleries
+ * 5.2 Galleries
  */
 .gallery .gallery-item {
 	display: inline-block;
@@ -308,7 +310,6 @@ tr,
 .gallery .gallery-caption {
 	color: #727272;
 	display: block;
-	/*font-family: "Noto Sans", sans-serif;*/
 	font-size: 16px;
 	font-size: 1rem;
 	font-style: italic;
@@ -317,11 +318,11 @@ tr,
 }
 
 /**
- * 7.0 RTL
+ * 6.0 RTL
  */
 
 /**
- * 8.0 Media Queries
+ * 7.0 Media Queries
  */
  @media screen and (min-width: 450px) {
 	h1 {
