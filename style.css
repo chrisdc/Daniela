@@ -1175,7 +1175,8 @@ a:active {
 }
 
 /* Fix spacing on last blog entry where no post nav exists. */
-.hentry:last-of-type {
+.blog .hentry:last-of-type,
+.archive .hentry:last-of-type {
 	border-bottom-width: 0;
 	margin-bottom: 0;
 }
