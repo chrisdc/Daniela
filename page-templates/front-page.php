@@ -56,7 +56,7 @@ get_header(); ?>
 				<?php endif; ?>
 			
 				<?php
-					$testimonials = new WP_Query( array(
+					$projects = new WP_Query( array(
 						'post_type'      => 'jetpack-portfolio',
 						'order'          => 'ASC',
 						'orderby'        => 'menu_order',
@@ -65,20 +65,20 @@ get_header(); ?>
 					) );
 				?>
 			
-				<?php if ( $testimonials->have_posts() ) : ?>
+				<?php if ( $projects->have_posts() ) : ?>
 				<div id="front-page-portfolio" class="front-portfolio portfolio-projects">
 					<header class="archive-header">
 						<h2 class="archive-title">Recent Projects:</h2>
 					</header>
 					<div class="grid-row">
 					<?php
-						while ( $testimonials->have_posts() ) : $testimonials->the_post();
+						while ( $projects->have_posts() ) : $projects->the_post();
 							 get_template_part( 'content', 'portfolio' );
 						endwhile;
 						wp_reset_postdata();
 					?>
 					</div>
-				</div><!-- .testimonials -->
+				</div><!-- .portfolio-projects -->
 				<?php endif; ?>
 
 			<?php endwhile; // end of the loop. ?>
