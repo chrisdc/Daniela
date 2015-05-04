@@ -23,13 +23,12 @@ get_header(); ?>
 					_e( 'Testimonials', 'daniela' );
 			?>
 		</h1>
+		<?php if ( '' != $jetpack_options['page-content'] ) : ?>
+			<div class="archive-description">
+				<?php echo convert_chars( convert_smilies( wptexturize( stripslashes( wp_filter_post_kses( addslashes( $jetpack_options['page-content'] ) ) ) ) ) ); ?>
+			</div><!-- .entry-content -->
+		<?php endif; ?>
 	</header><!-- .page-header -->
-
-	<?php if ( '' != $jetpack_options['page-content'] ) : ?>
-	<div class="archive-description">
-		<?php echo convert_chars( convert_smilies( wptexturize( stripslashes( wp_filter_post_kses( addslashes( $jetpack_options['page-content'] ) ) ) ) ) ); ?>
-	</div><!-- .entry-content -->
-	<?php endif; ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
