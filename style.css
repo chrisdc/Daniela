@@ -1161,6 +1161,12 @@ a:active {
 13.0 Content
 --------------------------------------------------------------*/
 
+/* Avoid a double border next to the footer. */
+.site-main > :last-child {
+	border-bottom-width: 0;
+	margin-bottom: 0;
+}
+
 /*--------------------------------------------------------------
 13.1 Posts and pages
 --------------------------------------------------------------*/
@@ -1176,7 +1182,8 @@ a:active {
 
 /* Fix spacing on last blog entry where no post nav exists. */
 .blog .hentry:last-of-type,
-.archive .hentry:last-of-type {
+.archive .hentry:last-of-type,
+.single .hentry:last-of-type {
 	border-bottom-width: 0;
 	margin-bottom: 0;
 }
@@ -1617,11 +1624,6 @@ a img:hover {
 	border-bottom: 1px solid #ddd;
 	margin-bottom: 42px;
 	padding-bottom: 6px;
-}
-
-.front-page .site-main > div:last-child {
-	border-width: 0;
-	margin-bottom: 0;
 }
 
 /*--------------------------------------------------------------
