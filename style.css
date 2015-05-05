@@ -907,6 +907,7 @@ a:active {
 .site-main .posts-navigation,
 .site-main .post-navigation {
 	border-top: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
 	clear: both;
 	font-weight: bold;
 	letter-spacing: 1px;
@@ -916,7 +917,7 @@ a:active {
 }
 
 .site-main .post-navigation {
-	border-bottom: 1px solid #ddd;
+	/*border-bottom: 1px solid #ddd;*/
 }
 
 .site-main .comment-navigation {
@@ -1065,6 +1066,10 @@ a:active {
 /*--------------------------------------------------------------
 11.0 Widgets
 --------------------------------------------------------------*/
+.widget-area {
+	margin-top: 2em; /* 32px */
+}
+
 .widget {
 	margin: 0 0 2em; /* 0 0 32px */
 }
@@ -1160,12 +1165,6 @@ a:active {
 /*--------------------------------------------------------------
 13.0 Content
 --------------------------------------------------------------*/
-
-/* Avoid a double border next to the footer. */
-.site-main > :last-child {
-	border-bottom-width: 0;
-	margin-bottom: 0;
-}
 
 /*--------------------------------------------------------------
 13.1 Posts and pages
@@ -1945,8 +1944,10 @@ object {
 	.portfolio-projects .jetpack-portfolio:nth-of-type(2n) {
 		margin-right: 0;
 	}
+}
 
-		/* Basic layout */
+@media screen and (min-width: 750px) {
+	/* Basic layout */
 	.content-area {
 		float: left;
 		width: 65.490196078%; /* 668px max */
@@ -1969,6 +1970,7 @@ object {
 	
 	.widget-area {
 		float: right;
+		margin-top: 0;
 		width: 30.980392156%; /* 316px max */
 		word-wrap: break-word;
 	}
@@ -2064,9 +2066,13 @@ object {
 		border-top-width: 1px;
 		left: -999em;
 	}
-}
 
-@media screen and (min-width: 750px) {
+	/* Avoid a double border next to the footer. */
+	.site-main > :last-child {
+		border-bottom-width: 0;
+		margin-bottom: 0;
+	}
+
 	.jetpack-testimonial {
 		float: left;
 		margin-right: 5.333333334%; /* 36 px max */
