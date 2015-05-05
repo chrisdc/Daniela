@@ -256,7 +256,7 @@ function daniela_post_thumbnail() {
 		$image_size = 'post-thumbnail';
 	}
 
-	if ( is_single() || is_page() || 'jetpack-testimonial' === $post_type ) {
+	if ( is_single() || ( is_page() && 'jetpack-portfolio' !== $post_type ) || 'jetpack-testimonial' === $post_type ) {
 		the_post_thumbnail( $image_size );
 	} else {
 		?>
