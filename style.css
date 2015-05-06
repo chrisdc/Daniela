@@ -8,7 +8,7 @@ Version: 1.0.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: daniela
-Tags:
+Tags: light, blue, two-columns, right-sidebar, responsive-layout, accessibility-ready, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-images, flexible-header, full-width-template, microformats, post-formats, rtl-language-support, sticky-post, threaded-comments, translation-ready
 
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
@@ -720,7 +720,7 @@ a:active {
 	padding-bottom: 0.875em; /* 14px */
 	padding-left: 2em; /* 32px */
 	padding: 0.875em 0 0.875em 2em; /* 14px 0 14px 32px */
-	
+
 }
 
 .main-navigation ul ul li {
@@ -1630,6 +1630,7 @@ a img:hover {
 --------------------------------------------------------------*/
 .site-footer {
 	border-top: 1px solid #ddd;
+	margin-top: 2em; /* 32px */
 	padding: 2.625em; /* 42px */
 	text-align: center;
 }
@@ -1917,17 +1918,17 @@ object {
 		font-size: 60px;
 		font-size: 3.75rem;
 	}
-	
+
 	h1 {
 		font-size: 42px;
 		font-size: 2.625rem;
 	}
-	
+
 	h2 {
 		font-size: 32px;
 		font-size: 2rem;
 	}
-	
+
 	.comment-author .fn {
 		font-size: 32px;
 		font-size: 2rem;
@@ -1940,7 +1941,7 @@ object {
 		margin-right: 5.333333334%; /* 36 px max */
 		width: 47.333333333%; /* 210px max */
 	}
-	
+
 	.portfolio-projects .jetpack-portfolio:nth-of-type(2n) {
 		margin-right: 0;
 	}
@@ -1952,7 +1953,7 @@ object {
 		float: left;
 		width: 65.490196078%; /* 668px max */
 	}
-	
+
 	.full-width .content-area {
 		float: none;
 		margin: 0 auto;
@@ -1967,7 +1968,7 @@ object {
 		margin-right: auto;
 		max-width: 52.75em; /* 844px */
 	}
-	
+
 	.widget-area {
 		float: right;
 		margin-top: 0;
@@ -1978,37 +1979,37 @@ object {
 	.menu-toggle {
 		display: none;
 	}
-	
+
 	.main-navigation {
 		border-top: 1px solid #ddd;
 		border-bottom: 1px solid #ddd;
 		padding: 0.875em 0; /* 14px 0 */
 	}
-	
+
 	.main-navigation .nav-menu {
 		display: block;
 		text-align: center;
 	}
-	
+
 	.main-navigation.toggled .nav-menu {
 		border-width: 0;
 		margin: 0;
 	}
-	
+
 	.main-navigation li {
 		border-width: 0;
 		display: inline-block;
 		margin: 0 0.75em; /* 0 12px */
 	}
-	
+
 	.main-navigation a {
 		padding: 0;
 	}
-	
+
 	.main-navigation .menu-item-has-children > a {
 		padding-right: 12px;
 	}
-	
+
 	.main-navigation ul ul {
 		background-color: #fff;
 		border: 1px solid #ddd;
@@ -2020,12 +2021,12 @@ object {
 		left: -999em;
 		z-index: 99999;
 	}
-	
+
 	.main-navigation ul li:hover > ul,
 	.main-navigation ul li.focus > ul {
 		left: auto;
 	}
-	
+
 	.main-navigation .menu-item-has-children > a:after {
 		content: "\f502";
 		font-family: genericons;
@@ -2035,33 +2036,33 @@ object {
 		right: 0;
 		position: absolute;
 	}
-	
+
 	.main-navigation ul ul li {
 		border-bottom: 1px solid #ddd;
 		margin: 0;
 	}
-	
+
 	.main-navigation ul ul li:last-child {
 		border-bottom: 0
 	}
-	
+
 	.main-navigation ul ul li:hover > ul,
 	.main-navigation ul ul li.focus > ul {
 		left: 100%;
 		top: -1px;
 	}
-	
+
 	.main-navigation ul ul .menu-item-has-children > a:after {
 		content: "\f501";
 		top: 1.75em; /* 14px */
 		right: 0.5em; /* 4px */
 	}
-	
+
 	.main-navigation ul ul a {
 		padding: 0.5em 0.75em; /* 8px 12px */
 		width: 200px;
 	}
-	
+
 	.main-navigation ul ul ul {
 		border-top-width: 1px;
 		left: -999em;
@@ -2078,17 +2079,17 @@ object {
 		margin-right: 5.333333334%; /* 36 px max */
 		width: 47.333333333%; /* 210px max */
 	}
-	
+
 	.jetpack-testimonial:nth-of-type(2n) {
 		margin-right: 0;
 	}
-	
+
 	.jetpack-testimonial {
 		float: left;
 		margin-right: 3.529411764%; /* 36 px max */
 		width: 48.235294117%; /* 492px max */
 	}
-	
+
 	.jetpack-testimonial:nth-of-type(2n) {
 		margin-right: 0;
 	}
@@ -2106,15 +2107,15 @@ object {
 		margin-right: 3.529411765%; /* 36 px max */
 		width: 30.980392156%; /* 316px max */
 	}
-	
+
 	.portfolio-projects .jetpack-portfolio:nth-of-type(2n) {
 		margin-right: 3.529411765%; /* 36 px max */
 	}
-	
+
 	.portfolio-projects .jetpack-portfolio:nth-of-type(3n) {
 		margin-right: 0;
 	}
-	
+
 	.portfolio-projects .jetpack-portfolio:nth-of-type(3n + 1) {
 		clear: left;
 	}
@@ -2140,12 +2141,12 @@ object {
 		background: transparent !important;
 		color: #000 !important;
 	}
-	
+
 	/* Basic Layout */
 	@page {
 		margin: 1cm;
 	}
-	
+
 	.main-navigation,
 	.post-navigation,
 	.widget-area,
@@ -2155,21 +2156,21 @@ object {
 	.reply {
 		display: none;
 	}
-	
+
 	.content-area {
 		float: none;
 	}
-	
+
 	.hentry {
 		border-width: 0;
 	}
-	
+
 	/* Typography */
 	.content-area p {
 		orphans: 3;
 		widows: 3;
 	}
-	
+
 	h1,
 	h2,
 	h3,
@@ -2179,12 +2180,12 @@ object {
 	dt {
 		page-break-after: avoid;
 	}
-	
+
 	blockquote,
 	.wp-caption {
 		page-break-inside: avoid;
 	}
-	
+
 	/* Stop preformated text from running off the page */
 	pre {
 		white-space: pre-wrap;
