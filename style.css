@@ -42,9 +42,8 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 	13.3 Aside Post Format
 	13.4 Quote Post Format
 	13.5 Link Post Format
-	13.6 Image / Video / Gallery Post Formats
+	13.6 Page Templates
 	13.7 Comments
-	13.8 Page Templates
 14.0 Footer
 16.0 Media
 	16.1 Captions
@@ -300,13 +299,13 @@ h4,
 h5,
 h6 {
 	clear: both;
+	line-height: 1.25;
 }
 
 h1 {
 	font-family: "Playfair Display", serif;
 	font-size: 36px;
 	font-size: 2.25rem;
-	line-height: 1.25;
 	margin: 0.95238095238em 0 0.7619047619em; /* 40px 0 32px */
 }
 
@@ -315,21 +314,18 @@ h2 {
 	font-size: 28px;
 	font-size: 1.75rem;
 	font-weight: normal;
-	line-height: 1.25;
 	margin: 1em 0 0.75em; /* 32px 0 24px */
 }
 
 h3 {
 	font-size: 20px;
 	font-size: 1.25rem;
-	line-height: 1.25;
 	margin: 1.6em 0 0.83333333333em; /* 32px 0 24px */
 }
 
 h4 {
 	font-size: 16px;
 	font-size: 1rem;
-	line-height: 1.25;
 	margin: 1.5em 0 1em; /* 24px 0 16px */
 }
 
@@ -337,7 +333,6 @@ h5 {
 	font-size: 14px;
 	font-size: 0.875rem;
 	letter-spacing: 1px;
-	line-height: 1.25;
 	margin: 1.71428571429em 0 1.14285714286em; /* 24px 0 16px */
 	text-transform: uppercase;
 }
@@ -345,7 +340,6 @@ h5 {
 h6 {
 	font-size: 14px;
 	font-size: 0.875rem;
-	line-height: 1.25;
 	margin: 1.71428571429em 0 1.14285714286em; /* 24px 0 16px */
 }
 
@@ -355,7 +349,7 @@ address,
 blockquote,
 ul,
 ol {
-	margin: 0 0 1.25em;
+	margin: 0 0 1.25em; /* 0 0 20px */
 }
 
 b,
@@ -378,7 +372,7 @@ pre {
 	line-height: 1.6;
 	max-width: 100%;
 	overflow: auto;
-	padding: 1.6em;
+	padding: 1.6em; /* 24px */
 }
 
 code,
@@ -413,10 +407,10 @@ big {
 /*--------------------------------------------------------------
 3.0 Genericons
 --------------------------------------------------------------*/
-
 .social-navigation a:before,
 .format-link .entry-title a:after,
-.comment .comment-reply-link:before {
+.comment .comment-reply-link:before,
+.entry-footer span:before {
 	display: inline-block;
 	font-family: "Genericons";
 	font-size: inherit;
@@ -467,7 +461,7 @@ hr {
 	background-color: #ccc;
 	border: 0;
 	height: 1px;
-	margin-bottom: 1.5em;
+	margin-bottom: 1.5em; /* 24px */
 }
 
 ul {
@@ -481,7 +475,7 @@ ol {
 li > ul,
 li > ol {
 	margin-bottom: 0;
-	margin-left: 1.5em;
+	margin-left: 1.5em; /* 24px */
 }
 
 dt {
@@ -533,10 +527,11 @@ input[type="submit"],
 .entry-content .button {
 	background-color: #333;
 	border: 0;
-	border-radius: 3px;
+	border-radius: 0.1875em; /* 3px */
 	box-shadow: none;
 	color: #fff;
 	display: inline-block;
+	font-size: 16px;
 	font-size: 1rem;
 	font-weight: bold;
 	margin: 0 auto;
@@ -576,10 +571,11 @@ input[type="submit"]:active,
 .entry-content .button-minimal {
 	background-color: #fff;
 	border: 3px solid #333;
-	border-radius: 3px;
+	border-radius: 0.1875em; /* 3px */
 	box-shadow: none;
 	color: #333;
 	display: inline-block;
+	font-size: 16px;
 	font-size: 1rem;
 	font-weight: bold;
 	margin: 0 auto;
@@ -605,7 +601,7 @@ input[type="password"],
 input[type="search"],
 textarea {
 	border: 1px solid #ccc;
-	border-radius: 3px;
+	border-radius: 0.1875em; /* 3px */
 	color: #333;
 }
 
@@ -666,6 +662,7 @@ a:active {
 	border: 3px solid #333;
 	box-shadow: none;
 	color: #333;
+	font-size: 16px;
 	font-size: 1rem;
 	font-weight: bold;
 	margin: 0 auto;
@@ -719,8 +716,6 @@ a:active {
 	border-top: 1px solid #ddd;
 	list-style: disc;
 	padding: 0.875em 0 0.875em 2em; /* 14px 0 14px 32px */
-	padding-bottom: 0.875em; /* 14px */
-	padding-left: 2em; /* 32px */
 }
 
 .main-navigation ul ul li {
@@ -777,9 +772,9 @@ a:active {
 .social-navigation a {
 	color: #333;
 	display: block;
-	height: 2em;
+	height: 2em; /* 32px */
 	position: relative;
-	width: 2em;
+	width: 2em; /* 32px */
 }
 
 .social-navigation a:hover,
@@ -916,10 +911,6 @@ a:active {
 	text-transform: uppercase;
 }
 
-.site-main .post-navigation {
-	/*border-bottom: 1px solid #ddd;*/
-}
-
 .site-main .comment-navigation {
 	border-bottom: 1px solid #ddd;
 	border-top-width: 0;
@@ -995,15 +986,15 @@ a:active {
 .alignleft {
 	display: inline;
 	float: left;
-	margin-right: 1.5em;
-	margin-bottom: 1.25em;
+	margin-right: 1.5em; /* 24px */
+	margin-bottom: 1.25em; /* 20px */
 }
 
 .alignright {
 	display: inline;
 	float: right;
-	margin-bottom: 1.25em;
-	margin-left: 1.5em;
+	margin-bottom: 1.25em; /* 24px */
+	margin-left: 1.5em; /* 20px */
 }
 
 .aligncenter {
@@ -1091,7 +1082,7 @@ a:active {
 
 .widget ul ul {
 	list-style: none;
-	margin-top: 0.45em;
+	margin-top: 0.4375em; /* 7px */
 	padding: 0;
 }
 
@@ -1259,7 +1250,7 @@ a:active {
 
 .page-links {
 	clear: both;
-	margin: 0 0 1.5em;
+	margin: 0 0 1.5em; /* 0 0 24px */
 }
 
 .archive-thumbnail,
@@ -1272,12 +1263,18 @@ a:active {
 	margin: 0 auto;
 }
 
-a img {
+.entry-content a img,
+.entry-summary a img,
+.page-content a img,
+.comment-content a img {
 	-webkit-transition: opacity 0.2s;
 	        transition: opacity 0.2s;
 }
 
-a img:hover {
+.entry-content a img:hover,
+.entry-summary a img:hover,
+.page-content a img:hover,
+.comment-content a img:hover {
 	opacity: 0.9;
 	-webkit-transition: opacity 0.2s;
 	        transition: opacity 0.2s;
@@ -1285,9 +1282,7 @@ a img:hover {
 
 /* Archive titles */
 .archive-header {
-	/*border-bottom: 1px solid #ddd;*/
 	margin-bottom: 2.5em; /* 40px */
-	/*padding-bottom: 2.5em; /* 40px */
 }
 
 .archive-header,
@@ -1312,15 +1307,6 @@ a img:hover {
 	margin-top: 2.5em; /* 40px */
 }
 
-.taxonomy-description {
-	/*margin-bottom: 2em; /* 32px */
-	/*margin-top: 0.4375em; /* 7px */
-}
-
-.taxonomy-description p {
-	margin: 0;
-}
-
 /*--------------------------------------------------------------
 13.2 Entry meta
 --------------------------------------------------------------*/
@@ -1329,60 +1315,36 @@ a img:hover {
 	word-wrap: break-word;
 }
 
-.cat-links,
-.tags-links,
-.author-link,
-.comments-link,
-.single-jetpack-portfolio .portfolio-type-links,
-.portfolio-tag-links {
-	margin-right: 1.5em;
+.entry-footer span {
+	margin-right: 1.5em; /* 24px */
+}
+
+.entry-footer span:before {
+	position: relative;
+	margin-right: 0.1875em; /* 3px */
+	top: 0.25em; /* 4px */
 }
 
 .cat-links:before,
 .single-jetpack-portfolio .portfolio-type-links:before {
 	content: "\f301";
-	font-family: genericons;
-	font-size: 16px;
-	margin-right: 3px;
-	position: relative;
-	top: 4px;
 }
 
 .tags-links:before,
 .portfolio-tag-links:before {
 	content: "\f302";
-	font-family: genericons;
-	font-size: 16px;
-	margin-right: 3px;
-	position: relative;
-	top: 4px;
 }
 
 .comments-link:before {
 	content: "\f300";
-	font-family: genericons;
-	font-size: 16px;
-	margin-right: 3px;
-	position: relative;
-	top: 4px;
 }
 
 .author-link:before {
 	content: "\f304";
-	font-family: genericons;
-	font-size: 16px;
-	margin-right: 3px;
-	position: relative;
-	top: 4px;
 }
 
 .edit-link:before {
 	content: "\f411";
-	font-family: genericons;
-	font-size: 16px;
-	margin-right: 3px;
-	position: relative;
-	top: 4px;
 }
 
 /*--------------------------------------------------------------
@@ -1406,8 +1368,8 @@ a img:hover {
 
 .format-quote blockquote {
 	font-family: playfair, serif;
-	font-size: 2em;
-	line-height: 1.25; /* 40px */
+	font-size: 2em; /* 32px */
+	line-height: 1.25;
 	margin: 0;
 }
 
@@ -1444,9 +1406,80 @@ a img:hover {
 	top: 0.16666666666em; /* 6px */
 }
 
+
 /*--------------------------------------------------------------
-13.6 Image / Video / Gallery Post Formats
+13.6 Page Templates
 --------------------------------------------------------------*/
+/* 404 template */
+.error-404 {
+	margin-bottom: 3em; /* 48px */
+}
+
+.error-404 .page-title {
+	margin-top: 0;
+}
+
+.error-404 > :last-child {
+	margin-bottom: 0;
+}
+
+/* full width template */
+.full-width .entry-header,
+.full-width .entry-content,
+.full-width .entry-footer,
+.full-width .comments-area,
+.front-page .hero-content .entry-header,
+.front-page .hero-content .entry-content {
+	margin-right: auto;
+	margin-left: auto;
+	max-width: 52.75em; /* 844px */
+}
+
+/* Front page template */
+.front-page .content-area {
+	float: none;
+	margin: 0 auto;
+	width: 100%;
+}
+
+.hero-content .entry-content {
+	margin-bottom: 0;
+}
+
+.front-page .site-main > :last-child {
+	border-bottom-width: 0;
+	margin-bottom: 0;
+}
+
+.front-page .hero-content article {
+	margin-bottom: 2.625em; /* 42px */
+	text-align: center;
+}
+
+.front-page .hero-content p {
+	font-size: 24px;
+	font-size: 1.5rem;
+	font-weight: normal;
+	line-height: 1.3125;
+	margin: 0 auto 0.75em; /* 0 auto 24px */
+	width: 95%;
+}
+
+.front-page .content-area p:last-child {
+	margin-bottom: 0;
+}
+
+.hero-image {
+	margin-bottom: 2.5em; /* 40px */
+	position: relative;
+}
+
+.front-page .front-testimonials,
+.front-page .front-portfolio {
+	border-bottom: 1px solid #ddd;
+	margin-bottom: 2.625em; /* 42px */
+	/*padding-bottom: 0.375em; /* 6px */
+}
 
 /*--------------------------------------------------------------
 13.7 Comments
@@ -1468,7 +1501,7 @@ a img:hover {
 	border-radius: 50%;
 	left: 0;
 	position: absolute;
-	top: 0.25em;
+	top: 0.25em; /* 4px */
 }
 
 .comment-author .fn {
@@ -1477,7 +1510,7 @@ a img:hover {
 	font-size: 1.75rem;
 	font-weight: bold;
 	line-height: 1;
-	margin: 0; /* 0 0 7px */
+	margin: 0;
 }
 
 .comment-author .fn a {
@@ -1512,9 +1545,9 @@ a img:hover {
 
 .comment .comment-reply-link:before {
 	content: "\f412";
-	margin-right: 0.25em;
+	margin-right: 0.25em; /* 4px */
 	position: relative;
-	top: 0.25em;
+	top: 0.25em; /* 4px */
 }
 
 .comment .comment-reply-link:hover:before {
@@ -1557,80 +1590,11 @@ a img:hover {
 }
 
 /*--------------------------------------------------------------
-13.8 Page Templates
---------------------------------------------------------------*/
-/* 404 template */
-.error-404 {
-	margin-bottom: 3em; /* 48px */
-}
-
-.error-404 .page-title {
-	margin-top: 0;
-}
-
-.error-404 > :last-child {
-	margin-bottom: 0;
-}
-
-/* full width template */
-.full-width .entry-header,
-.full-width .entry-content,
-.full-width .entry-footer,
-.full-width .comments-area,
-.front-page .hero-content .entry-header,
-.front-page .hero-content .entry-content {
-	margin-right: auto;
-	margin-left: auto;
-	max-width: 52.75em; /* 844px */
-}
-
-/* Front page template */
-.front-page .content-area {
-	float: none;
-	margin: 0 auto;
-	width: 100%;
-}
-
-.hero-content .entry-content {
-	margin-bottom: 0;
-}
-
-.front-page .hero-content article {
-	margin-bottom: 2.625em; /* 42px */
-	text-align: center;
-}
-
-.front-page .hero-content p {
-	font-size: 24px;
-	font-size: 1.5rem;
-	font-weight: normal;
-	line-height: 1.3125; /* 42px */
-	margin: 0 auto 0.75em; /* 0 auto 24px */
-	width: 95%;
-}
-
-.front-page .content-area p:last-child {
-	margin-bottom: 0;
-}
-
-.hero-image {
-	margin-bottom: 2.5em; /* 40px */
-	position: relative;
-}
-
-.front-page .front-testimonials,
-.front-page .front-portfolio {
-	border-bottom: 1px solid #ddd;
-	margin-bottom: 42px;
-	padding-bottom: 6px;
-}
-
-/*--------------------------------------------------------------
 14.0 Footer
 --------------------------------------------------------------*/
 .site-footer {
 	border-top: 1px solid #ddd;
-	margin-top: 2em; /* 32px */
+	/*margin-top: 2em; /* 32px */
 	padding: 2.625em; /* 42px */
 	text-align: center;
 }
@@ -1764,18 +1728,19 @@ object {
 .infinite-loader {
 	border-top: 1px solid #ddd;
 	clear: both;
-	padding: 3em 0;
+	padding: 3em 0; /* 48px */
 	text-align: center;
 }
 
 #infinite-handle span {
 	background-color: #333;
 	border: 0;
-	border-radius: 3px;
+	border-radius: 0.1875em; /* 3px */
 	box-shadow: none;
 	color: #fff;
 	display: inline-block;
-	font-size: 1em; /* 16px */
+	font-size: 16px;
+	font-size: 1rem;
 	font-weight: bold;
 	padding: 0.75em 1em; /* 12px 16px */
 	text-align: center;
@@ -1809,8 +1774,8 @@ object {
 }
 
 .sharedaddy .sd-title {
-	font-size: 1rem;
 	font-size: 16px;
+	font-size: 1rem;
 	letter-spacing: 1px;
 	text-transform: uppercase;
 }
@@ -1853,7 +1818,7 @@ object {
 }
 
 .post-thumbnail {
-	margin-bottom: 1.25em;
+	margin-bottom: 1.25em; /* 20px */
 }
 
 /*--------------------------------------------------------------
@@ -1873,23 +1838,11 @@ object {
 
 .jetpack-testimonial .post-thumbnail {
 	float: left;
-	margin: 0 1em 0.25em 0;
+	margin: 0 1em 0.25em 0; /* 0 16px 4px 0 */
 }
 
 .jetpack-testimonial .entry-content {
 	margin: 0 0 1.25em; /* 0 0 20px */
-}
-
-.post-type-archive-jetpack-testimonial .has-post-thumbnail .entry-content,
-.post-type-archive-jetpack-testimonial .has-post-thumbnail .entry-header,
-.post-type-archive-jetpack-testimonial .has-post-thumbnail .entry-footer {
-	/*margin: 0;*/
-	/*padding-left: 5.5em; /* 88px */
-}
-
-.jetpack-testimonial .entry-footer {
-	/*margin: 0;*/
-	/*padding-left: 5.5em; /* 88px */
 }
 
 .jetpack-testimonial .post-thumbnail img {
@@ -1899,7 +1852,7 @@ object {
 .jetpack-testimonial {
 	border-bottom-width: 0;
 	margin-bottom: 0;
-	padding-bottom: 2.25em;
+	padding-bottom: 2.25em; /* 36px */
 	position: relative;
 }
 
@@ -1938,6 +1891,7 @@ object {
 }
 
 @media screen and (min-width: 600px) {
+	/* 2 Portfolio projects per row. */
 	.portfolio-projects .jetpack-portfolio {
 		float: left;
 		margin-right: 5.333333334%; /* 36 px max */
@@ -1978,6 +1932,13 @@ object {
 		word-wrap: break-word;
 	}
 
+	/* Avoid a double border next to the footer. */
+	.site-main > :last-child {
+		border-bottom-width: 0;
+		margin-bottom: 0;
+	}
+
+	/* Menu */
 	.menu-toggle {
 		display: none;
 	}
@@ -2036,7 +1997,7 @@ object {
 		font-size: 0.5rem;
 		position: absolute;
 		right: 0;
-		top: 1em;  /*8px*/
+		top: 1em; /* 16px */
 	}
 
 	.main-navigation ul ul li {
@@ -2062,7 +2023,7 @@ object {
 
 	.main-navigation ul ul a {
 		padding: 0.5em 0.75em; /* 8px 12px */
-		width: 200px;
+		width: 12.5em; /* 16px */
 	}
 
 	.main-navigation ul ul ul {
@@ -2070,12 +2031,7 @@ object {
 		left: -999em;
 	}
 
-	/* Avoid a double border next to the footer. */
-	.site-main > :last-child {
-		border-bottom-width: 0;
-		margin-bottom: 0;
-	}
-
+	/* 2 Testimonials per row. */
 	.jetpack-testimonial {
 		float: left;
 		margin-right: 5.333333334%; /* 36 px max */
@@ -2095,15 +2051,10 @@ object {
 	.jetpack-testimonial:nth-of-type(2n) {
 		margin-right: 0;
 	}
-
-	.post-type-archive-jetpack-testimonial .entry-content,
-	.post-type-archive-jetpack-testimonial .entry-header,
-	.post-type-archive-jetpack-testimonial .entry-footer {
-		/*padding-left: 5.5em; /* 88px */
-	}
 }
 
 @media screen and (min-width: 900px) {
+	/* 3 portfolio projects per row */
 	.portfolio-projects .jetpack-portfolio {
 		float: left;
 		margin-right: 3.529411765%; /* 36 px max */
@@ -2149,6 +2100,7 @@ object {
 		margin: 1cm;
 	}
 
+	/* Hide redundant elements */
 	.main-navigation,
 	.post-navigation,
 	.widget-area,
@@ -2167,7 +2119,6 @@ object {
 		border-width: 0;
 	}
 
-	/* Typography */
 	.content-area p {
 		orphans: 3;
 		widows: 3;
