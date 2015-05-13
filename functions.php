@@ -162,13 +162,13 @@ function daniela_fonts_url() {
 	$subsets   = 'latin,latin-ext';
 
 	/* translators: If there are characters in your language that are not supported by Open Sans, translate this to 'off'. Do not translate into your own language. */
-	if ( 'off' !== _x( 'on', 'Noto Sans font: on or off', 'daniela' ) ) {
+	if ( 'off' !== _x( 'on', 'Open Sans font: on or off', 'daniela' ) ) {
 		$fonts[] = 'Open Sans:400italic,700italic,400,700';
 	}
 
 	/* translators: If there are characters in your language that are not supported by Playfair Display, translate this to 'off'. Do not translate into your own language. */
 	if ( 'off' !== _x( 'on', 'Playfair Display font: on or off', 'daniela' ) ) {
-		$fonts[] = 'Playfair Display:400,700,900';
+		$fonts[] = 'Playfair Display:700italic,400,700,900';
 	}
 
 	/* translators: To add an additional character subset specific to your language, translate this to 'greek', 'cyrillic', 'devanagari' or 'vietnamese'. Do not translate into your own language. */

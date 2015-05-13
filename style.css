@@ -1299,7 +1299,8 @@ a:active {
 .archive-title {
 	font-size: 32px;
 	font-size: 2rem;
-	font-weight: normal;
+	font-style: italic;
+	font-weight: bold;
 	line-height: 1;
 	margin: 0;
 	text-align: center;
