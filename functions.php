@@ -115,6 +115,36 @@ function daniela_widgets_init() {
 		'before_title'  => '<h1 class="widget-title">',
 		'after_title'   => '</h1>',
 	) );
+
+	register_sidebar( array(
+		'name'          => __( 'Front Page Widget 1', 'daniela' ),
+		'id'            => 'front-page-1',
+		'description'   => __( 'The first (leftmost) sidebar used by front-page.php', 'daniela' ),
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<h1 class="widget-title">',
+		'after_title'   => '</h1>',
+	) );
+
+	register_sidebar( array(
+		'name'          => __( 'Front Page Widget 2', 'daniela' ),
+		'id'            => 'front-page-2',
+		'description'   => __( 'The second (central) sidebar used by front-page.php', 'daniela' ),
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<h1 class="widget-title">',
+		'after_title'   => '</h1>',
+	) );
+
+	register_sidebar( array(
+		'name'          => __( 'Front Page Widget 3', 'daniela' ),
+		'id'            => 'front-page-3',
+		'description'   => __( 'The third (rightmost) sidebar used by front-page.php', 'daniela' ),
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<h1 class="widget-title">',
+		'after_title'   => '</h1>',
+	) );
 }
 add_action( 'widgets_init', 'daniela_widgets_init' );
 

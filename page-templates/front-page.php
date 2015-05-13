@@ -54,7 +54,7 @@ get_header(); ?>
 					</div>
 				</div><!-- .testimonials -->
 				<?php endif; ?>
-			
+
 				<?php
 					$projects = new WP_Query( array(
 						'post_type'      => 'jetpack-portfolio',
@@ -64,7 +64,7 @@ get_header(); ?>
 						'no_found_rows'  => true,
 					) );
 				?>
-			
+
 				<?php if ( $projects->have_posts() ) : ?>
 				<div id="front-page-portfolio" class="front-portfolio portfolio-projects">
 					<header class="archive-header">
@@ -81,9 +81,9 @@ get_header(); ?>
 				</div><!-- .portfolio-projects -->
 				<?php endif; ?>
 
+				<?php get_sidebar( 'front'); ?>
 			<?php endwhile; // end of the loop. ?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
-
 <?php get_footer(); ?>

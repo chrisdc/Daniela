@@ -23,7 +23,7 @@ function daniela_body_classes( $classes ) {
 		|| is_page_template( 'page-templates/full-width.php' ) ) {
 		$classes[] = 'full-width';
 	}
-	
+
 	if ( is_page_template( 'page-templates/front-page.php' ) ) {
 		$classes[] = 'front-page';
 	}
@@ -92,3 +92,25 @@ function daniela_archive_title( $title ) {
 	return $title;
 }
 add_filter( 'get_the_archive_title', 'daniela_archive_title' );
+
+/**
+ * Counts the number of front page widget areas currently in use.
+ * @returns int @count Number of widget areas in use.
+ */
+function daniela_count_widgets() {
+	$count = 0;
+
+	if ( is_active_sidebar( 'front-page-1' ) ) {
+		$count += 1;
+	}
+
+	if ( is_active_sidebar( 'front-page-2' ) ) {
+		$count += 1;
+	}
+
+	if ( is_active_sidebar( 'front-page-3' ) ) {
+		$count += 1;
+	}
+
+	return $count;
+}
