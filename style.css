@@ -1482,8 +1482,8 @@ a:active {
 .front-page .front-portfolio,
 .front-page .front-page-widgets {
 	border-bottom: 1px solid #d0d0d0;
-	margin-bottom: 2.625em; /* 42px */
-	/*padding-bottom: 0.375em; /* 6px */
+	margin-bottom: 2.5em; /* 40px */
+	padding-bottom: 0.25em; /* 4px */
 }
 
 .front-page .widget-area {
@@ -1792,7 +1792,9 @@ object {
 /*--------------------------------------------------------------
 17.3 Portfolio
 --------------------------------------------------------------*/
-.post-type-archive-jetpack-portfolio .content-area {
+.post-type-archive-jetpack-portfolio .content-area,
+.tax-jetpack-portfolio-type .content-area,
+.tax-jetpack-portfolio-tag .content-area {
 	width: 100%;
 }
 
@@ -1901,15 +1903,13 @@ object {
 
 @media screen and (min-width: 600px) {
 	/* 2 Portfolio projects / widgets per row. */
-	.portfolio-projects .jetpack-portfolio,
-	.front-page .widgets-2 .widget-area {
+	.portfolio-projects .jetpack-portfolio {
 		float: left;
 		margin-right: 5.333333334%; /* 36 px max */
 		width: 47.333333333%; /* 210px max */
 	}
 
-	.portfolio-projects .jetpack-portfolio:nth-of-type(2n),
-	.front-page .widgets-2 .widget-area:nth-of-type(2n) {
+	.portfolio-projects .jetpack-portfolio:nth-of-type(2n) {
 		margin-right: 0;
 	}
 }
@@ -2042,24 +2042,16 @@ object {
 		left: -999em;
 	}
 
-	/* 2 Testimonials per row. */
-	.jetpack-testimonial {
-		float: left;
-		margin-right: 5.333333334%; /* 36 px max */
-		width: 47.333333333%; /* 210px max */
-	}
-
-	.jetpack-testimonial:nth-of-type(2n) {
-		margin-right: 0;
-	}
-
-	.jetpack-testimonial {
+	/* 2 Testimonials / widgets per row. */
+	.jetpack-testimonial,
+	.front-page .widgets-2 .widget-area {
 		float: left;
 		margin-right: 3.529411764%; /* 36 px max */
 		width: 48.235294117%; /* 492px max */
 	}
 
-	.jetpack-testimonial:nth-of-type(2n) {
+	.jetpack-testimonial:nth-of-type(2n),
+	.front-page .widgets-2 .widget-area:nth-of-type(2n) {
 		margin-right: 0;
 	}
 }
