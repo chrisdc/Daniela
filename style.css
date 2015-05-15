@@ -557,7 +557,7 @@ button:focus,
 input[type="button"]:focus,
 input[type="reset"]:focus,
 input[type="submit"]:focus,
-.button:focus
+.button:focus,
 button:active,
 input[type="button"]:active,
 input[type="reset"]:active,
@@ -568,7 +568,7 @@ input[type="submit"]:active,
 	        transition: background-color 0.2s, color 0.2s;
 }
 
-.entry-content .button-minimal {
+.button-minimal {
 	background-color: #fff;
 	border: 3px solid #333;
 	border-radius: 0.1875em; /* 3px */
@@ -587,7 +587,8 @@ input[type="submit"]:active,
 	        transition: background-color 0.2s, color 0.2s;
 }
 
-.entry-content .button-minimal:hover {
+.button-minimal:hover,
+.button-minimal:focus {
 	background-color: #333;
 	color: #fff;
 	-webkit-transition: background-color 0.2s, color 0.2s;
@@ -1201,7 +1202,8 @@ a:active {
 	color: inherit;
 }
 
-.entry-footer a:hover {
+.entry-footer a:hover,
+.entry-footer a:focus {
 	color: #21759b;
 }
 
@@ -1269,15 +1271,22 @@ a:active {
 .entry-content a img,
 .entry-summary a img,
 .page-content a img,
-.comment-content a img {
+.comment-content a img,
+.post-thumbnail a img {
 	-webkit-transition: opacity 0.2s;
 	        transition: opacity 0.2s;
 }
 
 .entry-content a img:hover,
+.entry-content a img:focus,
 .entry-summary a img:hover,
+.entry-summary a img:focus,
 .page-content a img:hover,
-.comment-content a img:hover {
+.page-content a img:focus,
+.comment-content a img:hover,
+.comment-content a img:focus,
+.post-thumbnail a img:hover,
+.post-thumbnail a img:focus {
 	opacity: 0.9;
 	-webkit-transition: opacity 0.2s;
 	        transition: opacity 0.2s;
@@ -1617,7 +1626,8 @@ a:active {
 	text-decoration: underline;
 }
 
-.site-info a:hover {
+.site-info a:hover,
+.site-info a:focus {
 	color: #21759b;
 }
 
@@ -1817,7 +1827,8 @@ object {
 	color: inherit;
 }
 
-.portfolio-type-links a:hover {
+.portfolio-type-links a:hover,
+.portfolio-type-links a:focus {
 	color: #21759b;
 }
 
