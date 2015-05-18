@@ -912,6 +912,19 @@ a:active {
 	text-transform: uppercase;
 }
 
+.full-width .site-main .comment-navigation,
+.full-width .site-main .posts-navigation,
+.full-width .site-main .post-navigation {
+	border-top: 1px solid #d0d0d0;
+	border-bottom: 1px solid #d0d0d0;
+	clear: both;
+	font-weight: bold;
+	letter-spacing: 1px;
+	overflow: hidden;
+	padding: 3em 0; /* 48px 0 */
+	text-transform: uppercase;
+}
+
 .site-main .comment-navigation {
 	border-bottom: 1px solid #d0d0d0;
 	border-top-width: 0;
@@ -1806,6 +1819,10 @@ object {
 	font-size: 1rem;
 	letter-spacing: 1px;
 	text-transform: uppercase;
+}
+
+.jp-relatedposts {
+	margin-bottom: 0;
 }
 
 /*--------------------------------------------------------------
