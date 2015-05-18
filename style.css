@@ -1793,13 +1793,15 @@ object {
 }
 
 /*--------------------------------------------------------------
-17.2 Sharing
+17.2 Sharing / Related Posts
 --------------------------------------------------------------*/
-.sharedaddy {
+.sharedaddy,
+.jp-relatedposts {
 	margin-top: 1.75em; /* 28px */
 }
 
-.sharedaddy .sd-title {
+.sharedaddy .sd-title,
+.jp-relatedposts .jp-relatedposts-headline {
 	font-size: 16px;
 	font-size: 1rem;
 	letter-spacing: 1px;
