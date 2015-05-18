@@ -914,15 +914,14 @@ a:active {
 
 .full-width .site-main .comment-navigation,
 .full-width .site-main .posts-navigation,
-.full-width .site-main .post-navigation {
-	border-top: 1px solid #d0d0d0;
-	border-bottom: 1px solid #d0d0d0;
-	clear: both;
-	font-weight: bold;
-	letter-spacing: 1px;
-	overflow: hidden;
-	padding: 3em 0; /* 48px 0 */
-	text-transform: uppercase;
+.full-width .site-main .post-navigation,
+.post-type-archive-jetpack-portfolio .site-main .comment-navigation,
+.post-type-archive-jetpack-portfolio .site-main .posts-navigation,
+.post-type-archive-jetpack-portfolio .site-main .post-navigation,
+.post-type-archive-jetpack-testimonial .site-main .comment-navigation,
+.post-type-archive-jetpack-testimonial .site-main .posts-navigation,
+.post-type-archive-jetpack-testimonial .site-main .post-navigation {
+	border-bottom-width: 0;
 }
 
 .site-main .comment-navigation {
@@ -1149,7 +1148,7 @@ a:active {
 	font-size: 2.625rem;
 	font-weight: 900;
 	line-height: 1;
-	margin: 0;
+	margin: 0 0 0.1em; /* 0 0 6px */
 }
 
 .site-title a {
@@ -1766,7 +1765,11 @@ object {
 }
 
 .full-width #infinite-handle,
-.full-width .infinite-loader {
+.full-width .infinite-loader,
+.post-type-archive-jetpack-portfolio #infinite-handle,
+.post-type-archive-jetpack-portfolio .infinite-loader,
+.post-type-archive-jetpack-testimonial #infinite-handle,
+.post-type-archive-jetpack-testimonial .infinite-loader {
 	border-bottom-width: 0;
 }
 
@@ -1910,7 +1913,7 @@ object {
 .site-logo {
 	border-radius: 50%;
 	margin-bottom: 0.5em; /* 8px */
-	width: 80px;
+	width: 5em; /* 80px */
 }
 
 /*--------------------------------------------------------------
