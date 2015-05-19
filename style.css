@@ -1345,8 +1345,8 @@ a:active {
 }
 
 .entry-footer span:before {
-	position: relative;
 	margin-right: 0.1875em; /* 3px */
+	position: relative;
 	top: 0.25em; /* 4px */
 }
 
@@ -1507,9 +1507,7 @@ a:active {
 	padding-bottom: 0.25em; /* 4px */
 }
 
-.front-page .widget-area {
 
-}
 
 /*--------------------------------------------------------------
 13.7 Comments
