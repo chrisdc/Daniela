@@ -58,7 +58,9 @@ function daniela_setup() {
 	/*
 	 * Enqueue editor style sheet.
 	 */
-	add_editor_style( 'css/editor-style.css', daniela_fonts_url() );
+	$font_url = str_replace( ',', '%2C', daniela_fonts_url() );
+	add_editor_style( 'css/editor-style.css' );
+	add_editor_style( $font_url );
 
 	/*
 	 * Enable support for Post Thumbnails on posts and pages.

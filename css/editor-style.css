@@ -41,7 +41,7 @@ h6 {
 }
 
 h1 {
-	font-family: 'Playfair Display', serif;
+	font-family: "Playfair Display", serif;
 	font-size: 36px;
 	font-size: 2.25rem;
 	line-height: 1.25;
@@ -49,7 +49,7 @@ h1 {
 }
 
 h2 {
-	font-family: 'Playfair Display', serif;
+	font-family: "Playfair Display", serif;
 	font-size: 28px;
 	font-size: 1.75rem;
 	font-weight: normal;
@@ -329,7 +329,7 @@ tr,
 		font-size: 42px;
 		font-size: 2.625rem;
 	}
-	
+
 	h2 {
 		font-size: 32px;
 		font-size: 2rem;

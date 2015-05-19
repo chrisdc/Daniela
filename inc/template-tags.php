@@ -66,7 +66,7 @@ if ( ! function_exists( 'daniela_posted_on' ) ) :
  * Prints HTML with meta information for the post date and format.
  */
 function daniela_posted_on() {
-	if ( is_sticky() && ! is_single() ) {
+	if ( is_sticky() && is_home() && ! is_single() ) {
 		echo '<span class="sticky">' . __( 'Sticky', 'daniela' ) . '</span>';
 	} else {
 		$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
@@ -91,7 +91,7 @@ function daniela_posted_on() {
 		printf( ' | <span class="entry-format"><a href="%1$s">%2$s</a></span>',
 			esc_url( get_post_format_link( $post_format ) ),
 			get_post_format_string( $post_format )
-		);	
+		);
 	}
 }
 endif;
@@ -120,7 +120,7 @@ function daniela_entry_footer() {
 				$tags_list
 			);
 		}
-		
+
 		if ( is_multi_author() ) {
 			printf('<span class="author-link author vcard"><span class="screen-reader-text">%1$s</span><a class="url fn n" href="%2$s">%3$s</a></span> ',
 				_x( 'Author ', 'daniela' ),
@@ -241,11 +241,11 @@ function daniela_post_thumbnail() {
 	if ( ! has_post_thumbnail() || post_password_required() ) {
 		return;
 	}
-	
+
 	$post_type = get_post_type();
-	
+
 	echo '<p class="post-thumbnail">';
-	
+
 	if ( 'jetpack-portfolio' === $post_type && ! is_single() ) {
 		$image_size = 'daniela-porfolio-archive';
 	} elseif ( 'jetpack-testimonial' === $post_type ) {
