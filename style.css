@@ -1392,7 +1392,7 @@ a:active {
 }
 
 .format-quote blockquote {
-	font-family: playfair, serif;
+	font-family: "Playfair Display", serif;
 	font-size: 2em; /* 32px */
 	line-height: 1.25;
 	margin: 0;
