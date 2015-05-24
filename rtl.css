@@ -7,11 +7,279 @@ of your CSS stylesheet in a separate stylesheet file named rtl.css.
 
 http://codex.wordpress.org/Right_to_Left_Language_Support
 
+Note section numbers correspond to those in style.css
 */
 
-/*
+/*--------------------------------------------------------------
+1.0 Normalize
+--------------------------------------------------------------*/
 body {
 	direction: rtl;
 	unicode-bidi: embed;
 }
-*/
+
+/*--------------------------------------------------------------
+4.0 Elements
+--------------------------------------------------------------*/
+li > ul,
+li > ol {
+	padding-right: 1.5em; /* 24px */
+	padding-left: 0;
+}
+
+table {
+	text-align: right;
+}
+
+/*--------------------------------------------------------------
+5.0 Forms
+--------------------------------------------------------------*/
+textarea {
+	padding-right: 0.375em; /* 6px */
+	padding-left: 0;
+}
+
+/*--------------------------------------------------------------
+6.0 Navigation
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+6.2 Menus
+--------------------------------------------------------------*/
+.main-navigation .nav-menu {
+	padding-right: 0;
+	/*padding-left: 0;*/
+}
+
+.main-navigation ul {
+	text-align: right;
+}
+
+.main-navigation ul ul {
+	padding: 0.875em 2em 0.875em 0; /* 14px 32px 14px 0 */
+}
+
+.main-navigation ul ul .menu-item-has-children a:after {
+	left: 0.5em; /* 4px */
+	right: 0;
+}
+
+.main-navigation ul ul ul {
+	right: -999em;
+	left: auto;
+}
+
+.social-navigation a:before {
+	left: auto;
+	right: 0;
+}
+
+.comment-navigation .nav-previous,
+.posts-navigation .nav-previous,
+.post-navigation .nav-previous {
+	float: right;
+}
+
+.comment-navigation .nav-next,
+.posts-navigation .nav-next,
+.post-navigation .nav-next {
+	float: left;
+	text-align: left;
+}
+
+/*--------------------------------------------------------------
+8.0 Alignments
+--------------------------------------------------------------*/
+.alignleft {
+	float: right;
+	margin-left: 1.5em; /* 24px */
+	margin-right: 0;
+}
+
+.alignright {
+	float: left;
+	margin-right: 1.5em; /* 20px */
+	margin-left: 0;
+}
+
+/*--------------------------------------------------------------
+13.0 Content
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+13.2 Entry meta
+--------------------------------------------------------------*/
+.entry-footer span {
+	margin-left: 1.5em; /* 24px */
+	margin-right: 0;
+}
+
+.entry-footer span:before {
+	margin-left: 0.1875em; /* 3px */
+	margin-right: 0;
+}
+
+/*--------------------------------------------------------------
+13.5 Link Post Format
+--------------------------------------------------------------*/
+.format-link .entry-title a:after {
+	left: 0;
+	right: auto;
+}
+
+/*--------------------------------------------------------------
+13.7 Comments
+--------------------------------------------------------------*/
+.avatar {
+	right: 0;
+	left: auto;
+}
+
+.comment-author,
+.comment-metadata,
+.comment-content,
+.reply {
+	padding-right: 3em; /* 48px */
+	padding-left: 0;
+}
+
+.comment .comment-reply-link:before {
+	margin-left: 0.25em; /* 4px */
+	margin-right: 0;
+	transform: scaleX(-1);
+}
+
+.comment .edit-link:before {
+	margin-left: 0.25em; /* 4px */
+	margin-right: 0;
+}
+
+/*--------------------------------------------------------------
+17.0 Jetpack Features
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+17.4 Testimonials
+--------------------------------------------------------------*/
+.jetpack-testimonial .post-thumbnail {
+	float: right;
+	margin: 0 0 0.25em 1em; /* 0 0 4px 16px */
+}
+
+/*--------------------------------------------------------------
+18.0 Media Queries
+--------------------------------------------------------------*/
+
+@media screen and (min-width: 600px) {
+	/* 2 Portfolio projects / widgets per row. */
+	.portfolio-projects .jetpack-portfolio {
+		float: right;
+		margin-left: 5.333333334%; /* 36 px max */
+		margin-right: 0;
+	}
+
+	.portfolio-projects .jetpack-portfolio:nth-of-type(2n) {
+		margin-left: 0;
+		margin-right: auto;
+	}
+}
+
+@media screen and (min-width: 750px) {
+	/* Basic layout */
+	.content-area {
+		float: right;
+	}
+
+	.widget-area {
+		float: left;
+	}
+
+	.main-navigation .menu-item-has-children > a {
+		padding-left: 12px;
+		padding-right: 12px;
+	}
+
+	.main-navigation ul ul {
+		left: auto;
+		right: -999em;
+		padding: 0;
+	}
+
+	.main-navigation ul li:hover > ul,
+	.main-navigation ul li.focus > ul {
+		right: auto;
+	}
+
+	.main-navigation .menu-item-has-children > a:after {
+		right: auto;
+		left: 0;
+	}
+
+	.main-navigation ul ul li:hover > ul,
+	.main-navigation ul ul li.focus > ul {
+		right: 100%;
+		left: auto;
+	}
+
+	.main-navigation ul ul .menu-item-has-children > a:after {
+		left: 0.5em; /* 4px */
+		right: auto;
+		transform: scaleX(-1);
+	}
+
+	.main-navigation ul ul ul {
+		left: auto;
+		right: -999em;
+	}
+
+	/* 2 Testimonials / widgets per row. */
+	.jetpack-testimonial,
+	.front-page .widgets-2 .widget-area {
+		float: right;
+		margin-left: 3.529411764%; /* 36 px max */
+		margin-right: 0;
+	}
+
+	.jetpack-testimonial:nth-of-type(2n),
+	.front-page .widgets-2 .widget-area:nth-of-type(2n) {
+		margin-left: 0;
+	}
+}
+
+@media screen and (min-width: 900px) {
+	/* 3 portfolio projects / widgets per row */
+	.portfolio-projects .jetpack-portfolio,
+	.front-page .widgets-3 .widget-area {
+		float: right;
+		margin-left: 3.529411765%; /* 36 px max */
+		margin-right: 0;
+	}
+
+	.portfolio-projects .jetpack-portfolio:nth-of-type(2n) {
+		margin-left: 3.529411765%; /* 36 px max */
+		margin-right: 0;
+	}
+
+	.portfolio-projects .jetpack-portfolio:nth-of-type(3n),
+	.front-page .widgets-3 .widget-area:nth-of-type(3n) {
+		margin-left: 0;
+		margin-right: auto;
+	}
+
+	.portfolio-projects .jetpack-portfolio:nth-of-type(3n + 1) {
+		clear: right;
+	}
+}
+
+/* Max width + padding */
+@media screen and (min-width: 1133px) {
+	.full-width .alignleft {
+		margin-right: -8.62745098%;
+		margin-left: 0;
+	}
+
+	.full-width .alignright {
+		margin-left: -8.62745098%;
+		margin-right: 0;
+	}
+}
