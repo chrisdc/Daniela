@@ -23,10 +23,10 @@ function daniela_jetpack_setup() {
 
 	// Add support for Jetpack Site Logo.
 	add_theme_support( 'site-logo', array( 'size' => 'daniela-site-logo' ) );
-	
+
 	// Add support for Jetpack Testimonials.
 	add_theme_support( 'jetpack-testimonial' );
-	
+
     // Add theme support for Responsive Videos.
     add_theme_support( 'jetpack-responsive-videos' );
 }
