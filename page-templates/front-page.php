@@ -29,56 +29,60 @@ get_header(); ?>
 					</article><!-- #post-## -->
 				</div><!-- .hero-content -->
 
-				<?php
-					$testimonials = new WP_Query( array(
-						'post_type'      => 'jetpack-testimonial',
-						'order'          => 'ASC',
-						'orderby'        => 'menu_order',
-						'posts_per_page' => 2,
-						'no_found_rows'  => true,
-					) );
-				?>
-
-				<?php if ( $testimonials->have_posts() ) : ?>
-				<div id="front-page-testimonials" class="front-testimonials testimonials">
-					<header class="archive-header">
-						<h2 class="archive-title">What Our Customers Say:</h2>
-					</header>
-					<div class="grid-row">
+				<?php if ( post_type_exists( 'jetpack-testimonial' ) ) : ?>
 					<?php
-						while ( $testimonials->have_posts() ) : $testimonials->the_post();
-							 get_template_part( 'content', 'testimonial' );
-						endwhile;
-						wp_reset_postdata();
+						$testimonials = new WP_Query( array(
+							'post_type'      => 'jetpack-testimonial',
+							'order'          => 'ASC',
+							'orderby'        => 'menu_order',
+							'posts_per_page' => 2,
+							'no_found_rows'  => true,
+						) );
 					?>
-					</div>
-				</div><!-- .testimonials -->
+
+					<?php if ( $testimonials->have_posts() ) : ?>
+					<div id="front-page-testimonials" class="front-testimonials testimonials">
+						<header class="archive-header">
+							<h2 class="archive-title">What Our Customers Say:</h2>
+						</header>
+						<div class="grid-row">
+						<?php
+							while ( $testimonials->have_posts() ) : $testimonials->the_post();
+								 get_template_part( 'content', 'testimonial' );
+							endwhile;
+							wp_reset_postdata();
+						?>
+						</div>
+					</div><!-- .testimonials -->
+					<?php endif; ?>
 				<?php endif; ?>
 
-				<?php
-					$projects = new WP_Query( array(
-						'post_type'      => 'jetpack-portfolio',
-						'order'          => 'ASC',
-						'orderby'        => 'menu_order',
-						'posts_per_page' => 3,
-						'no_found_rows'  => true,
-					) );
-				?>
-
-				<?php if ( $projects->have_posts() ) : ?>
-				<div id="front-page-portfolio" class="front-portfolio portfolio-projects">
-					<header class="archive-header">
-						<h2 class="archive-title">Recent Projects:</h2>
-					</header>
-					<div class="grid-row">
+				<?php if ( post_type_exists( 'jetpack-portfolio' ) ) : ?>
 					<?php
-						while ( $projects->have_posts() ) : $projects->the_post();
-							 get_template_part( 'content', 'portfolio' );
-						endwhile;
-						wp_reset_postdata();
+						$projects = new WP_Query( array(
+							'post_type'      => 'jetpack-portfolio',
+							'order'          => 'ASC',
+							'orderby'        => 'menu_order',
+							'posts_per_page' => 3,
+							'no_found_rows'  => true,
+						) );
 					?>
-					</div>
-				</div><!-- .portfolio-projects -->
+
+					<?php if ( $projects->have_posts() ) : ?>
+					<div id="front-page-portfolio" class="front-portfolio portfolio-projects">
+						<header class="archive-header">
+							<h2 class="archive-title">Recent Projects:</h2>
+						</header>
+						<div class="grid-row">
+						<?php
+							while ( $projects->have_posts() ) : $projects->the_post();
+								 get_template_part( 'content', 'portfolio' );
+							endwhile;
+							wp_reset_postdata();
+						?>
+						</div>
+					</div><!-- .portfolio-projects -->
+					<?php endif; ?>
 				<?php endif; ?>
 
 				<?php get_sidebar( 'front'); ?>
