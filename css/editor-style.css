@@ -17,18 +17,18 @@ Description: Used to style the TinyMCE editor.
  * 7.0 - Media Queries
  */
 
-/**
+ /**
   * 1.0 Body
   */
 body {
 	color: #333;
-	font-family: "Open Sans", sans-serif;
+	font-family: 'Open Sans', sans-serif;
 	font-size: 16px;
 	font-size: 1rem;
 	line-height: 1.6;
 }
 
-/**
+ /**
   * 2.0 Typography
   */
 h1,
@@ -45,7 +45,7 @@ h1 {
 	font-size: 36px;
 	font-size: 2.25rem;
 	line-height: 1.25;
-	margin: 0.95238095238em 0 0.7619047619em; /* 40px 0 32px */
+	margin: 0.95238095238em 0 0.7619047619em /* 40px 0 32px */
 }
 
 h2 {
@@ -232,8 +232,8 @@ tr,
 .alignright {
 	display: inline;
 	float: right;
-	margin-bottom: 1.25em;
 	margin-left: 1.5em;
+	margin-bottom: 1.25em;
 }
 
 .aligncenter {
@@ -320,11 +320,32 @@ tr,
 /**
  * 6.0 RTL
  */
+.rtl li > ul,
+.rtl li > ol {
+	margin-right: 1.5em; /* 24px */
+}
+
+.rtl table,
+.rtl .mce-item-table {
+	text-align: right;
+}
+
+.rtl .alignleft {
+	float: right;
+	margin-right: 0;
+	margin-left: 1.5em; /* 24px */
+}
+
+.rtl .alignright {
+	float: left;
+	margin-right: 1.5em; /* 24px */
+	margin-left: 0;
+}
 
 /**
  * 7.0 Media Queries
  */
-@media screen and (min-width: 450px) {
+ @media screen and (min-width: 450px) {
 	h1 {
 		font-size: 42px;
 		font-size: 2.625rem;
