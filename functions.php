@@ -6,17 +6,22 @@
  */
 
 /**
- * Set the content width based on the theme's design and stylesheet.
+ * Set the content width in pixels, based on the theme's design and stylesheet.
+ *
+ * Priority 0 to make it available to lower priority callbacks.
+ *
+ * @global int $content_width
  */
-if ( ! isset( $content_width ) ) {
-	$content_width = 668; /* pixels */
+function daniela_content_width() {
+	$GLOBALS['content_width'] = apply_filters( 'daniela_content_width', 640 );
 }
+add_action( 'after_setup_theme', 'daniela_content_width', 0 );
 
-if ( ! function_exists( 'daniela_content_width' ) ) :
+if ( ! function_exists( 'daniela_modify_content_width' ) ) :
 /**
  * Adjust content_width value for full width template.
  */
-function daniela_content_width() {
+function daniela_modify_content_width() {
 	global $content_width;
 
 	if ( is_page_template( 'page-templates/full-width.php' ) || ! is_active_sidebar( 'sidebar-1' ) ) {
@@ -24,7 +29,7 @@ function daniela_content_width() {
 	}
 }
 endif;
-add_action( 'template_redirect', 'daniela_content_width' );
+add_action( 'template_redirect', 'daniela_modify_content_width' );
 
 if ( ! function_exists( 'daniela_setup' ) ) :
 /**
