@@ -11,11 +11,7 @@ get_header(); ?>
 	<header class="archive-header">
 		<?php
 			the_archive_title( '<h1 class="archive-title">', '</h1>' );
-			// Show an optional term description.
-			$term_description = term_description();
-			if ( ! empty( $term_description ) ) :
-				printf( '<div class="archive-description">%s</div>', $term_description );
-			endif;
+			the_archive_description( '<div class="archive-description">', '</div>' );
 		?>
 	</header><!-- .page-header -->
 
