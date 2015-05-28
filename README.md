@@ -92,15 +92,15 @@ With [Infinite Scroll](https://en.support.wordpress.com/infinite-scroll/) you ca
 
 ## Quick Specs
 
-The main column width is 668.
-The sidebar width is 316.
-The full width and front page templates are 1020 wide.
-Custom header images display at a maximum width of 1020.
-Featured images are 668 by 445,
-Full screen featured images are 1020 by 612.
-The site logo is 100 by 100.
-Jetpack portfolio items are 524 by 339 on the archive view.
-Jetpack testimonial featured images are 70 by 70.
+* The main column width is 668.
+* The sidebar width is 316.
+* The full width and front page templates are 1020 wide.
+* Custom header images display at a maximum width of 1020.
+* Featured images are 668 by 445,
+* Full screen featured images are 1020 by 612.
+* The site logo is 100 by 100.
+* Jetpack portfolio items are 524 by 339 on the archive view.
+* Jetpack testimonial featured images are 70 by 70.
 
 ## Copyight
 
