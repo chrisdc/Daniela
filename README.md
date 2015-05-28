@@ -1,45 +1,132 @@
-![Travis CI Build Status](https://travis-ci.org/Automattic/_s.svg?branch=master)
+# Daniela
 
-_s
-===
+Daniela is a clean, mobile-first theme with a touch of elegance. With features including a front page template and Jetpack Testimonial and Portfolio post types, Daniela is ideal for freelancers and small businesses in the creative industries.
 
-Hi. I'm a starter theme called `_s`, or `underscores`, if you like. I'm a theme meant for hacking so don't use me as a Parent Theme. Instead try turning me into the next, most awesome, WordPress theme out there. That's what I'm here for.
+## Features
 
-My ultra-minimal CSS might make me look like theme tartare but that means less stuff to get in your way when you're designing your awesome theme. Here are some of the other more interesting things you'll find here:
+### Social Media menu
 
-* A just right amount of lean, well-commented, modern, HTML5 templates.
-* A helpful 404 template.
-* A sample custom header implementation in `inc/custom-header.php` that can be activated by uncommenting one line in `functions.php` and adding the code snippet found in the comments of `inc/custom-header.php` to your `header.php` template.
-* Custom template tags in `inc/template-tags.php` that keep your templates clean and neat and prevent code duplication.
-* Some small tweaks in `inc/extras.php` that can improve your theming experience.
-* A script at `js/navigation.js` that makes your menu a toggled dropdown on small screens (like your phone), ready for CSS artistry. It's enqueued in `functions.php`.
-* 2 sample CSS layouts in `layouts/` for a sidebar on either side of your content.
-* Smartly organized starter CSS in `style.css` that will help you to quickly get your design off the ground.
-* Licensed under GPLv2 or later. :) Use it to make something cool.
+The Daniela theme supports an optional social media menu in the site footer. To set this up navigate to Appearance → Menus in your dashboard and click the create a new menu link. In the menu name box enter any name, then each of your social media accounts as custom links.
 
-Getting Started
----------------
+Once you've added all your social media accounts scroll to the Menu Settings area at the bottom of the page, and under Theme Locations tick Social Media Menu. Finally click the save button,
 
-If you want to keep it simple, head over to http://underscores.me and generate your `_s` based theme from there. You just input the name of the theme you want to create, click the "Generate" button, and you get your ready-to-awesomize starter theme.
+The menu will automatically display the correct icon when you link to any of the following sites or services:
 
-If you want to set things up manually, download `_s` from GitHub. The first thing you want to do is copy the `_s` directory and change the name to something else (like, say, `megatherium`), and then you'll need to do a five-step find and replace on the name in all the templates.
+* CodePen
+* Digg
+* Dribbble
+* Dropbox
+* Email (mailto: links)
+* Facebook
+* Flickr
+* Foursquare
+* Google+
+* GitHub
+* Instagram
+* LinkedIn
+* Path
+* Pinterest
+* Pocket
+* Polldaddy
+* Reddit
+* RSS feeds (URLs with /feed/)
+* StumbleUpon
+* Tumblr
+* Twitter
+* Vimio
+* WordPress (.com or .org links)
+* YouTube
 
-1. Search for `'_s'` (inside single quotations) to capture the text domain.
-2. Search for `_s_` to capture all the function names.
-3. Search for `Text Domain: _s` in style.css.
-4. Search for <code>&nbsp;_s</code> (with a space before it) to capture DocBlocks.
-5. Search for `_s-` to capture prefixed handles.
+### Full Width template
 
-OR
+Daniela includes an optional full width page template that display without any sidebars. To set this up create a new page as normal and select 'Full Width Page' from the template dropdown in the Page Attributes box. This page features 4 areas:
 
-* Search for: `'_s'` and replace with: `'megatherium'`
-* Search for: `_s_` and replace with: `megatherium_`
-* Search for: `Text Domain: _s` and replace with: `Text Domain: megatherium` in style.css.
-* Search for: <code>&nbsp;_s</code> and replace with: <code>&nbsp;Megatherium</code>
-* Search for: `_s-` and replace with: `megatherium-`
+### Front page template
 
-Then, update the stylesheet header in `style.css` and the links in `footer.php` with your own information. Next, update or delete this readme.
+Daniela includes a front page template with a full width image. To set this up create a new page as normal and select 'Front Page' from the template dropdown in the Page Attributes box. This page features 4 areas:
 
-Now you're ready to go! The next step is easy to say, but harder to do: make an awesome WordPress theme. :)
+1. A full-width content area with large text.
+2. The two most recent Jetpack Testimonial posts (if active).
+3. The three most recent Jetpack Portfolio posts (if active).
+4. A sidebar area containing three widget areas.
 
-Good luck!
+### Post Formats
+
+Daniela supports the following post formats:
+
+* Standard
+* Aside
+* Image
+* Video
+* Quote
+* Link
+* Gallery
+
+### Custom Header
+
+Daniela supports an optional image header. This can be any height, and any width up to 1020px.
+
+### Custom Backgrounds
+
+You can also use the customizer to set a custom background color or image.
+
+## Jetpack Support
+
+In addition to the above features Daniela supports a number of features found in Automattic's [Jetpack plugin](www.jetpack.me) including the following:
+
+### Jetpack Portfolio CPT
+
+Display photos, illustrations or other visual items using the [Jetpack Portfolio](https://en.support.wordpress.com/portfolios/) custom post type.
+
+### Jetpack Testimonial CPT
+
+Use the [Jetpack Testimonial](https://en.support.wordpress.com/testimonials/) custom post type to display customer recommendations and comments, perfect for freelancers and small businesses.
+
+### Site Logo
+
+The [site logo](https://en.support.wordpress.com/site-logo/) feature lets you add a 100 × 100px round logo above the site title.
+
+### Infinite Scroll
+
+With [Infinite Scroll](https://en.support.wordpress.com/infinite-scroll/) you can automatically load in new posts as you scroll down the page, similar to social media services like Twitter.
+
+## Quick Specs
+
+The main column width is 668.
+The sidebar width is 316.
+The full width and front page templates are 1020 wide.
+Custom header images display at a maximum width of 1020.
+Featured images are 668 by 445,
+Full screen featured images are 1020 by 612.
+The site logo is 100 by 100.
+Jetpack portfolio items are 524 by 339 on the archive view.
+Jetpack testimonial featured images are 70 by 70.
+
+## Copyight
+
+Daniela WordPress theme, Copyright (C) 2015 Christopher Crouch
+Daniela is licensed under the GPL.
+(http://www.gnu.org/licenses/gpl-2.0.html)
+
+Daniela is based on Underscores http://underscores.me/(C) 2012-2015 Automattic, Inc.
+
+Daniela includes additional code from the Twenty Fifteen and Sela themes.
+
+Twenty Fifteen WordPress Theme https://wordpress.org/themes/twentyfifteen/
+Copyright 2014-2015 WordPress.org
+Twenty Fifteen is distributed under the terms of the GNU GPL
+(http://www.gnu.org/licenses/gpl-2.0.html)
+
+Sela WordPress Theme https://wordpress.com/themes/sela/
+Copyright 2015 Automattic, Inc.
+Sela is distributed under the terms of the GNU GPL
+(http://www.gnu.org/licenses/gpl-2.0.html)
+
+Playfair Display font (served via Google web fonts), Copyright (C) Claus Eggers Sørensen
+Playfair Display is licensed under the SIL Open Font License, 1.1 (http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL)
+
+Open Sans font (served via Google web fonts), Copyright (C) Steve Matteson
+Open Sans is licensed under the Apache lisence, version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.html)
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
