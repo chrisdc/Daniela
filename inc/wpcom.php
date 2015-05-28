@@ -18,11 +18,11 @@ function daniela_wpcom_setup() {
 	// Set theme colors for third party services.
 	if ( ! isset( $themecolors ) ) {
 		$themecolors = array(
-			'bg'     => '',
-			'border' => '',
-			'text'   => '',
-			'link'   => '',
-			'url'    => '',
+			'bg'     => 'fff',
+			'border' => 'd0d0d0',
+			'text'   => '333',
+			'link'   => '21759b',
+			'url'    => '21759b',
 		);
 	}
 }
