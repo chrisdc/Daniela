@@ -40,7 +40,6 @@ if ( ! function_exists( 'daniela_setup' ) ) :
  * as indicating support for post thumbnails.
  */
 function daniela_setup() {
-
 	/*
 	 * Make theme available for translation.
 	 * Translations can be filed in the /languages/ directory.
