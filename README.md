@@ -128,5 +128,8 @@ Playfair Display is licensed under the SIL Open Font License, 1.1 (http://script
 Open Sans font (served via Google web fonts), Copyright (C) Steve Matteson
 Open Sans is licensed under the Apache lisence, version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.html)
 
+Theme screenshot photo, Copyright (C) 2015 Christopher Crouch
+Licensed under the CC0 license. (http://creativecommons.org/choose/zero/)
+
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
