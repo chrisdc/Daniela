@@ -34,8 +34,6 @@ add_action( 'after_setup_theme', 'daniela_jetpack_setup' );
 
 /**
  * Define the code that is used to render the posts added by Infinite Scroll.
- *
- * Includes the whole loop. Used to include the correct template part for the Portfolio CPT.
  */
 function daniela_infinite_scroll_render() {
 	while ( have_posts() ) {
