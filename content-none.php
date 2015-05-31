@@ -6,6 +6,7 @@
  *
  * @package Daniela
  */
+
 ?>
 
 <section class="no-results not-found">

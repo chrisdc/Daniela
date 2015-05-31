@@ -33,7 +33,7 @@ function daniela_jetpack_setup() {
 add_action( 'after_setup_theme', 'daniela_jetpack_setup' );
 
 /**
- * Define the code that is used to render the posts added by Infinite Scroll.
+ * Custom render function for Infinite Scroll.
  */
 function daniela_infinite_scroll_render() {
 	while ( have_posts() ) {

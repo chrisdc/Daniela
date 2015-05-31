@@ -53,7 +53,7 @@ function daniela_entry_footer() {
 		$categories_list = get_the_category_list( __( ', ', 'daniela' ) );
 		if ( $categories_list && daniela_categorized_blog() ) {
 			printf( '<span class="cat-links"><span class="screen-reader-text">%1$s </span>%2$s</span> ',
-				_x( 'Categories: ', 'Indicates a list of post categories.' 'daniela' ),
+				_x( 'Categories: ', 'Indicates a list of post categories.', 'daniela' ),
 				$categories_list
 			);
 		}

@@ -86,7 +86,11 @@ function daniela_setup() {
 	 * to output valid HTML5.
 	 */
 	add_theme_support( 'html5', array(
-		'search-form', 'comment-form', 'comment-list', 'gallery', 'caption',
+		'search-form',
+		'comment-form',
+		'comment-list',
+		'gallery',
+		'caption',
 	) );
 
 	/*
@@ -94,7 +98,12 @@ function daniela_setup() {
 	 * See http://codex.wordpress.org/Post_Formats
 	 */
 	add_theme_support( 'post-formats', array(
-		'aside', 'image', 'video', 'quote', 'link', 'gallery'
+		'aside',
+		'image',
+		'video',
+		'quote',
+		'link',
+		'gallery'
 	) );
 
 	// Set up the WordPress core custom background feature.
