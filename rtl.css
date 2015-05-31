@@ -65,8 +65,8 @@ textarea {
 }
 
 .main-navigation ul ul ul {
-	right: -999em;
 	left: auto;
+	right: -999em;
 }
 
 .social-navigation a:before {
@@ -92,8 +92,8 @@ textarea {
 --------------------------------------------------------------*/
 .alignleft {
 	float: right;
-	margin-left: 1.5em; /* 24px */
 	margin-right: 0;
+	margin-left: 1.5em; /* 24px */
 }
 
 .alignright {
@@ -110,13 +110,13 @@ textarea {
 13.2 Entry meta
 --------------------------------------------------------------*/
 .entry-footer span {
-	margin-left: 1.5em; /* 24px */
 	margin-right: 0;
+	margin-left: 1.5em; /* 24px */
 }
 
 .entry-footer span:before {
-	margin-left: 0.1875em; /* 3px */
 	margin-right: 0;
+	margin-left: 0.1875em; /* 3px */
 }
 
 /*--------------------------------------------------------------
@@ -131,8 +131,8 @@ textarea {
 13.7 Comments
 --------------------------------------------------------------*/
 .avatar {
-	right: 0;
 	left: auto;
+	right: 0;
 }
 
 .comment-author,
@@ -144,14 +144,14 @@ textarea {
 }
 
 .comment .comment-reply-link:before {
-	margin-left: 0.25em; /* 4px */
 	margin-right: 0;
+	margin-left: 0.25em; /* 4px */
 	transform: scaleX(-1);
 }
 
 .comment .edit-link:before {
-	margin-left: 0.25em; /* 4px */
 	margin-right: 0;
+	margin-left: 0.25em; /* 4px */
 }
 
 /*--------------------------------------------------------------
@@ -174,13 +174,13 @@ textarea {
 	/* 2 Portfolio projects / widgets per row. */
 	.portfolio-projects .jetpack-portfolio {
 		float: right;
-		margin-left: 5.333333334%; /* 36 px max */
 		margin-right: 0;
+		margin-left: 5.333333334%; /* 36 px max */
 	}
 
 	.portfolio-projects .jetpack-portfolio:nth-of-type(2n) {
-		margin-left: 0;
 		margin-right: auto;
+		margin-left: 0;
 	}
 }
 
@@ -195,14 +195,14 @@ textarea {
 	}
 
 	.main-navigation .menu-item-has-children > a {
-		padding-left: 12px;
 		padding-right: 12px;
+		padding-left: 12px;
 	}
 
 	.main-navigation ul ul {
 		left: auto;
-		right: -999em;
 		padding: 0;
+		right: -999em;
 	}
 
 	.main-navigation ul li:hover > ul,
@@ -211,14 +211,14 @@ textarea {
 	}
 
 	.main-navigation .menu-item-has-children > a:after {
-		right: auto;
 		left: 0;
+		right: auto;
 	}
 
 	.main-navigation ul ul li:hover > ul,
 	.main-navigation ul ul li.focus > ul {
-		right: 100%;
 		left: auto;
+		right: 100%;
 	}
 
 	.main-navigation ul ul .menu-item-has-children > a:after {
@@ -236,8 +236,8 @@ textarea {
 	.jetpack-testimonial,
 	.front-page .widgets-2 .widget-area {
 		float: right;
-		margin-left: 3.529411764%; /* 36 px max */
 		margin-right: 0;
+		margin-left: 3.529411764%; /* 36 px max */
 	}
 
 	.jetpack-testimonial:nth-of-type(2n),
@@ -251,19 +251,19 @@ textarea {
 	.portfolio-projects .jetpack-portfolio,
 	.front-page .widgets-3 .widget-area {
 		float: right;
-		margin-left: 3.529411765%; /* 36 px max */
 		margin-right: 0;
+		margin-left: 3.529411765%; /* 36 px max */
 	}
 
 	.portfolio-projects .jetpack-portfolio:nth-of-type(2n) {
-		margin-left: 3.529411765%; /* 36 px max */
 		margin-right: 0;
+		margin-left: 3.529411765%; /* 36 px max */
 	}
 
 	.portfolio-projects .jetpack-portfolio:nth-of-type(3n),
 	.front-page .widgets-3 .widget-area:nth-of-type(3n) {
-		margin-left: 0;
 		margin-right: auto;
+		margin-left: 0;
 	}
 
 	.portfolio-projects .jetpack-portfolio:nth-of-type(3n + 1) {
@@ -279,7 +279,7 @@ textarea {
 	}
 
 	.full-width .alignright {
-		margin-left: -8.62745098%;
 		margin-right: 0;
+		margin-left: -8.62745098%;
 	}
 }
