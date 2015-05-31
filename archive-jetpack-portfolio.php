@@ -25,9 +25,9 @@ get_header(); ?>
 				<?php endwhile; ?>
 
 				<?php the_posts_navigation( array(
-					'prev_text'          => __( 'Older projects' ),
-					'next_text'          => __( 'Newer projects' ),
-					'screen_reader_text' => __( 'Projects navigation' ),
+					'prev_text'          => __( 'Older projects', 'daniela' ),
+					'next_text'          => __( 'Newer projects', 'daniela' ),
+					'screen_reader_text' => __( 'Projects navigation', 'daniela' ),
 				) ); ?>
 		<?php else : ?>
 
