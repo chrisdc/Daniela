@@ -53,7 +53,7 @@ function daniela_entry_footer() {
 		$categories_list = get_the_category_list( __( ', ', 'daniela' ) );
 		if ( $categories_list && daniela_categorized_blog() ) {
 			printf( '<span class="cat-links"><span class="screen-reader-text">%1$s </span>%2$s</span> ',
-				_x( 'Categories', 'daniela' ),
+				_x( 'Categories: ', 'Indicates a list of post categories.' 'daniela' ),
 				$categories_list
 			);
 		}
@@ -62,14 +62,14 @@ function daniela_entry_footer() {
 		$tags_list = get_the_tag_list( '', __( ', ', 'daniela' ) );
 		if ( $tags_list ) {
 			printf( '<span class="tags-links"><span class="screen-reader-text">%1$s </span>%2$s</span> ',
-				_x( 'Tags ', 'daniela' ),
+				_x( 'Tags: ', 'Indicates a list of post tags', 'daniela' ),
 				$tags_list
 			);
 		}
 
 		if ( is_multi_author() ) {
 			printf('<span class="author-link author vcard"><span class="screen-reader-text">%1$s</span><a class="url fn n" href="%2$s">%3$s</a></span> ',
-				_x( 'Author ', 'daniela' ),
+				_x( 'Author: ', 'Indicates the post author.', 'daniela' ),
 				esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
 				esc_html( get_the_author() )
 			);
