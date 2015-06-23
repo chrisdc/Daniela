@@ -1,3 +1,20 @@
+Version 1.0.2
+-------------
+
+* Add space to comments are closed message
+* Tweak icon positioning
+* Fix edit icon on trackbacks
+* Ensure Jetpack testimonial settings exist before attempting to access
+* Remove link to underscores.me from footer
+* Fix error in readme
+* Escape headings on front page
+* Escape all translated strings
+
+Version 1.0.1
+-------------
+
+* Remove redundant file
+
 Version 1
 ---------
 
