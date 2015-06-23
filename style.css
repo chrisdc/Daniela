@@ -410,6 +410,7 @@ big {
 .format-link .entry-title a:after,
 .comment .comment-reply-link:before,
 .comment .edit-link:before,
+.pingback .edit-link:before,
 .entry-footer span:before {
 	display: inline-block;
 	font-family: "Genericons";
@@ -1576,7 +1577,8 @@ a:active {
 	top: 0.25em; /* 4px */
 }
 
-.comment .edit-link:before {
+.comment .edit-link:before,
+.pingback .edit-link:before {
 	content: "\f411";
 	margin-right: 0.25em; /* 4px */
 	position: relative;
