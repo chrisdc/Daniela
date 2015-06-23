@@ -17,7 +17,7 @@
 
 		<?php
 			wp_link_pages( array(
-				'before' => '<div class="page-links">' . __( 'Pages:', 'daniela' ),
+				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'daniela' ),
 				'after'  => '</div>',
 			) );
 		?>

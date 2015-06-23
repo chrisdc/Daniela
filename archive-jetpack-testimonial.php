@@ -20,7 +20,7 @@ get_header(); ?>
 				if ( '' != $jetpack_options['page-title'] )
 					echo esc_html( $jetpack_options['page-title'] );
 				else
-					_e( 'Testimonials', 'daniela' );
+					esc_html_e( 'Testimonials', 'daniela' );
 			?>
 		</h1>
 		<?php if ( '' != $jetpack_options['page-content'] ) : ?>
@@ -44,9 +44,9 @@ get_header(); ?>
 				<?php endwhile; ?>
 
 				<?php the_posts_navigation( array(
-					'prev_text'          => __( 'Older testimonials', 'daniela' ),
-					'next_text'          => __( 'Newer testimonials', 'daniela' ),
-					'screen_reader_text' => __( 'Testimonials navigation', 'daniela' ),
+					'prev_text'          => esc_html__( 'Older testimonials', 'daniela' ),
+					'next_text'          => esc_html__( 'Newer testimonials', 'daniela' ),
+					'screen_reader_text' => esc_html__( 'Testimonials navigation', 'daniela' ),
 				) ); ?>
 
 			</div><!-- .projects -->

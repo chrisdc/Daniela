@@ -22,9 +22,9 @@
 		<?php endif; ?>
 
 		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'http://wordpress.org/', 'daniela' ) ); ?>"><?php printf( __( 'Proudly powered by %s', 'daniela' ), 'WordPress' ); ?></a>
+			<a href="<?php echo esc_url( esc_html__( 'http://wordpress.org/', 'daniela' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'daniela' ), 'WordPress' ); ?></a>
 			<span class="sep"> | </span>
-			<?php printf( __( 'Theme: %1$s by %2$s.', 'daniela' ), 'Daniela', '<a href="http://underscores.me/" rel="designer">Christopher Crouch</a>' ); ?>
+			<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'daniela' ), 'Daniela', '<a href="http://underscores.me/" rel="designer">Christopher Crouch</a>' ); ?>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->

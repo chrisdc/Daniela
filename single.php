@@ -15,9 +15,9 @@ get_header(); ?>
 			<?php get_template_part( 'content', get_post_format() ); ?>
 
 			<?php the_post_navigation( array(
-				'next_text' => '<span class="meta-nav">' . __( 'Next Post', 'daniela' ) . '</span> ' .
+				'next_text' => '<span class="meta-nav">' . esc_html__( 'Next Post', 'daniela' ) . '</span> ' .
 					'<span class="post-title">%title</span>',
-				'prev_text' => '<span class="meta-nav">' . __( 'Previous Post', 'daniela' ) . '</span> ' .
+				'prev_text' => '<span class="meta-nav">' . esc_html__( 'Previous Post', 'daniela' ) . '</span> ' .
 					'<span class="post-title">%title</span>',
 			) ); ?>
 

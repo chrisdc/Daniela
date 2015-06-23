@@ -15,9 +15,9 @@ get_header(); ?>
 			<?php get_template_part( 'content', 'portfolio-single' ); ?>
 
 			<?php the_post_navigation( array(
-				'next_text' => '<span class="meta-nav">' . __( 'Next Project', 'daniela' ) . '</span> ' .
+				'next_text' => '<span class="meta-nav">' . esc_html__( 'Next Project', 'daniela' ) . '</span> ' .
 					'<span class="post-title">%title</span>',
-				'prev_text' => '<span class="meta-nav">' . __( 'Previous Project', 'daniela' ) . '</span> ' .
+				'prev_text' => '<span class="meta-nav">' . esc_html__( 'Previous Project', 'daniela' ) . '</span> ' .
 					'<span class="post-title">%title</span>',
 			) ); ?>
 

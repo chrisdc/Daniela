@@ -70,9 +70,9 @@ function daniela_portfolio_entry_footer() {
 		'jetpack-portfolio-type',
 		sprintf(
 			'<span class="portfolio-type-links"><span class="screen-reader-text">%1$s </span>',
-			__( 'Project types: ', 'daniela' )
+			esc_html__( 'Project types: ', 'daniela' )
 		),
-		_x(', ', 'Used between list items, there is a space after the comma.', 'daniela' ),
+		esc_attr_x(', ', 'Used between list items, there is a space after the comma.', 'daniela' ),
 		'</span>'
 	);
 
@@ -81,18 +81,18 @@ function daniela_portfolio_entry_footer() {
 		'jetpack-portfolio-tag',
 		sprintf(
 			'<span class="portfolio-tag-links"><span class="screen-reader-text">%1$s </span>',
-			__( 'Project tags: ', 'daniela' )
+			esc_html__( 'Project tags: ', 'daniela' )
 		),
-		_x(', ', 'Used between list items, there is a space after the comma.', 'daniela' ),
+		esc_attr_x(', ', 'Used between list items, there is a space after the comma.', 'daniela' ),
 		'</span>'
 	);
 
 	if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
 		echo '<span class="comments-link">';
-		comments_popup_link( __( 'Leave a comment', 'daniela' ), __( '1 Comment', 'daniela' ), __( '% Comments', 'daniela' ) );
+		comments_popup_link( esc_html__( 'Leave a comment', 'daniela' ), esc_html__( '1 Comment', 'daniela' ), esc_html__( '% Comments', 'daniela' ) );
 		echo '</span>';
 	}
 
-	edit_post_link( __( 'Edit', 'daniela' ), '<span class="edit-link">', '</span>' );
+	edit_post_link( esc_html__( 'Edit', 'daniela' ), '<span class="edit-link">', '</span>' );
 }
 endif;

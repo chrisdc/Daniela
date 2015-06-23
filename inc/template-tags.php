@@ -13,7 +13,7 @@ if ( ! function_exists( 'daniela_posted_on' ) ) :
  */
 function daniela_posted_on() {
 	if ( is_sticky() && is_home() && ! is_single() && ! is_paged() ) {
-		echo '<span class="sticky">' . __( 'Sticky', 'daniela' ) . '</span>';
+		echo '<span class="sticky">' . esc_html__( 'Sticky', 'daniela' ) . '</span>';
 	} else {
 		$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
 		if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
@@ -50,26 +50,26 @@ function daniela_entry_footer() {
 	// Hide category and tag text for pages.
 	if ( 'post' == get_post_type() ) {
 		/* translators: used between list items, there is a space after the comma */
-		$categories_list = get_the_category_list( __( ', ', 'daniela' ) );
+		$categories_list = get_the_category_list( esc_html__( ', ', 'daniela' ) );
 		if ( $categories_list && daniela_categorized_blog() ) {
 			printf( '<span class="cat-links"><span class="screen-reader-text">%1$s </span>%2$s</span> ',
-				_x( 'Categories: ', 'Indicates a list of post categories.', 'daniela' ),
+				esc_attr_x( 'Categories: ', 'Indicates a list of post categories.', 'daniela' ),
 				$categories_list
 			);
 		}
 
 		/* translators: used between list items, there is a space after the comma */
-		$tags_list = get_the_tag_list( '', __( ', ', 'daniela' ) );
+		$tags_list = get_the_tag_list( '', esc_html__( ', ', 'daniela' ) );
 		if ( $tags_list ) {
 			printf( '<span class="tags-links"><span class="screen-reader-text">%1$s </span>%2$s</span> ',
-				_x( 'Tags: ', 'Indicates a list of post tags', 'daniela' ),
+				esc_attr_x( 'Tags: ', 'Indicates a list of post tags', 'daniela' ),
 				$tags_list
 			);
 		}
 
 		if ( is_multi_author() ) {
 			printf('<span class="author-link author vcard"><span class="screen-reader-text">%1$s</span><a class="url fn n" href="%2$s">%3$s</a></span> ',
-				_x( 'Author: ', 'Indicates the post author.', 'daniela' ),
+				esc_attr_x( 'Author: ', 'Indicates the post author.', 'daniela' ),
 				esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
 				esc_html( get_the_author() )
 			);
@@ -78,11 +78,11 @@ function daniela_entry_footer() {
 
 	if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
 		echo '<span class="comments-link">';
-		comments_popup_link( __( 'Leave a comment', 'daniela' ), __( '1 Comment', 'daniela' ), __( '% Comments', 'daniela' ) );
+		comments_popup_link( esc_html__( 'Leave a comment', 'daniela' ), esc_html__( '1 Comment', 'daniela' ), esc_html__( '% Comments', 'daniela' ) );
 		echo '</span> ';
 	}
 
-	edit_post_link( __( 'Edit', 'daniela' ), '<span class="edit-link">', '</span>' );
+	edit_post_link( esc_html__( 'Edit', 'daniela' ), '<span class="edit-link">', '</span>' );
 }
 endif;
 
@@ -99,45 +99,45 @@ if ( ! function_exists( 'the_archive_title' ) ) :
  */
 function the_archive_title( $before = '', $after = '' ) {
 	if ( is_category() ) {
-		$title = sprintf( __( 'Category: %s', 'daniela' ), single_cat_title( '', false ) );
+		$title = sprintf( esc_html__( 'Category: %s', 'daniela' ), single_cat_title( '', false ) );
 	} elseif ( is_tag() ) {
-		$title = sprintf( __( 'Tag: %s', 'daniela' ), single_tag_title( '', false ) );
+		$title = sprintf( esc_html__( 'Tag: %s', 'daniela' ), single_tag_title( '', false ) );
 	} elseif ( is_author() ) {
-		$title = sprintf( __( 'Author: %s', 'daniela' ), '<span class="vcard">' . get_the_author() . '</span>' );
+		$title = sprintf( esc_html__( 'Author: %s', 'daniela' ), '<span class="vcard">' . get_the_author() . '</span>' );
 	} elseif ( is_year() ) {
-		$title = sprintf( __( 'Year: %s', 'daniela' ), get_the_date( _x( 'Y', 'yearly archives date format', 'daniela' ) ) );
+		$title = sprintf( esc_html__( 'Year: %s', 'daniela' ), get_the_date( esc_attr_x( 'Y', 'yearly archives date format', 'daniela' ) ) );
 	} elseif ( is_month() ) {
-		$title = sprintf( __( 'Month: %s', 'daniela' ), get_the_date( _x( 'F Y', 'monthly archives date format', 'daniela' ) ) );
+		$title = sprintf( esc_html__( 'Month: %s', 'daniela' ), get_the_date( esc_attr_x( 'F Y', 'monthly archives date format', 'daniela' ) ) );
 	} elseif ( is_day() ) {
-		$title = sprintf( __( 'Day: %s', 'daniela' ), get_the_date( _x( 'F j, Y', 'daily archives date format', 'daniela' ) ) );
+		$title = sprintf( esc_html__( 'Day: %s', 'daniela' ), get_the_date( esc_attr_x( 'F j, Y', 'daily archives date format', 'daniela' ) ) );
 	} elseif ( is_tax( 'post_format' ) ) {
 		if ( is_tax( 'post_format', 'post-format-aside' ) ) {
-			$title = _x( 'Asides', 'post format archive title', 'daniela' );
+			$title = esc_attr_x( 'Asides', 'post format archive title', 'daniela' );
 		} elseif ( is_tax( 'post_format', 'post-format-gallery' ) ) {
-			$title = _x( 'Galleries', 'post format archive title', 'daniela' );
+			$title = esc_attr_x( 'Galleries', 'post format archive title', 'daniela' );
 		} elseif ( is_tax( 'post_format', 'post-format-image' ) ) {
-			$title = _x( 'Images', 'post format archive title', 'daniela' );
+			$title = esc_attr_x( 'Images', 'post format archive title', 'daniela' );
 		} elseif ( is_tax( 'post_format', 'post-format-video' ) ) {
-			$title = _x( 'Videos', 'post format archive title', 'daniela' );
+			$title = esc_attr_x( 'Videos', 'post format archive title', 'daniela' );
 		} elseif ( is_tax( 'post_format', 'post-format-quote' ) ) {
-			$title = _x( 'Quotes', 'post format archive title', 'daniela' );
+			$title = esc_attr_x( 'Quotes', 'post format archive title', 'daniela' );
 		} elseif ( is_tax( 'post_format', 'post-format-link' ) ) {
-			$title = _x( 'Links', 'post format archive title', 'daniela' );
+			$title = esc_attr_x( 'Links', 'post format archive title', 'daniela' );
 		} elseif ( is_tax( 'post_format', 'post-format-status' ) ) {
-			$title = _x( 'Statuses', 'post format archive title', 'daniela' );
+			$title = esc_attr_x( 'Statuses', 'post format archive title', 'daniela' );
 		} elseif ( is_tax( 'post_format', 'post-format-audio' ) ) {
-			$title = _x( 'Audio', 'post format archive title', 'daniela' );
+			$title = esc_attr_x( 'Audio', 'post format archive title', 'daniela' );
 		} elseif ( is_tax( 'post_format', 'post-format-chat' ) ) {
-			$title = _x( 'Chats', 'post format archive title', 'daniela' );
+			$title = esc_attr_x( 'Chats', 'post format archive title', 'daniela' );
 		}
 	} elseif ( is_post_type_archive() ) {
-		$title = sprintf( __( 'Archives: %s', 'daniela' ), post_type_archive_title( '', false ) );
+		$title = sprintf( esc_html__( 'Archives: %s', 'daniela' ), post_type_archive_title( '', false ) );
 	} elseif ( is_tax() ) {
 		$tax = get_taxonomy( get_queried_object()->taxonomy );
 		/* translators: 1: Taxonomy singular name, 2: Current taxonomy term */
-		$title = sprintf( __( '%1$s: %2$s', 'daniela' ), $tax->labels->singular_name, single_term_title( '', false ) );
+		$title = sprintf( esc_html__( '%1$s: %2$s', 'daniela' ), $tax->labels->singular_name, single_term_title( '', false ) );
 	} else {
-		$title = __( 'Archives', 'daniela' );
+		$title = esc_html__( 'Archives', 'daniela' );
 	}
 
 	/**
@@ -285,15 +285,15 @@ function the_posts_navigation() {
 	}
 	?>
 	<nav class="navigation posts-navigation" role="navigation">
-		<h2 class="screen-reader-text"><?php _e( 'Posts navigation', '_s' ); ?></h2>
+		<h2 class="screen-reader-text"><?php esc_html_e( 'Posts navigation', '_s' ); ?></h2>
 		<div class="nav-links">
 
 			<?php if ( get_next_posts_link() ) : ?>
-			<div class="nav-previous"><?php next_posts_link( __( 'Older posts', '_s' ) ); ?></div>
+			<div class="nav-previous"><?php next_posts_link( esc_html__( 'Older posts', '_s' ) ); ?></div>
 			<?php endif; ?>
 
 			<?php if ( get_previous_posts_link() ) : ?>
-			<div class="nav-next"><?php previous_posts_link( __( 'Newer posts', '_s' ) ); ?></div>
+			<div class="nav-next"><?php previous_posts_link( esc_html__( 'Newer posts', '_s' ) ); ?></div>
 			<?php endif; ?>
 
 		</div><!-- .nav-links -->

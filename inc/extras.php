@@ -58,7 +58,7 @@ if ( version_compare( $GLOBALS['wp_version'], '4.1', '<' ) ) :
 
 		// Add a page number if necessary.
 		if ( ( $paged >= 2 || $page >= 2 ) && ! is_404() ) {
-			$title .= " $sep " . sprintf( __( 'Page %s', 'daniela' ), max( $paged, $page ) );
+			$title .= " $sep " . sprintf( esc_html__( 'Page %s', 'daniela' ), max( $paged, $page ) );
 		}
 
 		return $title;
@@ -86,7 +86,7 @@ endif;
  */
 function daniela_archive_title( $title ) {
 	if ( is_post_type_archive( 'jetpack-portfolio' ) ) {
-		$title = __( 'Projects', 'daniela' );
+		$title = esc_html__( 'Projects', 'daniela' );
 	}
 
 	return $title;

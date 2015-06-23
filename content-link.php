@@ -22,14 +22,14 @@
 		<?php
 			/* translators: %s: Name of current post */
 			the_content( sprintf(
-				__( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'daniela' ),
+				esc_html__( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'daniela' ),
 				the_title( '<span class="screen-reader-text">"', '"</span>', false )
 			) );
 		?>
 
 		<?php
 			wp_link_pages( array(
-				'before' => '<div class="page-links">' . __( 'Pages:', 'daniela' ),
+				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'daniela' ),
 				'after'  => '</div>',
 			) );
 		?>

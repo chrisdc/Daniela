@@ -77,8 +77,8 @@ function daniela_setup() {
 
 	// This theme uses wp_nav_menu() in two locations.
 	register_nav_menus( array(
-		'primary' => __( 'Primary Menu', 'daniela' ),
-		'social'  => __( 'Social Media Menu', 'daniela' ),
+		'primary' => esc_html__( 'Primary Menu', 'daniela' ),
+		'social'  => esc_html__( 'Social Media Menu', 'daniela' ),
 	) );
 
 	/*
@@ -122,7 +122,7 @@ add_action( 'after_setup_theme', 'daniela_setup' );
  */
 function daniela_widgets_init() {
 	register_sidebar( array(
-		'name'          => __( 'Sidebar', 'daniela' ),
+		'name'          => esc_html__( 'Sidebar', 'daniela' ),
 		'id'            => 'sidebar-1',
 		'description'   => '',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
@@ -132,9 +132,9 @@ function daniela_widgets_init() {
 	) );
 
 	register_sidebar( array(
-		'name'          => __( 'Front Page Widget 1', 'daniela' ),
+		'name'          => esc_html__( 'Front Page Widget 1', 'daniela' ),
 		'id'            => 'front-page-1',
-		'description'   => __( 'The first (leftmost) sidebar used by front-page.php', 'daniela' ),
+		'description'   => esc_html__( 'The first (leftmost) sidebar used by front-page.php', 'daniela' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
 		'before_title'  => '<h1 class="widget-title">',
@@ -142,9 +142,9 @@ function daniela_widgets_init() {
 	) );
 
 	register_sidebar( array(
-		'name'          => __( 'Front Page Widget 2', 'daniela' ),
+		'name'          => esc_html__( 'Front Page Widget 2', 'daniela' ),
 		'id'            => 'front-page-2',
-		'description'   => __( 'The second (central) sidebar used by front-page.php', 'daniela' ),
+		'description'   => esc_html__( 'The second (central) sidebar used by front-page.php', 'daniela' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
 		'before_title'  => '<h1 class="widget-title">',
@@ -152,9 +152,9 @@ function daniela_widgets_init() {
 	) );
 
 	register_sidebar( array(
-		'name'          => __( 'Front Page Widget 3', 'daniela' ),
+		'name'          => esc_html__( 'Front Page Widget 3', 'daniela' ),
 		'id'            => 'front-page-3',
-		'description'   => __( 'The third (rightmost) sidebar used by front-page.php', 'daniela' ),
+		'description'   => esc_html__( 'The third (rightmost) sidebar used by front-page.php', 'daniela' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
 		'before_title'  => '<h1 class="widget-title">',
@@ -177,17 +177,17 @@ function daniela_fonts_url() {
 	$subsets   = 'latin,latin-ext';
 
 	/* translators: If there are characters in your language that are not supported by Open Sans, translate this to 'off'. Do not translate into your own language. */
-	if ( 'off' !== _x( 'on', 'Open Sans font: on or off', 'daniela' ) ) {
+	if ( 'off' !== esc_attr_x( 'on', 'Open Sans font: on or off', 'daniela' ) ) {
 		$fonts[] = 'Open Sans:400italic,700italic,400,700';
 	}
 
 	/* translators: If there are characters in your language that are not supported by Playfair Display, translate this to 'off'. Do not translate into your own language. */
-	if ( 'off' !== _x( 'on', 'Playfair Display font: on or off', 'daniela' ) ) {
+	if ( 'off' !== esc_attr_x( 'on', 'Playfair Display font: on or off', 'daniela' ) ) {
 		$fonts[] = 'Playfair Display:700italic,400,700,900';
 	}
 
 	/* translators: To add an additional character subset specific to your language, translate this to 'greek', 'cyrillic', 'devanagari' or 'vietnamese'. Do not translate into your own language. */
-	$subset = _x( 'no-subset', 'Add new subset (greek, cyrillic, devanagari, vietnamese)', 'daniela' );
+	$subset = esc_attr_x( 'no-subset', 'Add new subset (greek, cyrillic, devanagari, vietnamese)', 'daniela' );
 
 	if ( 'cyrillic' == $subset ) {
 		$subsets .= ',cyrillic,cyrillic-ext';

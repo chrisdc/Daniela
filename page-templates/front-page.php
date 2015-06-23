@@ -25,7 +25,7 @@ get_header(); ?>
 							<?php the_content(); ?>
 						</div><!-- .entry-content -->
 
-						<?php edit_post_link( __( 'Edit', 'daniela' ), '<footer class="entry-footer"><span class="edit-link">', '</span></footer>' ); ?>
+						<?php edit_post_link( esc_html__( 'Edit', 'daniela' ), '<footer class="entry-footer"><span class="edit-link">', '</span></footer>' ); ?>
 					</article><!-- #post-## -->
 				</div><!-- .hero-content -->
 
