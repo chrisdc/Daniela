@@ -1582,7 +1582,7 @@ a:active {
 	content: "\f411";
 	margin-right: 0.25em; /* 4px */
 	position: relative;
-	top: 0.25em; /* 4px */
+	top: 0.3125em; /* 5px */
 }
 
 .comment .comment-reply-link:hover:before {
@@ -1622,6 +1622,10 @@ a:active {
 .pingback .edit-link a:hover,
 .trackback .edit-link a:hover {
 	color: #21759b;
+}
+
+.no-comments {
+	margin: 1.25em 0; /* 20px 0 */
 }
 
 /*--------------------------------------------------------------
