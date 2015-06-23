@@ -39,7 +39,7 @@ The menu will automatically display the correct icon when you link to any of the
 
 ### Full Width template
 
-Daniela includes an optional full width page template that display without any sidebars. To set this up create a new page as normal and select 'Full Width Page' from the template dropdown in the Page Attributes box. This page features 4 areas:
+Daniela includes an optional full width page template that display without any sidebars. To set this up create a new page as normal and select 'Full Width Page' from the template dropdown in the Page Attributes box.
 
 ### Front page template
 
