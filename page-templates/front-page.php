@@ -43,7 +43,7 @@ get_header(); ?>
 					<?php if ( $testimonials->have_posts() ) : ?>
 					<div id="front-page-testimonials" class="front-testimonials testimonials">
 						<header class="archive-header">
-							<h2 class="archive-title">What Our Customers Say:</h2>
+							<h2 class="archive-title"><?php esc_html__( 'What Our Customers Say:', 'daniela' ); ?></h2>
 						</header>
 						<div class="grid-row">
 						<?php
@@ -71,7 +71,7 @@ get_header(); ?>
 					<?php if ( $projects->have_posts() ) : ?>
 					<div id="front-page-portfolio" class="front-portfolio portfolio-projects">
 						<header class="archive-header">
-							<h2 class="archive-title">Recent Projects:</h2>
+							<h2 class="archive-title"><?php esc_html__( 'Recent Projects:', 'daniela' ); ?></h2>
 						</header>
 						<div class="grid-row">
 						<?php
