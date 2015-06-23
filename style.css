@@ -1349,7 +1349,7 @@ a:active {
 .entry-footer span:before {
 	margin-right: 0.1875em; /* 3px */
 	position: relative;
-	top: 0.25em; /* 4px */
+	top: 0.3125em; /* 5px */
 }
 
 .cat-links:before,
@@ -1574,7 +1574,7 @@ a:active {
 	content: "\f412";
 	margin-right: 0.25em; /* 4px */
 	position: relative;
-	top: 0.25em; /* 4px */
+	top: 0.3125em; /* 5px */
 }
 
 .comment .edit-link:before,
