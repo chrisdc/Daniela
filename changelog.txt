@@ -1,6 +1,7 @@
 Version 1.0.2
 -------------
-
+* Add height setting to custom header image
+* Add space to comments are closed message
 * Add space to comments are closed message
 * Tweak icon positioning
 * Fix edit icon on trackbacks

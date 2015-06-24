@@ -26,7 +26,7 @@ function daniela_custom_header_setup() {
 		'default-image'          => '',
 		'default-text-color'     => '333',
 		'width'                  => 1020,
-		//'height'                 => 300,
+		'height'                 => 300,
 		'flex-height'            => true,
 		'flex-width'             => true,
 		'wp-head-callback'       => 'daniela_header_style',
