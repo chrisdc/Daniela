@@ -1,3 +1,7 @@
+Version 1.0.3
+-------------
+* Escape remaining data
+
 Version 1.0.2
 -------------
 * Add height setting to custom header image
