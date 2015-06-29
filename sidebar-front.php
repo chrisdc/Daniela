@@ -13,7 +13,7 @@ if ( 0 === $daniela_widget_count ) {
 }
 ?>
 
-<div id="front-page-widgets" class="front-page-widgets <?php echo 'widgets-' . $daniela_widget_count ?>" role="complementary">
+<div id="front-page-widgets" class="front-page-widgets <?php echo 'widgets-' . esc_attr( $daniela_widget_count ) ?>" role="complementary">
 	<?php if ( is_active_sidebar( 'front-page-1' ) ) : ?>
 		<div class="widget-area front-page-1">
 			<?php dynamic_sidebar( 'front-page-1' ); ?>
