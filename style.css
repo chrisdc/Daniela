@@ -615,6 +615,17 @@ input[type="search"] {
 	padding: 0.6875em 0.375em; /* 11px 6px */
 }
 
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
+input[type="search"]:focus,
+textarea:focus {
+	border-color: #21759b;
+	outline: 0;
+	box-shadow: 0px 0px 5px #21759b;
+}
+
 textarea {
 	padding-left: 0.375em; /* 6px */
 	width: 100%;
