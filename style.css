@@ -1577,6 +1577,7 @@ a:active {
 .comment-author,
 .comment-metadata,
 .comment-content,
+.comment-awaiting-moderation,
 .reply {
 	padding-left: 3em; /* 48px */
 }
