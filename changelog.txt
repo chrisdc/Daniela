@@ -1,3 +1,9 @@
+Version 1.0.4
+-------------
+* Update heading structure for accessibility
+* Fix padding on comments awaiting moderation
+* Define :focus styles for form fields
+
 Version 1.0.3
 -------------
 * Escape remaining data
