@@ -28,7 +28,7 @@ function daniela_posted_on() {
 		);
 
 		$time_link = '<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>';
-		echo '<span class="posted-on">' . esc_html( $time_link ) . '</span>';
+		echo '<span class="posted-on">' . $time_link . '</span>';
 	}
 
 	$post_format = get_post_format();

@@ -13,7 +13,13 @@
 		<?php the_content(); ?>
 	</div>
 	<header class="entry-header">
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+		<?php
+			if ( is_single() ) :
+				the_title( '<h1 class="entry-title">', '</h1>' );
+			else :
+				the_title( '<h2 class="entry-title">', '</h2>' );
+			endif;
+		?>
 	</header>
 	<?php edit_post_link( esc_html__( 'Edit', 'daniela' ), '<footer class="entry-footer"><span class="edit-link">', '</span></footer>' ); ?>
 </article><!-- #post-## -->

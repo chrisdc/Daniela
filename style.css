@@ -1233,6 +1233,10 @@ a:active {
 
 .entry-title {
 	margin: 0;
+	font-family: "Playfair Display", serif;
+	font-size: 36px;
+	font-size: 2.25rem;
+	font-weight: bold;
 	word-wrap: break-word;
 }
 
@@ -1947,7 +1951,8 @@ div#jp-relatedposts {
 		font-size: 3.75rem;
 	}
 
-	h1 {
+	h1,
+	.entry-title {
 		font-size: 42px;
 		font-size: 2.625rem;
 	}
