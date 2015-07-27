@@ -3,7 +3,7 @@ Theme Name: Daniela
 Theme URI: https://github.com/chrisdc/Daniela
 Author: Christopher Crouch
 Description: Daniela is a clean, mobile-first theme with a touch of elegance. With features including a front page template and Jetpack Testimonial and Portfolio post types, Daniela is ideal for freelancers and small businesses in the creative industries.
-Version: 1.0.4
+Version: 1.0.5
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: daniela
@@ -1097,6 +1097,7 @@ a:active {
 	font-family: "Open Sans", sans-serif;
 	font-size: 16px;
 	font-size: 1rem;
+	font-weight: bold;
 	letter-spacing: 1px;
 	line-height: 1.6;
 	margin: 0 0 0.4375em; /* 0 0 7px */

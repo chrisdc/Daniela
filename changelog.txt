@@ -1,3 +1,9 @@
+Version 1.0.5
+-------------
+* Use h2 tags on widget titles
+* Avoid duplicating .page-title in index.php
+* Include WPCS: XSS OK. comment in daniela_posted_on()
+
 Version 1.0.4
 -------------
 * Update heading structure for accessibility
