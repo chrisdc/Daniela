@@ -1,3 +1,7 @@
+Version 1.0.6
+-------------
+* Fix continue reading link
+
 Version 1.0.5
 -------------
 * Use h2 tags on widget titles
